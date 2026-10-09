@@ -1,0 +1,109 @@
+{
+  "stage": "4B-2",
+  "stage_version": "1.0.0",
+  "ranking_training_protocol": "single_historical_14d_snapshot_v1",
+  "snapshot": {
+    "snapshot_id": "ranking_train_14d_v1",
+    "as_of_date": "2020-08-11",
+    "request_date": "2020-08-12",
+    "label_start": "2020-08-12",
+    "label_end": "2020-08-25",
+    "label_window_days": 14
+  },
+  "versions": {
+    "feedback": "B_user_item_day_binary",
+    "ranking_dataset": "ranking_dataset_14d_binary_v1",
+    "ranking_label": "candidate_purchase_relevance_b14_v1",
+    "all_label_population": "ranking_train_all_label_users_v1",
+    "main_population": "historical_evaluable_warm_users_v1",
+    "cold_population": "cold_history_label_users_v1",
+    "negative_sampling_policy": "sha256_zero_cap100_v1",
+    "optimizer_view": "ranking_optimizer_sha256_100_v1",
+    "candidate_contract": "stage_3e_candidate_contract_v1",
+    "candidate_protocol": "source_rank_cap_pre_dedup_v1"
+  },
+  "keys": {
+    "row": ["snapshot_id", "customer_key", "article_key"],
+    "query": ["snapshot_id", "customer_key"],
+    "query_order": ["snapshot_id", "customer_key"]
+  },
+  "candidate": {
+    "budget": 500,
+    "semantic_fingerprint_version": "candidate_semantic_sha256_user_merkle_v1",
+    "expected_formal_semantic_fingerprint": "1448b2dd20ffcc3afceaa35143eec6f86f2ec5900a7fb24a3ebfb28ade8b7dc0"
+  },
+  "negative_sampling": {
+    "fixed_seed": 20260811,
+    "algorithm": "sha256",
+    "encoding": "utf-8",
+    "max_zero_per_query": 100,
+    "canonical_payload": "{snapshot_id}|{customer_key}|{article_key}|{fixed_seed}",
+    "sort": ["digest_ASC", "article_key_ASC"],
+    "keep_all_positives": true,
+    "python_builtin_hash_allowed": false,
+    "partition_id_in_payload": false
+  },
+  "views": {
+    "main_full_evaluation": "is_historical_evaluable_warm = true; retain complete 500 including all-zero groups",
+    "cold_full_evaluation": "is_cold_history_label_user = true; retain complete 500 and report separately",
+    "optimizer_eligibility": "is_historical_evaluable_warm = true AND candidate_positive_count >= 1"
+  },
+  "fingerprints": {
+    "ranking_dataset": "ranking_dataset_semantic_sha256_query_merkle_v1",
+    "optimizer": "ranking_optimizer_semantic_sha256_query_merkle_v1",
+    "query_population": "ranking_query_population_sha256_v1"
+  },
+  "upstream": {
+    "stage_4a_config": "configs/stage_4a_ranking_time_protocol.yaml",
+    "stage_4a_manifest": "artifacts/stage_4a/stage_4a_manifest.csv",
+    "stage_4a_gate": "artifacts/stage_4a/protocol_gate.csv",
+    "stage_4b1_config": "configs/stage_4b1_historical_replay.yaml",
+    "stage_4b1_manifest": "artifacts/stage_4b1/stage_4b1_manifest.csv",
+    "stage_4b1_gate": "artifacts/stage_4b1/contract_gate.csv",
+    "stage_4b1_upstream_manifest": "artifacts/stage_4b1/upstream_fingerprint_manifest.csv",
+    "stage_4b1_candidate_manifest": "artifacts/stage_4b1/historical_candidate_contract_manifest.csv",
+    "stage_4b1_candidate_schema": "artifacts/stage_4b1/historical_candidate_schema_manifest.csv",
+    "stage_4b1_candidate_directory": "artifacts/stage_4b1/private/candidates/ranking_train_14d_v1",
+    "feedback_daily": "artifacts/stage_2a/private/feedback_daily.parquet",
+    "customer_key_map": "artifacts/stage_2a/private/customer_key_map.parquet",
+    "article_key_map": "artifacts/stage_2a/private/article_key_map.parquet"
+  },
+  "execution": {
+    "partitions": 32,
+    "query_partition_expression": "customer_key % 32",
+    "formal_partition_order": "forward",
+    "replay_partition_order": "reverse",
+    "arrow_batch_rows": 65536,
+    "parquet_compression": "zstd"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 512,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "checkpoint": {
+    "reuse_matching_success": true,
+    "retry_failed": true,
+    "require_input_physical_fingerprint": true,
+    "require_output_physical_fingerprint": true
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_4b2",
+    "private_directory": "artifacts/stage_4b2/private",
+    "checkpoint_directory": "artifacts/stage_4b2/checkpoints",
+    "temp_directory": "artifacts/stage_4b2/tmp",
+    "report": "docs/stages/stage_4b2_ranking_dataset_and_negative_sampling.md"
+  },
+  "strictly_forbidden_downstream_execution": {
+    "ranking_features": "NOT ENTERED",
+    "lightgbm": "NOT ENTERED",
+    "validation_selection": "NOT EXECUTED",
+    "first7d": "NOT EXECUTED",
+    "final_refit": "NOT EXECUTED",
+    "test_ranking": "NOT EXECUTED",
+    "reranking": "NOT ENTERED"
+  }
+}

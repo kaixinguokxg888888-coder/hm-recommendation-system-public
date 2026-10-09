@@ -1,0 +1,6 @@
+﻿audit_item,observed_value,status,candidate_partition_rerun
+recovery_classification,C_PARTIAL_RUN_VALID_CHECKPOINTS,RESUME,0
+valid_checkpoints_at_recovery_audit,119,PASS,0
+valid_checkpoints_at_public_finalization,128,PASS,0
+invalidated_checkpoints,0,PASS,0
+initial_public_privacy_scan,DECLARED_SHA256_SUBSTRING_FALSE_POSITIVE,RECOVERED_FIELD_AWARE,0

@@ -1,0 +1,20 @@
+{
+  "additional_challenger_evaluated": false,
+  "final_refit_executed": false,
+  "first7d_labels_read": true,
+  "first7d_read_count": 1,
+  "label_window": "2020-08-26..2020-09-01",
+  "phase": "phase3_first7d_locked_winner_diagnostic_v1",
+  "recorded_at": "2026-08-14T16:57:23+08:00",
+  "recorded_before_content_open": true,
+  "reranking_executed": false,
+  "retrieval_retuned": false,
+  "stage": "4B-4",
+  "test_authorized": false,
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "validation_14d_source_content_open_count": 1,
+  "winner_changed": false
+}

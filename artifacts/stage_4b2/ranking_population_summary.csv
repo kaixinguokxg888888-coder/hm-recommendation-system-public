@@ -1,0 +1,4 @@
+﻿population,query_count,included_in_main_average,optimizer_eligible_definition
+ranking_train_all_label_users,130001,False,False
+historical_evaluable_warm_users_v1,120608,True,candidate_positive_count>=1
+cold_history_label_users,9393,False,False

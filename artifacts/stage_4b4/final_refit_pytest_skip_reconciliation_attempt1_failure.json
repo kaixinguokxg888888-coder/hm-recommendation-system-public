@@ -1,0 +1,27 @@
+{
+  "binary_rebuilt": false,
+  "cause": "The script-mode structured worker omitted the repository root from sys.path, so two tests that formally import scripts.* failed during collection. No corrected audit, lock, gate, report, model, binary, prediction, replay, label, or Test artifact was promoted or accessed.",
+  "collection_errors": [
+    {
+      "nodeid": "tests/test_stage_3e.py",
+      "reason": "collection failed"
+    },
+    {
+      "nodeid": "tests/test_stage_4b4.py",
+      "reason": "collection failed"
+    }
+  ],
+  "failed_preregistration_fingerprint": "c3b5184986d51504179745a2a085f1675d57f5b30a3e7888ac7c257259f726e3",
+  "failed_source_fingerprint": "894f7f948dbdf6fd5bde339ad6167a96a4b54b4156164fbe5762d4a120705179",
+  "failure_classification": "RECONCILIATION_PARSER_LAUNCH_ENVIRONMENT_ERROR",
+  "failure_fingerprint": "83034435f8a5bcf85b07927c902178e3cffd4a246fc86fecf898e8ed3e44ab92",
+  "formal_artifacts_promoted": false,
+  "labels_opened": false,
+  "model_retrained": false,
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "prediction_recomputed": false,
+  "pytest_return_code": 2,
+  "replay_recomputed": false,
+  "status": "FAILED_ATTEMPT1_SUPERSEDED_BEFORE_FORMAL_PROMOTION",
+  "test_access": false
+}

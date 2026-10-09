@@ -1,0 +1,15 @@
+check_id,status,observed
+RA01,PASS,config=61f8571ddbd5e98a288ce68403980805f75103cebe6e43067f40038f8b6dee7c
+RA02,PASS,source=2e8a030d43f829f61c7fd1bdd64f03d5cfae824ebbb2b64b3964f739db48b84e
+RA03,PASS,original lock/gate superseded
+RA04,PASS,corrected resource gate PASS
+RA05,PASS,"First7d reopen=0,total=1"
+RA06,PASS,metrics/bootstrap recomputed=false
+RA07,PASS,artifact fingerprints unchanged
+RA08,PASS,checkpoint=160/160
+RA09,PASS,replay=2/2;bootstrap replay=16/16
+RA10,PASS,44 passed
+RA11,PASS,378 passed
+RA12,PASS,compile=PASS;diff=PASS
+RA13,PASS,privacy/raw/ignore/tracked-private PASS
+RA14,PASS,Test reads=0;final-refit=false

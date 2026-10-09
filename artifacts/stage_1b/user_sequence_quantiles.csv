@@ -1,0 +1,8 @@
+﻿feedback_scope,metric,p01,p05,p10,p25,p50,p75,p90,p95,p99,execution_scope
+A,sequence_length,1.0,1.0,2.0,3.0,9.0,27.0,60.0,91.0,187.0,FULL_SCAN
+B,sequence_length,1.0,1.0,1.0,3.0,9.0,24.0,54.0,81.0,164.0,FULL_SCAN
+C,sequence_length,1.0,1.0,2.0,3.0,9.0,27.0,60.0,91.0,187.0,FULL_SCAN
+aggregate,distinct_articles,1.0,1.0,1.0,3.0,8.0,24.0,52.0,77.0,153.0,FULL_SCAN
+aggregate,active_days,1.0,1.0,1.0,1.0,3.0,8.0,17.0,24.0,45.0,FULL_SCAN
+aggregate,lifecycle_days,0.0,0.0,0.0,0.0,206.0,549.0,667.0,697.0,721.0,FULL_SCAN
+aggregate,average_active_day_gap,2.0,9.108626434653841,18.027027027027028,34.125,60.666666666666664,109.83333333333333,196.0,280.5,502.0,FULL_SCAN

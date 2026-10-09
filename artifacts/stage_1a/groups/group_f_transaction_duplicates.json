@@ -1,0 +1,91 @@
+{
+  "group_name": "group_f_transaction_duplicates",
+  "results": [
+    {
+      "check_id": "transactions.full.duplicate.full_row",
+      "table_name": "transactions",
+      "check_name": "Full-field identical record repetitions",
+      "check_type": "duplicate_profile",
+      "severity": "warning",
+      "status": "WARN",
+      "observed_value": {
+        "full_identical_duplicate_groups": 2543908,
+        "full_identical_duplicate_excess_rows": 2974905,
+        "full_identical_max_repetition": 569,
+        "rows_in_repeated_full_groups": 5518813,
+        "duplicate_excess_ratio": 0.09358483322367042,
+        "rows_in_repeated_groups_ratio": 0.17361132345322766,
+        "group_count_buckets": {
+          "1": 26269511,
+          "2": 2285073,
+          "3": 177237,
+          "4": 55412,
+          "5+": 26186
+        }
+      },
+      "expected_condition": "report repetition metrics without classifying them as data errors",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 8e-06,
+      "evidence_path": "artifacts/stage_1a/transaction_duplicate_profiles.csv",
+      "notes": "记录重复不等于脏数据；缺少 order_id、时间戳和 quantity，不能判断业务含义。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_f_transaction_duplicates",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.duplicate.date_customer_article",
+      "table_name": "transactions",
+      "check_name": "Same-date customer-article repeated purchase profile",
+      "check_type": "repeat_purchase_profile",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "same_date_customer_article_multi_groups": 2717844,
+        "same_date_customer_article_excess_rows": 3212929,
+        "max_repetition": 570,
+        "excess_ratio": 0.10107261395725047
+      },
+      "expected_condition": "report repeated groups and excess rows without judging validity",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 1.1e-05,
+      "evidence_path": "artifacts/stage_1a/transaction_duplicate_profiles.csv",
+      "notes": "该口径可能包含同日多件购买；缺少 quantity 和 order_id。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_f_transaction_duplicates",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.duplicate.date_distribution",
+      "table_name": "transactions",
+      "check_name": "Full-field repetition distribution by date",
+      "check_type": "duplicate_date_profile",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "date_count": 734,
+        "dates_with_repeated_records": 734,
+        "max_daily_excess_rows": 21718
+      },
+      "expected_condition": "report aggregate daily distribution only",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 6e-06,
+      "evidence_path": "artifacts/stage_1a/transaction_duplicate_profiles.csv",
+      "notes": "日期级汇总不包含用户、商品或交易明细。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_f_transaction_duplicates",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    }
+  ]
+}

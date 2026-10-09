@@ -1,0 +1,75 @@
+{
+  "stage": "3E",
+  "stage_version": "1.0.0",
+  "candidate_contract_version": "stage_3e_candidate_contract_v1",
+  "candidate_protocol_version": "source_rank_cap_pre_dedup_v1",
+  "migration_semantics": "stage3d_locked_t100_rank_preserving_v1",
+  "snapshots": ["validation_14d", "test_14d"],
+  "upstream": {
+    "split_manifest": "artifacts/stage_2a/split_manifest.csv",
+    "population_manifest": "artifacts/stage_2b/evaluation_population_manifest.csv",
+    "stage_3a_manifest": "artifacts/stage_3a/stage_3a_manifest.csv",
+    "stage_3b_manifest": "artifacts/stage_3b/stage_3b_manifest.csv",
+    "stage_3c_manifest": "artifacts/stage_3c/stage_3c_manifest.csv",
+    "stage_3d_manifest": "artifacts/stage_3d/stage_3d_manifest.csv",
+    "stage_3a_lock": "artifacts/stage_3a/stage_3a_lock.json",
+    "stage_3b_lock": "artifacts/stage_3b/stage_3b_lock.json",
+    "stage_3c_lock": "artifacts/stage_3c/stage_3c_lock.json",
+    "stage_3d_lock": "artifacts/stage_3d/stage_3d_lock.json",
+    "stage_3d_config": "configs/stage_3d_two_tower.yaml",
+    "stage_3d_manifest_metrics": "artifacts/stage_3d/union_metrics.csv",
+    "stage_3d_model_lineage": "artifacts/stage_3d/model_lineage.csv",
+    "stage_3d_union_directory": "artifacts/stage_3d/private/unions",
+    "stage_3d_checkpoint_directory": "artifacts/stage_3d/checkpoints",
+    "stage_3d_metric_directory": "artifacts/stage_3d/private",
+    "stage_2b_private": "artifacts/stage_2b/private"
+  },
+  "frozen_retrieval": {
+    "model": "TT1",
+    "quota": "T100",
+    "ann_ef_search": 200,
+    "candidate_budget": 500,
+    "source_caps": {
+      "repurchase": 50,
+      "itemcf": 200,
+      "two_tower": 100,
+      "trend": 100
+    },
+    "quota_semantics": "source_rank_cap_before_cross_source_dedup",
+    "duplicate_semantics": "duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance",
+    "insertion_order": [
+      "repurchase",
+      "itemcf",
+      "two_tower",
+      "trend",
+      "popularity_fallback"
+    ],
+    "fallback": "popularity_unique_fill_to_500"
+  },
+  "semantic_fingerprint": {
+    "version": "candidate_semantic_sha256_user_merkle_v1",
+    "membership_fields": ["snapshot_id", "customer_key", "candidate_rank", "article_key"],
+    "canonical_order": ["snapshot_id", "customer_key", "candidate_rank", "article_key"]
+  },
+  "execution": {
+    "partitions": 32,
+    "arrow_batch_rows": 65536,
+    "replay_partition_order": "reverse",
+    "parquet_compression": "zstd"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 512,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_3e",
+    "private_directory": "artifacts/stage_3e/private",
+    "checkpoint_directory": "artifacts/stage_3e/checkpoints",
+    "temp_directory": "artifacts/stage_3e/tmp",
+    "report": "docs/stages/stage_3e_final_retrieval_fusion_and_candidate_contract.md"
+  }
+}

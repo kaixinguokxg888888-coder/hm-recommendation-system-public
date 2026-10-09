@@ -1,0 +1,65 @@
+{
+  "group_name": "group_d_primary_keys",
+  "results": [
+    {
+      "check_id": "articles.full.primary_key",
+      "table_name": "articles",
+      "check_name": "article_id full candidate-key integrity",
+      "check_type": "candidate_key",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "table_name": "articles",
+        "field_name": "article_id",
+        "total_rows": 105542,
+        "non_null_rows": 105542,
+        "distinct_count": 105542,
+        "duplicate_key_count": 0,
+        "duplicate_excess_rows": 0,
+        "execution_scope": "FULL_SCAN"
+      },
+      "expected_condition": "null_count = 0 and duplicate_key_count = 0",
+      "rows_scanned": 105542,
+      "scan_scope": "FULL_SCAN: entire data/raw/articles.parquet; 105542 rows; 1/1 row groups",
+      "execution_seconds": 4e-06,
+      "evidence_path": "artifacts/stage_1a/key_integrity.csv",
+      "notes": "不输出任何具体重复键。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_d_primary_keys",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.primary_key",
+      "table_name": "customers",
+      "check_name": "customer_id full candidate-key integrity",
+      "check_type": "candidate_key",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "table_name": "customers",
+        "field_name": "customer_id",
+        "total_rows": 1371980,
+        "non_null_rows": 1371980,
+        "distinct_count": 1371980,
+        "duplicate_key_count": 0,
+        "duplicate_excess_rows": 0,
+        "execution_scope": "FULL_SCAN"
+      },
+      "expected_condition": "null_count = 0 and duplicate_key_count = 0",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/key_integrity.csv",
+      "notes": "不输出任何具体重复键。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_d_primary_keys",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    }
+  ]
+}

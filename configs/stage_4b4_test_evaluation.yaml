@@ -1,0 +1,153 @@
+{
+  "stage": "4B-4",
+  "stage_version": "5.1.0",
+  "phase": "phase5b_one_time_test_label_join_and_final_evaluation_v1",
+  "snapshot": {
+    "snapshot_id": "test_14d",
+    "as_of_date": "2020-09-08",
+    "request_date": "2020-09-09",
+    "label_start": "2020-09-09",
+    "label_end": "2020-09-22",
+    "label_window_days": 14,
+    "feedback_semantics": "B_user_item_day_binary_v1",
+    "label_window_closed": "both"
+  },
+  "versions": ["B0", "L1_FINAL_REFIT_600"],
+  "evaluation": {
+    "cutoff": 12,
+    "primary_metric": "MAP@12",
+    "secondary_metrics": ["NDCG@12", "Recall@12", "HitRate@12"],
+    "map_denominator": "min(all_future_positive_count,12)",
+    "recall_denominator": "all_future_positive_count",
+    "ndcg_gain": "binary",
+    "ndcg_discount": "1/log2(rank+1)",
+    "query_aggregation": "macro_unweighted_query_mean",
+    "all_zero_relevance_queries": "retained_as_zero",
+    "missed_future_positives": "retained_in_denominators",
+    "main_population": "evaluable_warm_users",
+    "cold_population": "cold_history_label_users"
+  },
+  "segments": {
+    "user": [
+      "evaluable_warm_users", "short_history", "warm", "active",
+      "positive_count_eq_1", "positive_count_gt_1", "candidate_positive_zero",
+      "candidate_positive_nonzero", "has_cold_positive", "no_cold_positive",
+      "cold_history_label_users"
+    ],
+    "target": ["seen_item", "cold_item", "head", "mid", "tail", "zero_history"],
+    "critical_regression": [
+      "short_history", "warm", "active", "positive_count_eq_1",
+      "positive_count_gt_1", "has_cold_positive", "cold_history_label_users"
+    ],
+    "critical_regression_rule": "final_minus_B0_MAP_ci_upper_lt_0"
+  },
+  "bootstrap": {
+    "method": "paired_user_block_percentile_v1",
+    "sampling_unit": "query",
+    "iterations": 1000,
+    "seed": 20260826,
+    "confidence_level": 0.95,
+    "interval": "percentile",
+    "comparison": "L1_FINAL_REFIT_600_minus_B0",
+    "metric": "per_query_AP_at_12"
+  },
+  "value_gate": {
+    "passed": "delta_gt_0_and_main_ci_lower_gt_0",
+    "positive_not_significant": "delta_gt_0_and_main_ci_lower_lte_0",
+    "non_positive": "delta_lte_0"
+  },
+  "keys": {
+    "query": ["snapshot_id", "customer_key"],
+    "row": ["snapshot_id", "customer_key", "article_key"],
+    "prediction_label_join": ["snapshot_id", "customer_key", "article_key"]
+  },
+  "ground_truth": {
+    "schema_version": "stage_4b4_test_ground_truth_binary_v1",
+    "same_user_item_window_dedup": true,
+    "label_positive": "at_least_one_B_feedback_purchase_in_closed_test_window",
+    "label_zero_interpretation": "candidate_item_not_observed_purchased_in_test_window",
+    "positive_injection_allowed": false
+  },
+  "execution": {
+    "partitions": 32,
+    "query_partition_expression": "customer_key % 32",
+    "duckdb_memory_limit_mb": 768,
+    "threads": 1,
+    "parquet_compression": "zstd",
+    "max_temp_directory_size": "20GB",
+    "resource_rss_fraction_of_available": 0.70,
+    "runtime_cap_recomputation_allowed": false,
+    "formal_test_evaluation_limit": 1,
+    "checkpoint_reuse_after_label_access_allowed": false
+  },
+  "fingerprints": {
+    "physical": "sha256_bytes_v1",
+    "semantic": "canonical_sha256_merkle_v1",
+    "lock": "canonical_json_self_sha256_v1",
+    "query_metric": "stage4b4_test_query_metric_sha256_v1",
+    "bootstrap_identity": "config_population_rng_binding_sha256_v1"
+  },
+  "expected": {
+    "phase4_lock": "358c25d19ecce3006428a293acd61564e0f6cd3fbdc0c156aa636ee41bef4bd8",
+    "phase5a_pre_label_lock": "34c8dcc52ee18c18766904d234e8fda0f2964e4805fee3175e9b45c375f7e8ca",
+    "candidate_queries": 128333,
+    "candidate_rows": 64166500,
+    "candidates_per_query": 500,
+    "main_queries": 117366,
+    "cold_queries": 10967,
+    "positive_pairs": 438380,
+    "stage2b_ground_truth_declared_fingerprint": "755cdb8a263ac2ff7bcb8e21b7176c4459d846486733f06870513971497ea779",
+    "candidate_semantic_fingerprint": "fd94f546add97637e15652c800bc636f3c7723bc4ae7d9cb055f82d5e83e9948",
+    "candidate_global_merkle_fingerprint": "4fee32e52f3476b2360fd3e7df7f77d1a92931f246d4165756a89fa3958f65d8",
+    "feature_schema_fingerprint": "5964882d45d0c3453fb49b3dac39fb187969989d364a63e7d4c18b3ed49896a3",
+    "feature_semantic_fingerprint": "179abf06003e880ddf7ecd00d1d98c47282a4a4e078f5516695ca860720479f1",
+    "b0_prediction_global_fingerprint": "b7a1f9b6268923dc4c27441b6ce559e90e339673a4bd5001402e91e05ddc75a9",
+    "final_prediction_global_fingerprint": "5080c3cc2149aa7bebc3cbd3261f93e5162aefbf426a3d987fcda05df8ee9a0e"
+  },
+  "upstream": {
+    "stage4a_config": "configs/stage_4a_ranking_time_protocol.yaml",
+    "stage2b_population_manifest": "artifacts/stage_2b/evaluation_population_manifest.csv",
+    "raw_test_label_source": "artifacts/stage_2b/private/ground_truth_test_14d.parquet",
+    "test_population_source": "artifacts/stage_2b/private/evaluation_population_test_14d.parquet",
+    "test_item_state_source": "artifacts/stage_2b/private/item_state_test_14d.parquet",
+    "phase4_lock": "artifacts/stage_4b4/stage_4b4_final_refit_lock.json",
+    "phase5a_lock": "artifacts/stage_4b4/stage_4b4_test_pre_label_lock.json",
+    "phase5a_gate": "artifacts/stage_4b4/test_prediction_contract_gate.csv",
+    "phase5a_manifest": "artifacts/stage_4b4/test_prediction_freeze_manifest.csv",
+    "phase5a_prediction_manifest": "artifacts/stage_4b4/test_prediction_fingerprint_manifest.csv",
+    "phase5a_checkpoints": "artifacts/stage_4b4/checkpoints/test_prediction_freeze",
+    "predictions": "artifacts/stage_4b4/private/test_prediction_freeze/predictions/formal"
+  },
+  "paths": {
+    "public_directory": "artifacts/stage_4b4",
+    "private_directory": "artifacts/stage_4b4/private/test_evaluation",
+    "checkpoint_directory": "artifacts/stage_4b4/checkpoints/test_evaluation",
+    "temp_directory": "artifacts/stage_4b4/tmp/test_evaluation",
+    "pre_access_audit": "artifacts/stage_4b4/test_evaluation_pre_access_audit.csv",
+    "preregistration": "artifacts/stage_4b4/test_evaluation_preregistration.json",
+    "pre_label_gate": "artifacts/stage_4b4/test_evaluation_pre_label_gate.csv",
+    "ground_truth_manifest": "artifacts/stage_4b4/test_ground_truth_manifest.json",
+    "population_summary": "artifacts/stage_4b4/test_evaluation_population_summary.csv",
+    "metrics": "artifacts/stage_4b4/test_evaluation_metrics.csv",
+    "bootstrap": "artifacts/stage_4b4/test_evaluation_bootstrap.csv",
+    "segment_metrics": "artifacts/stage_4b4/test_evaluation_segment_metrics.csv",
+    "fingerprint_manifest": "artifacts/stage_4b4/test_evaluation_fingerprint_manifest.csv",
+    "access_audit": "artifacts/stage_4b4/test_evaluation_access_audit.csv",
+    "resource_audit": "artifacts/stage_4b4/test_evaluation_resource_audit.csv",
+    "engineering_audit": "artifacts/stage_4b4/test_evaluation_engineering_audit.json",
+    "contract_gate": "artifacts/stage_4b4/test_evaluation_contract_gate.csv",
+    "lock": "artifacts/stage_4b4/stage_4b4_test_evaluation_lock.json",
+    "report": "docs/stages/stage_4b4_test_evaluation.md"
+  },
+  "forbidden": {
+    "model_retrained": false,
+    "predictions_recomputed": false,
+    "winner_changed": false,
+    "reranking_executed": false,
+    "retrieval_retuned": false,
+    "readme_updated": false,
+    "agents_updated": false,
+    "commit_executed": false,
+    "push_executed": false
+  }
+}

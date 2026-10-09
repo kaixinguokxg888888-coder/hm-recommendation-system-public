@@ -1,0 +1,56 @@
+{
+  "stage": "1A",
+  "executed_at": "2026-07-27T20:18:42+08:00",
+  "execution_scope": "FULL_SCAN",
+  "result_version": "1.0.0",
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+  "groups_expected": [
+    "group_a_metadata_schema",
+    "group_b_null_format",
+    "group_c_date_value_ranges",
+    "group_d_primary_keys",
+    "group_e_foreign_keys",
+    "group_f_transaction_duplicates"
+  ],
+  "groups_successful": [
+    "group_a_metadata_schema",
+    "group_b_null_format",
+    "group_c_date_value_ranges",
+    "group_d_primary_keys",
+    "group_e_foreign_keys",
+    "group_f_transaction_duplicates"
+  ],
+  "status_counts": {
+    "PASS": 33,
+    "WARN": 1
+  },
+  "result_count": 34,
+  "tests": {
+    "command": "python -m pytest",
+    "passed": true,
+    "return_code": 0,
+    "execution_seconds": 1.073263,
+    "summary": "24 passed in 0.42s"
+  },
+  "stopped_after_resource_failure": false,
+  "environment": {
+    "python": "3.10.11",
+    "duckdb": "1.5.5",
+    "pyarrow": "24.0.0",
+    "psutil": "7.2.2",
+    "virtual_environment_active": true
+  },
+  "resource_totals": {
+    "spill_observed": true,
+    "retry_observed": true,
+    "oom_observed": true,
+    "sum_group_execution_seconds": 160.459251,
+    "max_group_peak_rss_bytes": 710352896,
+    "max_group_temp_disk_peak_bytes": 2345404225
+  },
+  "stage_1b_recommendation": {
+    "decision": "有条件建议进入 Stage 1B",
+    "reason": "六个全量检查组、扩展测试和资源护栏均完成；进入前应先评审本报告中的警告与重复语义。"
+  }
+}

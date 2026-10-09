@@ -1,0 +1,40 @@
+{
+  "executed_at": "2026-07-27T15:53:37+08:00",
+  "workspace": ".",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": {
+    "version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "python.exe",
+    "virtual_env_active": false
+  },
+  "cpu": {
+    "logical_cores": 8
+  },
+  "memory": {
+    "total_bytes": 16969424896,
+    "available_bytes": 2272133120
+  },
+  "disk": {
+    "path": ".",
+    "total_bytes": 838155104256,
+    "used_bytes": 259645620224,
+    "free_bytes": 578509484032
+  },
+  "dependencies": {
+    "pandas": "2.2.3",
+    "pyarrow": "24.0.0",
+    "polars": null,
+    "duckdb": null,
+    "numpy": "2.2.4",
+    "scikit-learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "pytorch": "2.6.0"
+  },
+  "git": {
+    "available": true,
+    "is_repository": false,
+    "error": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  "data_total_size_bytes": 948369865,
+  "parquet_file_count": 3
+}

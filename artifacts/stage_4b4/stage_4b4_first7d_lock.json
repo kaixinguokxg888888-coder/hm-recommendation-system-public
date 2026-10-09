@@ -1,0 +1,79 @@
+{
+  "additional_challenger_evaluated": false,
+  "bootstrap_physical_fingerprint": "21ca34b46b12e5c6d91acab9d0b090995308db89df1aae58936006b426a79f1c",
+  "confidence_status": "POSITIVE_AND_SIGNIFICANT",
+  "config_fingerprint": "4ef6dfcd30b52bc75efbdd58c0cd0c5be271f45577b02a511b266d9bf2a5b369",
+  "direction_status": "ROBUSTNESS_DIRECTION_PASS",
+  "final_refit_executed": false,
+  "first7d_ground_truth": {
+    "label_window": "2020-08-26..2020-09-01",
+    "physical_fingerprint": "c2b007dd9dc77b0d6036a82fd6ca638426857ab251011b92d9d1124e54a63202",
+    "positive_pair_count": 255172,
+    "semantic_fingerprint": "eae1e1585e209ebb93696bc7efcadc9c5e327cf1b2d4eac9acbb011deca212f8"
+  },
+  "first7d_labels_read": true,
+  "first7d_population": {
+    "cold_query_count": 5940,
+    "main_query_count": 74313,
+    "physical_fingerprint": "7b90950db5776e1447d5e3c4a5e8644c6900414883761bb7f2e8955a01603214",
+    "query_count": 80253,
+    "semantic_fingerprint": "d71ed07a3f895e26a7702ece31c2829aba391ab92b69119201e2888cd27bff2a"
+  },
+  "first7d_read_count": 1,
+  "lock_fingerprint": "b3fa0a2a48b99a31c90fb85852951622ccc9a7ba2acaea196056dcac76db69c5",
+  "locked_at": "2026-08-14T16:58:45+08:00",
+  "main_metrics": {
+    "B0": {
+      "hit_rate_at_12": 0.06848061577382154,
+      "map_at_12": 0.01507260929160742,
+      "ndcg_at_12": 0.02326953128715582,
+      "recall_at_12": 0.03556462947587783
+    },
+    "L1_600": {
+      "hit_rate_at_12": 0.14434890261461655,
+      "map_at_12": 0.03144863029531143,
+      "ndcg_at_12": 0.04851479410723566,
+      "recall_at_12": 0.07091106044833446
+    }
+  },
+  "metric_fingerprints": {
+    "B0": {
+      "physical_fingerprint": "eb45f73989475b573a3279a013b19f3505a510bab8a17c3287e9b2d337be2232",
+      "query_count": 80253,
+      "query_metric_merkle_fingerprint": "026239f514f18e703e95b325f4fe46bde0740c994ddebbc9c68f20abe988067a"
+    },
+    "L1_600": {
+      "physical_fingerprint": "27adfc67ad9e5bab3c19159d14bc15f52b43c5bc96d2cf6dd0bb83b66e1594e6",
+      "query_count": 80253,
+      "query_metric_merkle_fingerprint": "d431910200ad474c4658442b3d74c622a2ba3679ab55d1ca164c1a454214ba3c"
+    }
+  },
+  "phase": "phase3_first7d_locked_winner_diagnostic_v1",
+  "phase1_lock_physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+  "phase2_selection_lock_physical_fingerprint": "2880fb7a4cf864b56ac595e8f6ce8498d938e2ecf20579f1358eff19d03a86cc",
+  "phase2_selection_lock_semantic_fingerprint": "83a4bfd2dfc76084126eccb2291b2da91d6214756159b0f07f159b8cce001780",
+  "prediction_global_merkle_fingerprints": {
+    "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+    "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+  },
+  "preregistration_fingerprint": "9b90a83a0c37808db6635c80652ae5f10d5161767e6983346ba116606179b2d9",
+  "public_metric_physical_fingerprint": "71b7d2bf65d72f10be7c7aa2daeebfc79d637cf6b48f907c23b9cbb6c93ad575",
+  "replay_physical_fingerprint": "5347446f20a726ecd8503b1e91cdbcbb31d5c4c6168ef66728a482cc51b8ca1f",
+  "reranking_executed": false,
+  "retrieval_retuned": false,
+  "segment_regression_review": "NO_FIRST7D_CRITICAL_SEGMENT_REGRESSION",
+  "stage": "4B-4",
+  "status": "FIRST7D_LOCKED_WINNER_DIAGNOSTIC_COMPLETE",
+  "test_authorized": false,
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "validation_predictions_frozen": true,
+  "winner": "L1_600",
+  "winner_changed": false,
+  "winner_feature_set": "F1",
+  "winner_iteration": 600,
+  "winner_map_delta_vs_b0": 0.016376021003704014,
+  "winner_selected": true
+}

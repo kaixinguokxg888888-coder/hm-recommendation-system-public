@@ -1,0 +1,11 @@
+﻿task,status,scope,rows,queries,rounds,wall_time_seconds,peak_rss_bytes,rss_limit_bytes,temp_disk_peak_bytes,spill_observed,oom_observed,checkpoint_attempt,error
+resource_smoke,PASS,train_partition_0_f1,161354,1587,600,14.6895154,323706880,2592550912,0,False,False,1,
+formal_completed_checkpoints,PASS,validation_features_and_training_matrix,75915556,192856,0,1712.8599021,2095194112,2496645939,563085312,True,False,1,
+train_L0,BLOCKED_BY_RESOURCE,full_optimizer_f0,5236056,51497,600,203.4770019,2755088384,2496645939,0,False,False,1,training_peak_rss_exceeded_formal_70_percent_boundary
+train_L0_isolated,REPORT_CONFLICT,full_optimizer_f0,5236056,51497,600,1.2028809,97222656,2246628966,0,False,False,1,stopped_before_dataset_because_memmap_and_group_order_conflict
+train_L0_isolated,FAILED,full_optimizer_f0_query_order_v2,5236056,51497,600,20.1367196,1101053952,2104387174,0,False,False,2,dataset_construct_parameter_binding_error_before_training
+train_L0_isolated_accepted,PASS,full_optimizer_f0_query_order_v2,5236056,51497,600,237.6745998999977,1122066432,2009026969,0,False,False,2,
+train_L1_isolated_accepted,PASS,full_optimizer_f1_query_order_v2,5236056,51497,600,340.3313407999958,1646505984,1942920806,0,False,False,1,
+training_query_order_v2,PASS,full_optimizer_global_query_order,5236056,51497,0,66.95095199999923,0,0,0,False,False,2,
+prediction_partitions,PASS,seven_versions_full500_32_partitions,494756500,989513,0,13193.052579,919638016,0,0,False,False,2,
+prediction_replay,PASS,partition_0_seven_versions,15288000,30576,0,214.3900015000254,418533376,0,0,False,False,1,

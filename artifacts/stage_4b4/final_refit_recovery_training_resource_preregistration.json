@@ -1,0 +1,15 @@
+{
+  "available_memory_at_training_start_bytes": 6794416128,
+  "cap_shopping_allowed": false,
+  "external_process_tree_monitor": true,
+  "frozen_absolute_training_cap_bytes": 4756091289,
+  "input_fingerprint": "20c91eab2204d68dac0b5b7d3f69079e0ed39c4901f05debd77c5f5ff688d724",
+  "recovery_config_canonical_fingerprint": "677584aa34c13d01ed65495388ae3ea3f127dde002c6bf13bdc390b2444b9882",
+  "recovery_preregistration_fingerprint": "6ae57984e94cfea14fc9716eec67406892efbae766e26bf15f0abcc95ff89183",
+  "resource_preregistration_fingerprint": "67dfdd6eb291e0aa6ab335a630c522bb4deaacd386451012c976accf66838b11",
+  "rss_fraction": 0.7,
+  "runtime_available_memory_is_observation_only": true,
+  "status": "FINAL_REFIT_TRAINING_RESOURCE_PREREGISTERED_BEFORE_WORKER",
+  "worker_consumes_frozen_absolute_cap_only": true,
+  "worker_source_fingerprint": "5820ca3a36d2dd898e48140c2041b92c33fee42bef45d406492749b5b9206aa8"
+}

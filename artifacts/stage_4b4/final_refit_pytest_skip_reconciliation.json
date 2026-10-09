@@ -1,0 +1,93 @@
+{
+  "binary_rebuilt": false,
+  "combined_matrix_rebuilt": false,
+  "corrected_test_audit_physical_fingerprint": "bb550b02684eb30ddb377a28f7ba9e74681c205c5fef9c636f9a3bcbd3aa3ae9",
+  "critical_gate_test_skipped": false,
+  "full_collection": 447,
+  "full_command": [
+    "python",
+    "scripts/stage_4b4_pytest_structured_worker.py",
+    "--output",
+    "<private-results>/full.json",
+    "--",
+    "-ra",
+    "-q"
+  ],
+  "full_errors": 0,
+  "full_failed": 0,
+  "full_passed": 446,
+  "full_skipped": 1,
+  "full_xfailed": 0,
+  "full_xpassed": 0,
+  "historical_formal_audit_counts": {
+    "counts_are_formal_statistics": false,
+    "full_last_line_s_markers": 1,
+    "targeted_s_markers": 6
+  },
+  "historical_reported_counts": {
+    "full_skipped": 2,
+    "source": "prior_narrative_post_lock_rerun_summary",
+    "targeted_skipped": 1
+  },
+  "labels_opened": false,
+  "model_retrained": false,
+  "original_test_audit_physical_fingerprint": "f0ca5a19af80da95f6bd8a6054c8d9d54e21c2184baa03c9a0d7f7e7d975f97f",
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "prediction_recomputed": false,
+  "reconciliation_semantic_fingerprint": "4febdf93d435795df7b7b292e18f23b0d26b1b4ac0db42bb8b3cfc78cea72433",
+  "replay_recomputed": false,
+  "root_cause": "AUDIT_PARSER_ERROR",
+  "root_cause_detail": "The old auditor retained only the last non-empty pytest stdout line. The targeted suite fit on one progress line and displayed six pre-finalization skips; the full suite spanned multiple progress lines, so its persisted '..s...' fragment was not a total. The prior 1/2 narrative mixed later post-lock targeted/full output and also counted the targeted skip as if it belonged to full.",
+  "skip_classification": {
+    "ENVIRONMENT_OR_DEPENDENCY_SKIP": 0,
+    "EXPECTED_OBSOLETE_ARTIFACT_SKIP": 2,
+    "EXPECTED_PROTOCOL_SKIP": 0,
+    "MISSING_FORMAL_ARTIFACT_SKIP": 0,
+    "UNEXPECTED_REQUIRED_TEST_SKIP": 0,
+    "UNKNOWN_SKIP": 0
+  },
+  "skip_details": [
+    {
+      "classification": "EXPECTED_OBSOLETE_ARTIFACT_SKIP",
+      "code_location": "tests/test_stage_4b4_phase4.py:190",
+      "evidence": "The optional test targets legacy final_refit_contract_gate.csv (P4G1-P4G13); the formal recovered gate is final_refit_resource_recovery_gate.csv (R1-R16), whose dedicated tests execute and pass.",
+      "is_expected": true,
+      "is_phase4_required_gate": false,
+      "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+      "reason": "formal gate is created during finalization",
+      "suite": "targeted"
+    },
+    {
+      "classification": "EXPECTED_OBSOLETE_ARTIFACT_SKIP",
+      "code_location": "tests/test_stage_4b4_phase4.py:190",
+      "evidence": "The optional test targets legacy final_refit_contract_gate.csv (P4G1-P4G13); the formal recovered gate is final_refit_resource_recovery_gate.csv (R1-R16), whose dedicated tests execute and pass.",
+      "is_expected": true,
+      "is_phase4_required_gate": false,
+      "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+      "reason": "formal gate is created during finalization",
+      "suite": "full"
+    }
+  ],
+  "status": "PYTEST_SKIP_AUDIT_RECONCILED",
+  "targeted_collection": 60,
+  "targeted_command": [
+    "python",
+    "scripts/stage_4b4_pytest_structured_worker.py",
+    "--output",
+    "<private-results>/targeted.json",
+    "--",
+    "tests/test_stage_4b4_phase4.py",
+    "tests/test_stage_4b4_phase4_resource_recovery.py",
+    "tests/test_stage_4b4_phase4_post_training_recovery.py",
+    "-ra",
+    "-q"
+  ],
+  "targeted_errors": 0,
+  "targeted_failed": 0,
+  "targeted_passed": 59,
+  "targeted_skipped": 1,
+  "targeted_xfailed": 0,
+  "targeted_xpassed": 0,
+  "test_access": false,
+  "validation_optimizer_rebuilt": false
+}

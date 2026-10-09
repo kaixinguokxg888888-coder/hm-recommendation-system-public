@@ -1,0 +1,7 @@
+﻿check,status
+public_absolute_path,PASS
+public_local_username,PASS
+public_raw_id_fields,PASS
+raw_read_only,PASS
+stage3d_artifacts_read_only,PASS
+stage3e_artifacts_read_only,PASS

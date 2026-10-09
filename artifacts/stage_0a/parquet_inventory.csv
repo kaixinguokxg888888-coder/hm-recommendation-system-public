@@ -1,0 +1,4 @@
+﻿logical_table,file_path,file_size_bytes,row_count,row_group_count,compression,schema_fingerprint,readable,error_message
+articles,data/raw/articles.parquet,6378835,105542,1,SNAPPY,b32d5784aa3a872285cdbbd873a875f85da966cd1d3842eac39fccef6b1b3cd0,True,
+customers,data/raw/customers.parquet,167711266,1371980,2,SNAPPY,d768b8937a423769de6c4e41822a704060660ac68d9b3f086645b8baf3cfc790,True,
+transactions,data/raw/transactions_train.parquet,774279764,31788324,31,SNAPPY,630a9f8f9b68ca8d3745238f15be8cacd3c51541a127cd29fd6211e8b5a8fb4c,True,

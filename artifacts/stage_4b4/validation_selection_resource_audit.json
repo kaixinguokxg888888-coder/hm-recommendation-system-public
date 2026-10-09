@@ -1,0 +1,13 @@
+{
+  "available_memory_at_preregistration_bytes": 2404909056,
+  "initial_materialization_checkpoint_recomputed_count": 480,
+  "recovery_checkpoint_reused_count": 480,
+  "duckdb_memory_limit_mb_frozen_at_preregistration": 802,
+  "recovery_process_calculated_memory_limit_mb_not_used_for_recomputation": 860,
+  "peak_rss_bytes": 601559040,
+  "peak_temp_bytes": 0,
+  "rss_hard_limit_bytes_frozen_at_preregistration": 1683436339,
+  "recovery_process_calculated_rss_limit_bytes_not_used_for_recomputation": 1805461504,
+  "task_count": 480,
+  "threads": 2
+}

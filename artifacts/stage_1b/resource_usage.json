@@ -1,0 +1,303 @@
+{
+  "memory_limit_policy": {
+    "fraction_of_available": 0.35,
+    "min_mb": 256,
+    "max_mb": 1024
+  },
+  "threads": 1,
+  "temp_directory": "artifacts/stage_1b/tmp",
+  "max_temp_directory_size": "20GB",
+  "groups": [
+    {
+      "group_name": "group_a_temporal_activity",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:34:30+08:00",
+      "finished_at": "2026-07-28T10:36:05+08:00",
+      "execution_seconds": 95.101936,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1201090560,
+      "current_attempt_peak_rss_bytes": 1201090560,
+      "temp_disk_peak_bytes": 4776755200,
+      "current_attempt_temp_disk_peak_bytes": 918781952,
+      "output_files": [
+        "artifacts/stage_1b/temporal_activity.csv",
+        "artifacts/stage_1b/groups/group_a_temporal_activity.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/temporal_activity.csv": 67543,
+        "artifacts/stage_1b/groups/group_a_temporal_activity.json": 586
+      },
+      "error_message": "",
+      "attempts": 2,
+      "retried": true,
+      "spill_observed": true,
+      "oom_observed": true,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [
+        {
+          "status": "FAILED",
+          "execution_seconds": 45.223259,
+          "peak_rss_bytes": 1100066816,
+          "temp_disk_peak_bytes": 4776755200,
+          "error_message": "OutOfMemoryException: Out of Memory Error: failed to pin block of size 256.0 KiB (976.4 MiB/976.5 MiB used)\n\nPossible solutions:\n* Reducing the number of threads (SET threads=X)\n* Disabling insertion-order preservation (SET preserve_insertion_order=false)\n* Increasing the memory limit (SET memory_limit='...GB')\n\nSee also https://duckdb.org/docs/stable/guides/performance/how_to_tune_workloads",
+          "oom_observed": true,
+          "spill_observed": true
+        }
+      ],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_b_user_activity",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:36:22+08:00",
+      "finished_at": "2026-07-28T10:38:03+08:00",
+      "execution_seconds": 100.611774,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1109790720,
+      "current_attempt_peak_rss_bytes": 1109790720,
+      "temp_disk_peak_bytes": 2779086848,
+      "current_attempt_temp_disk_peak_bytes": 2779086848,
+      "output_files": [
+        "artifacts/stage_1b/user_activity_buckets.csv",
+        "artifacts/stage_1b/user_sequence_quantiles.csv",
+        "artifacts/stage_1b/groups/group_b_user_activity.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/user_activity_buckets.csv": 2545,
+        "artifacts/stage_1b/user_sequence_quantiles.csv": 670,
+        "artifacts/stage_1b/groups/group_b_user_activity.json": 917
+      },
+      "error_message": "",
+      "attempts": 1,
+      "retried": false,
+      "spill_observed": true,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_c_item_long_tail",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:38:19+08:00",
+      "finished_at": "2026-07-28T10:39:09+08:00",
+      "execution_seconds": 50.240714,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1096167424,
+      "current_attempt_peak_rss_bytes": 1096167424,
+      "temp_disk_peak_bytes": 1730150400,
+      "current_attempt_temp_disk_peak_bytes": 1730150400,
+      "output_files": [
+        "artifacts/stage_1b/item_popularity_buckets.csv",
+        "artifacts/stage_1b/item_long_tail_metrics.csv",
+        "artifacts/stage_1b/groups/group_c_item_long_tail.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/item_popularity_buckets.csv": 1797,
+        "artifacts/stage_1b/item_long_tail_metrics.csv": 459,
+        "artifacts/stage_1b/groups/group_c_item_long_tail.json": 1129
+      },
+      "error_message": "",
+      "attempts": 1,
+      "retried": false,
+      "spill_observed": true,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_d_repurchase_stability",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:43:15+08:00",
+      "finished_at": "2026-07-28T10:46:26+08:00",
+      "execution_seconds": 190.730708,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1322614784,
+      "current_attempt_peak_rss_bytes": 1322614784,
+      "temp_disk_peak_bytes": 6140264448,
+      "current_attempt_temp_disk_peak_bytes": 6127616000,
+      "output_files": [
+        "artifacts/stage_1b/repurchase_metrics.csv",
+        "artifacts/stage_1b/groups/group_d_repurchase_stability.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/repurchase_metrics.csv": 1655,
+        "artifacts/stage_1b/groups/group_d_repurchase_stability.json": 1453
+      },
+      "error_message": "",
+      "attempts": 2,
+      "retried": true,
+      "spill_observed": true,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [
+        {
+          "status": "FAILED",
+          "execution_seconds": 185.414404,
+          "peak_rss_bytes": 1321639936,
+          "temp_disk_peak_bytes": 6140264448,
+          "error_message": "ValueError: dict contains fields not in fieldnames: 'user_count', 'max_count', 'group_count'",
+          "oom_observed": false,
+          "spill_observed": true
+        }
+      ],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_e_cold_start",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:46:46+08:00",
+      "finished_at": "2026-07-28T10:47:18+08:00",
+      "execution_seconds": 32.53879,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1131454464,
+      "current_attempt_peak_rss_bytes": 1131454464,
+      "temp_disk_peak_bytes": 543752192,
+      "current_attempt_temp_disk_peak_bytes": 543752192,
+      "output_files": [
+        "artifacts/stage_1b/cold_start_by_window.csv",
+        "artifacts/stage_1b/groups/group_e_cold_start.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/cold_start_by_window.csv": 1080,
+        "artifacts/stage_1b/groups/group_e_cold_start.json": 2393
+      },
+      "error_message": "",
+      "attempts": 1,
+      "retried": false,
+      "spill_observed": true,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_f_time_split",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:47:31+08:00",
+      "finished_at": "2026-07-28T10:48:07+08:00",
+      "execution_seconds": 35.927155,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 31788324,
+      "peak_rss_bytes": 1132470272,
+      "current_attempt_peak_rss_bytes": 1132470272,
+      "temp_disk_peak_bytes": 538017792,
+      "current_attempt_temp_disk_peak_bytes": 538017792,
+      "output_files": [
+        "artifacts/stage_1b/time_split_comparison.csv",
+        "artifacts/stage_1b/groups/group_f_time_split.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/time_split_comparison.csv": 1344,
+        "artifacts/stage_1b/groups/group_f_time_split.json": 2740
+      },
+      "error_message": "",
+      "attempts": 1,
+      "retried": false,
+      "spill_observed": true,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [],
+      "last_action": "EXECUTED"
+    },
+    {
+      "group_name": "group_g_model_evidence",
+      "status": "SUCCESS",
+      "started_at": "2026-07-28T10:48:20+08:00",
+      "finished_at": "2026-07-28T10:48:20+08:00",
+      "execution_seconds": 0.047378,
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+      "rows_scanned": 0,
+      "peak_rss_bytes": 50503680,
+      "current_attempt_peak_rss_bytes": 50503680,
+      "temp_disk_peak_bytes": 0,
+      "current_attempt_temp_disk_peak_bytes": 0,
+      "output_files": [
+        "artifacts/stage_1b/model_evidence_matrix.csv",
+        "artifacts/stage_1b/groups/group_g_model_evidence.json"
+      ],
+      "output_file_sizes": {
+        "artifacts/stage_1b/model_evidence_matrix.csv": 2170,
+        "artifacts/stage_1b/groups/group_g_model_evidence.json": 368
+      },
+      "error_message": "",
+      "attempts": 1,
+      "retried": false,
+      "spill_observed": false,
+      "oom_observed": false,
+      "duckdb_memory_limit_mb": 1024,
+      "duckdb_threads": 1,
+      "temp_directory": "artifacts/stage_1b/tmp",
+      "max_temp_directory_size": "20GB",
+      "attempt_history": [],
+      "last_action": "EXECUTED"
+    }
+  ],
+  "totals": {
+    "sum_group_seconds": 505.19845499999997,
+    "peak_rss_bytes": 1322614784,
+    "peak_temp_bytes": 6140264448,
+    "spill_observed": true,
+    "retry_observed": true,
+    "oom_observed": true
+  },
+  "output_file_sizes": {
+    "artifacts/stage_1b/profile_summary.json": 10361,
+    "artifacts/stage_1b/resource_usage.json": 12818,
+    "docs/stages/stage_1b_recommendation_feasibility_profile.md": 7883,
+    "artifacts/stage_1b/cold_start_by_window.csv": 1080,
+    "artifacts/stage_1b/item_long_tail_metrics.csv": 459,
+    "artifacts/stage_1b/item_popularity_buckets.csv": 1797,
+    "artifacts/stage_1b/model_evidence_matrix.csv": 2170,
+    "artifacts/stage_1b/repurchase_metrics.csv": 1655,
+    "artifacts/stage_1b/temporal_activity.csv": 67543,
+    "artifacts/stage_1b/time_split_comparison.csv": 1344,
+    "artifacts/stage_1b/user_activity_buckets.csv": 2545,
+    "artifacts/stage_1b/user_sequence_quantiles.csv": 670,
+    "artifacts/stage_1b/checkpoints/group_a_temporal_activity.json": 1853,
+    "artifacts/stage_1b/checkpoints/group_b_user_activity.json": 1315,
+    "artifacts/stage_1b/checkpoints/group_c_item_long_tail.json": 1320,
+    "artifacts/stage_1b/checkpoints/group_d_repurchase_stability.json": 1560,
+    "artifacts/stage_1b/checkpoints/group_e_cold_start.json": 1186,
+    "artifacts/stage_1b/checkpoints/group_f_time_split.json": 1189,
+    "artifacts/stage_1b/checkpoints/group_g_model_evidence.json": 1173,
+    "artifacts/stage_1b/groups/group_a_temporal_activity.json": 586,
+    "artifacts/stage_1b/groups/group_b_user_activity.json": 917,
+    "artifacts/stage_1b/groups/group_c_item_long_tail.json": 1129,
+    "artifacts/stage_1b/groups/group_d_repurchase_stability.json": 1453,
+    "artifacts/stage_1b/groups/group_e_cold_start.json": 2393,
+    "artifacts/stage_1b/groups/group_f_time_split.json": 2740,
+    "artifacts/stage_1b/groups/group_g_model_evidence.json": 368
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "group_name": "group_b_user_activity",
+  "status": "SUCCESS",
+  "started_at": "2026-07-28T10:36:22+08:00",
+  "finished_at": "2026-07-28T10:38:03+08:00",
+  "execution_seconds": 100.611774,
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+  "rows_scanned": 31788324,
+  "peak_rss_bytes": 1109790720,
+  "current_attempt_peak_rss_bytes": 1109790720,
+  "temp_disk_peak_bytes": 2779086848,
+  "current_attempt_temp_disk_peak_bytes": 2779086848,
+  "output_files": [
+    "artifacts/stage_1b/user_activity_buckets.csv",
+    "artifacts/stage_1b/user_sequence_quantiles.csv",
+    "artifacts/stage_1b/groups/group_b_user_activity.json"
+  ],
+  "output_file_sizes": {
+    "artifacts/stage_1b/user_activity_buckets.csv": 2545,
+    "artifacts/stage_1b/user_sequence_quantiles.csv": 670,
+    "artifacts/stage_1b/groups/group_b_user_activity.json": 917
+  },
+  "error_message": "",
+  "attempts": 1,
+  "retried": false,
+  "spill_observed": true,
+  "oom_observed": false,
+  "duckdb_memory_limit_mb": 1024,
+  "duckdb_threads": 1,
+  "temp_directory": "artifacts/stage_1b/tmp",
+  "max_temp_directory_size": "20GB",
+  "attempt_history": [],
+  "last_action": "EXECUTED"
+}

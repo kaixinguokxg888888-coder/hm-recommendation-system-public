@@ -1,0 +1,15 @@
+﻿check,actual,expected,violations,status
+query_count,51497,51497,0,PASS
+row_count,5236056,5236056,0,PASS
+query_position_mismatch,0,0,0,PASS
+group_size_position_mismatch,0,0,0,PASS
+positive_count_position_mismatch,0,0,0,PASS
+sampled_zero_count_position_mismatch,0,0,0,PASS
+row_key_mismatch,0,0,0,PASS
+candidate_rank_order_violations,0,0,0,PASS
+all_zero_groups,0,0,0,PASS
+cross_query_boundary_groups,0,0,0,PASS
+duplicate_row_keys,0,0,0,PASS
+sum_group_size,5236056,5236056,0,PASS
+positive_rows,86356,86356,0,PASS
+sampled_zero_rows,5149700,5149700,0,PASS

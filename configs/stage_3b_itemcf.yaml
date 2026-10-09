@@ -1,0 +1,99 @@
+{
+  "stage": "3B",
+  "stage_version": "1.0.0",
+  "candidate_protocol_version": "1.0.0",
+  "input_manifests": {
+    "split": "artifacts/stage_2a/split_manifest.csv",
+    "population": "artifacts/stage_2b/evaluation_population_manifest.csv",
+    "stage_3a": "artifacts/stage_3a/stage_3a_manifest.csv"
+  },
+  "upstream": {
+    "stage_2a_private": "artifacts/stage_2a/private",
+    "stage_2b_private": "artifacts/stage_2b/private",
+    "stage_3a_private": "artifacts/stage_3a/private",
+    "stage_3a_lock": "artifacts/stage_3a/stage_3a_lock.json"
+  },
+  "snapshots": ["validation_14d", "test_14d"],
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "population_version": "1.0.0",
+  "candidate_universe_versions": {
+    "warm": "history_seen_items_v1",
+    "cold_history": "full_article_dimension_v1"
+  },
+  "itemcf": {
+    "variants": ["cosine", "iuf"],
+    "max_items_per_user_for_cooccurrence": 50,
+    "top_neighbors_per_item": 200,
+    "max_seed_items_per_user": 20,
+    "seed_decay_version": "inverse_log2_rank_plus_1_v1",
+    "seen_item_exclusion": true,
+    "candidate_max_k": 500,
+    "selection_order": [
+      "recall_at_500_desc",
+      "hit_rate_at_500_desc",
+      "map_at_12_desc",
+      "candidate_user_coverage_desc",
+      "cosine_if_exact_tie"
+    ]
+  },
+  "evaluation_k": [12, 50, 100, 500],
+  "union": {
+    "candidate_budget": 500,
+    "base_quotas": {"repurchase": 50, "trend": 100, "itemcf": 0},
+    "itemcf_quotas": {"repurchase": 50, "itemcf": 300, "trend": 100},
+    "insertion_order": ["repurchase", "itemcf", "trend", "popularity_fallback"],
+    "trend_variant": "window_7d",
+    "repurchase_variant": "pure",
+    "popularity_variant": "global"
+  },
+  "bootstrap": {
+    "iterations": 1000,
+    "seed": 20260803,
+    "confidence_level": 0.95,
+    "sampling_unit": "paired_user_block"
+  },
+  "execution": {
+    "pair_partitions": 32,
+    "candidate_partitions": 32
+  },
+  "test": {
+    "lock_path": "artifacts/stage_3b/stage_3b_lock.json",
+    "allowed_tasks": [
+      "locked_itemcf",
+      "single_route_evaluation",
+      "base_union",
+      "itemcf_union",
+      "overlap",
+      "marginal_recall",
+      "bootstrap",
+      "public_aggregation"
+    ]
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_3b",
+    "private_directory": "artifacts/stage_3b/private",
+    "checkpoint_directory": "artifacts/stage_3b/checkpoints",
+    "temp_directory": "artifacts/stage_3b/tmp",
+    "report": "docs/stages/stage_3b_itemcf_and_incremental_recall.md"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 512,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "checkpoint": {
+    "reuse_matching_success": true,
+    "retry_failed": true,
+    "require_output_fingerprint": true
+  },
+  "fingerprint": {
+    "algorithm": "sha256",
+    "include_config": true,
+    "include_input_manifests": true,
+    "include_stage_3a_lock": true,
+    "include_stage_3b_source": true
+  }
+}

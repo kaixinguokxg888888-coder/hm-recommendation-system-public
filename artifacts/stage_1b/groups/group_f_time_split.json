@@ -1,0 +1,85 @@
+{
+  "group_name": "group_f_time_split",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "7": {
+      "cutoff": "2020-09-16",
+      "train_rows": 31548013,
+      "test_rows": 240311,
+      "train_users": 1356709,
+      "test_users": 68984,
+      "train_items": 103880,
+      "test_items": 17986,
+      "evaluable_users": 63412,
+      "test_user_train_visibility": 0.9192276469906066,
+      "one_test_positive_users": 19994,
+      "one_test_positive_user_rate": 0.28983532413313234,
+      "evaluable_users_history_lt5": 4135,
+      "evaluable_users_history_lt10": 9170,
+      "test_positive_quantiles": {
+        "p25": 1.0,
+        "p50": 2.0,
+        "p75": 4.0,
+        "p90": 7.0,
+        "p99": 17.0
+      },
+      "warm_user_row_rate": 0.9245019994923245,
+      "warm_item_row_rate": 0.9602015721294489,
+      "warm_user_item_candidate_upper_bound": 0.887799559737174
+    },
+    "14": {
+      "cutoff": "2020-09-09",
+      "train_rows": 31292772,
+      "test_rows": 495552,
+      "train_users": 1351314,
+      "test_users": 128333,
+      "train_items": 102967,
+      "test_items": 22640,
+      "evaluable_users": 117366,
+      "test_user_train_visibility": 0.9145426351756758,
+      "one_test_positive_users": 33063,
+      "one_test_positive_user_rate": 0.25763443541411796,
+      "evaluable_users_history_lt5": 8017,
+      "evaluable_users_history_lt10": 17778,
+      "test_positive_quantiles": {
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 5.0,
+        "p90": 8.0,
+        "p99": 19.0
+      },
+      "warm_user_row_rate": 0.9243853319126953,
+      "warm_item_row_rate": 0.9093253583882216,
+      "warm_user_item_candidate_upper_bound": 0.8395203732403461
+    },
+    "28": {
+      "cutoff": "2020-08-26",
+      "train_rows": 30744934,
+      "test_rows": 1043390,
+      "train_users": 1339660,
+      "test_users": 233174,
+      "train_items": 101151,
+      "test_items": 28297,
+      "evaluable_users": 210553,
+      "test_user_train_visibility": 0.9029866108571282,
+      "one_test_positive_users": 51510,
+      "one_test_positive_user_rate": 0.2209079914570235,
+      "evaluable_users_history_lt5": 16034,
+      "evaluable_users_history_lt10": 35071,
+      "test_positive_quantiles": {
+        "p25": 2.0,
+        "p50": 3.0,
+        "p75": 6.0,
+        "p90": 10.0,
+        "p99": 23.0
+      },
+      "warm_user_row_rate": 0.9235396160591917,
+      "warm_item_row_rate": 0.8435781443180402,
+      "warm_user_item_candidate_upper_bound": 0.7777647859381439
+    }
+  }
+}

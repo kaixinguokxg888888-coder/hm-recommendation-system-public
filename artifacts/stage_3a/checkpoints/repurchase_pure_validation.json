@@ -1,0 +1,24 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 53.70451690000482,
+  "generated_at": "2026-07-28T16:35:19+08:00",
+  "group_name": "repurchase_pure_validation",
+  "memory_limit_mb": 580,
+  "output_files": [
+    "artifacts/stage_3a/private/candidates_validation_14d_repurchase_pure.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3a/private/candidates_validation_14d_repurchase_pure.parquet": "a2aa30afe7a08e21ea24953c5cea72e6f95bb9780b4b27de674b29433bf35d3a"
+  },
+  "output_size_bytes": 25481448,
+  "peak_rss_bytes": 967249920,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 1048839028,
+  "threads": 1
+}

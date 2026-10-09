@@ -1,0 +1,24 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 10.074492100044154,
+  "generated_at": "2026-08-03T11:37:09+08:00",
+  "group_name": "validation_14d_pairs_part_011",
+  "memory_limit_mb": 705,
+  "output_files": [
+    "artifacts/stage_3b/private/pairs/validation_14d/part_011.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/pairs/validation_14d/part_011.parquet": "9dbca493d16ca0a94705fe2d867bbceb1e6cd89246702290ecaf2c0f73008416"
+  },
+  "output_size_bytes": 29259016,
+  "peak_rss_bytes": 668491776,
+  "run_fingerprint": "1b7715446551f1ad388b845ce2a409a047a919bc20e586f34c5cad2517e692b1",
+  "source_fingerprint": "6464f9f62189460eb3572f78ce3ab12b9a4f9ac55d71be576ff5e34be1bbff84",
+  "spill_observed": false,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 0,
+  "threads": 1
+}

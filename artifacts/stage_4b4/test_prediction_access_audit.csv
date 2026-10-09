@@ -1,0 +1,7 @@
+﻿object,content_read_count,authorized,purpose,status
+test_candidates,1,True,candidate_and_feature_freeze,PASS
+test_features,1,True,feature_audit_and_prediction,PASS
+test_labels,0,False,forbidden_in_phase5a,PASS
+test_metrics,0,False,forbidden_in_phase5a,PASS
+validation_labels,0,False,not_reopened,PASS
+first7d_labels,0,False,not_reopened,PASS

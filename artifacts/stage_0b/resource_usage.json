@@ -1,0 +1,27 @@
+{
+  "total_execution_seconds": 3.197638,
+  "peak_rss_bytes": 301858816,
+  "duckdb_memory_limit_mb": 458,
+  "duckdb_threads": 2,
+  "temp_directory": "artifacts/stage_0b/tmp",
+  "temp_bytes_after_queries": 0,
+  "peak_temp_bytes": 0,
+  "spill_observed": false,
+  "oom_observed": false,
+  "dependencies": {
+    "duckdb": "1.5.5",
+    "pyarrow": "24.0.0",
+    "psutil": "7.2.2",
+    "pytest": "8.4.2"
+  },
+  "python": {
+    "version": "3.10.11",
+    "virtual_environment_active": true
+  },
+  "output_file_sizes": {
+    "artifacts/stage_0b/audit_results.csv": 10881,
+    "artifacts/stage_0b/audit_summary.json": 1416,
+    "artifacts/stage_0b/resource_usage.json": 749,
+    "docs/stages/stage_0b_contract_and_smoke.md": 7569
+  }
+}

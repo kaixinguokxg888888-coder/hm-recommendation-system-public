@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 242.5450225000386,
+  "generated_at": "2026-07-28T16:58:56+08:00",
+  "group_name": "trend_locked_test",
+  "memory_limit_mb": 1024,
+  "output_files": [
+    "artifacts/stage_3a/private/ranking_test_14d_trend_window_7d.parquet",
+    "artifacts/stage_3a/private/candidates_test_14d_trend_window_7d.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3a/private/candidates_test_14d_trend_window_7d.parquet": "1315008c4601a9e2ff0602804272ee36947a8f333d0c1f484a5499644b48251f",
+    "artifacts/stage_3a/private/ranking_test_14d_trend_window_7d.parquet": "e98f56d723fb106699aecf4348f8ee6b8256a7825683335dfbf0c3c0ab1b73c6"
+  },
+  "output_size_bytes": 8004610,
+  "peak_rss_bytes": 1034502144,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 14999094161,
+  "threads": 1
+}

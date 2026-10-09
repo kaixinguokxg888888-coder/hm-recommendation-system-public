@@ -1,0 +1,11 @@
+{
+  "group_name": "group_f_leakage_report",
+  "payload": {
+    "checks": 24,
+    "passed": 24
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08"
+}

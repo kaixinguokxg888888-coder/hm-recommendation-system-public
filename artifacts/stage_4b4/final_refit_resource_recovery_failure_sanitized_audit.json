@@ -1,0 +1,12 @@
+{
+  "correction_status": "MANIFEST_AND_AUDITOR_CORRECTION_AUTHORIZED",
+  "failure_category": "RESOURCE_RECOVERY_IMPLEMENTATION_FAILURE",
+  "git_warning_misclassification": true,
+  "manifest_missing_field_failure": "prediction_replay.raw_score_fingerprint",
+  "original_failure_fact_deleted": false,
+  "original_private_evidence_physical_fingerprint": "8524e71ce18df1f53dedff05e1e2eb000f36317281f60fbd77cc2047255b9ba9",
+  "privacy_violation_count": 4,
+  "private_evidence_tracked": false,
+  "sanitized_failure_audit_fingerprint": "7ba473e1b760502f252771193d9e2288872f38170ba3df416dd8799cd50f6a21",
+  "status": "SANITIZED_FAILURE_EVIDENCE_PRESERVED"
+}

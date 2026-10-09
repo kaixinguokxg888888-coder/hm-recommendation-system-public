@@ -1,0 +1,43 @@
+{
+  "group_name": "group_d_repurchase_stability",
+  "status": "SUCCESS",
+  "started_at": "2026-07-28T10:43:15+08:00",
+  "finished_at": "2026-07-28T10:46:26+08:00",
+  "execution_seconds": 190.730708,
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+  "rows_scanned": 31788324,
+  "peak_rss_bytes": 1322614784,
+  "current_attempt_peak_rss_bytes": 1322614784,
+  "temp_disk_peak_bytes": 6140264448,
+  "current_attempt_temp_disk_peak_bytes": 6127616000,
+  "output_files": [
+    "artifacts/stage_1b/repurchase_metrics.csv",
+    "artifacts/stage_1b/groups/group_d_repurchase_stability.json"
+  ],
+  "output_file_sizes": {
+    "artifacts/stage_1b/repurchase_metrics.csv": 1655,
+    "artifacts/stage_1b/groups/group_d_repurchase_stability.json": 1453
+  },
+  "error_message": "",
+  "attempts": 2,
+  "retried": true,
+  "spill_observed": true,
+  "oom_observed": false,
+  "duckdb_memory_limit_mb": 1024,
+  "duckdb_threads": 1,
+  "temp_directory": "artifacts/stage_1b/tmp",
+  "max_temp_directory_size": "20GB",
+  "attempt_history": [
+    {
+      "status": "FAILED",
+      "execution_seconds": 185.414404,
+      "peak_rss_bytes": 1321639936,
+      "temp_disk_peak_bytes": 6140264448,
+      "error_message": "ValueError: dict contains fields not in fieldnames: 'user_count', 'max_count', 'group_count'",
+      "oom_observed": false,
+      "spill_observed": true
+    }
+  ],
+  "last_action": "EXECUTED"
+}

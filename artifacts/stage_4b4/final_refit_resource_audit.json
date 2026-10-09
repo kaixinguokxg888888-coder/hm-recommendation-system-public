@@ -1,0 +1,17 @@
+{
+  "child_process_tree_peak_rss_bytes": 2818605056,
+  "frozen_absolute_rss_cap_bytes": 2800775577,
+  "oom_observed": false,
+  "resource_audit_fingerprint": "28eb48c25c7cd27c460244b9b850d3760fd58450ab3df61b76ad9149db41e961",
+  "resource_preregistration_fingerprint": "8456620fcfdcf65e7760d305a22f002b1ddc3d14c605ea46032419d666d97ad0",
+  "rss_gate_exceeded": true,
+  "rss_hard_fraction_of_available": 0.7,
+  "runtime_available_memory_max_bytes_observation_only": 4208615424,
+  "runtime_available_memory_min_bytes_observation_only": 1446797312,
+  "spill_directory": "artifacts/stage_4b4/tmp/final_refit/training_worker",
+  "status": "BLOCKED_BY_RESOURCE",
+  "wall_time_seconds": 59.221967399993446,
+  "worker_exit_code": 15,
+  "worker_pid_recorded": true,
+  "worker_recalculated_available_memory": false
+}

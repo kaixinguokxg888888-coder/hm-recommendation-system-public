@@ -1,0 +1,22 @@
+{
+  "authorization": "chatgpt_post_training_manifest_audit_recovery_2026-08-19",
+  "binary_physical_fingerprint": "df18e505648ad70924d9d59b2a5a888600f893427b1d6c543688666366c3e9d1",
+  "binary_rebuild_allowed": false,
+  "binary_semantic_fingerprint": "8fe8fe6ed1c1cc3e7cd82f2f5845c15955a0f1f45b2c7a9f29f31a41dcf52af9",
+  "config_canonical_fingerprint": "6fd0055a6d5adb92dcb55bb87087b35f44695467d28b498c398cc40f90f4d425",
+  "failed_test_audit_physical_fingerprint": "8524e71ce18df1f53dedff05e1e2eb000f36317281f60fbd77cc2047255b9ba9",
+  "label_access_allowed": false,
+  "model_physical_fingerprint": "1f2af19a79ed8d085d68d20fe9437f4eca7da3534a3852eb823f483c6bf96922",
+  "model_retraining_allowed": false,
+  "model_semantic_fingerprint": "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+  "original_incomplete_manifest_physical_fingerprint": "3a9b6e9228f6bdd26b6a7f33e83dab7399a0495f187bc1c300c318dd68d4ca8f",
+  "original_recovery_source_fingerprint": "d2b0e6cbefc1e9555de08af499f73d1339f978a7a8ed034434d5b094b55092ec",
+  "prediction_recomputation_allowed": false,
+  "preexisting_checkpoint_count": 5,
+  "preexisting_checkpoint_set_fingerprint": "9dacb88d7b65f7281a7d07d54dbc6f0b1d17a53f28ce1122a4afca3d7224560d",
+  "preregistration_fingerprint": "01780b7634df74a6f6e1a46f7c71ffc16adcb683b236616d4a26496aef9b9de8",
+  "replay_audit_physical_fingerprint": "7e52482d421bc2bca85c7bce2209e74aa6993d10ddfa71defbc6fd57a775e347",
+  "replay_fingerprint": "9241b2fe75b3cf8703a753ee1606e26fa84eb272d929f8767577157f15128cf6",
+  "source_fingerprint": "5ef78e8f585a2c99e882fd4840cd69c493659b1df195a23fe571d1ad5b2a9b81",
+  "status": "POST_TRAINING_RECOVERY_PREREGISTERED_BEFORE_METADATA_MUTATION"
+}

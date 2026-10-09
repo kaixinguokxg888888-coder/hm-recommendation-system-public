@@ -1,0 +1,107 @@
+{
+  "base_phase3_config_fingerprint": "4ef6dfcd30b52bc75efbdd58c0cd0c5be271f45577b02a511b266d9bf2a5b369",
+  "base_phase3_preregistration_fingerprint": "9b90a83a0c37808db6635c80652ae5f10d5161767e6983346ba116606179b2d9",
+  "bootstrap_physical_fingerprint": "21ca34b46b12e5c6d91acab9d0b090995308db89df1aae58936006b426a79f1c",
+  "bootstrap_recomputed": false,
+  "bootstrap_replay_physical_fingerprint": "4be5e3ed33a0e814621449b0503dab588a56dbbe492e76d9bfc6be0c1f61a835",
+  "checkpoint_set_fingerprint": "6a2248b6b79ab4ff8149a49f22eacd1afd36b772513a6079f19511b23c5fb17c",
+  "checkpoint_success_count": 160,
+  "confidence_status": "POSITIVE_AND_SIGNIFICANT",
+  "corrected_resource_contract": {
+    "available_memory_at_original_preregistration_bytes": 1857146880,
+    "corrected_resource_gate": "PASS",
+    "formal_required_fraction": 0.7,
+    "frozen_absolute_rss_cap_bytes": 1300002816,
+    "invalid_preregistered_cap_bytes": 1207145472,
+    "invalid_registered_fraction": 0.65,
+    "invalid_runtime_cap_formal_evidence": false,
+    "invalid_runtime_recomputed_cap_bytes": 1315638272,
+    "observed_peak_fraction_of_corrected_cap": 0.4430507572069752,
+    "observed_peak_rss_bytes": 575967232
+  },
+  "direction_status": "ROBUSTNESS_DIRECTION_PASS",
+  "final_refit_executed": false,
+  "first7d_ground_truth": {
+    "label_window": "2020-08-26..2020-09-01",
+    "physical_fingerprint": "c2b007dd9dc77b0d6036a82fd6ca638426857ab251011b92d9d1124e54a63202",
+    "positive_pair_count": 255172,
+    "semantic_fingerprint": "eae1e1585e209ebb93696bc7efcadc9c5e327cf1b2d4eac9acbb011deca212f8"
+  },
+  "first7d_label_reopen_count_during_recovery": 0,
+  "first7d_label_total_read_count": 1,
+  "first7d_population": {
+    "cold_query_count": 5940,
+    "main_query_count": 74313,
+    "physical_fingerprint": "7b90950db5776e1447d5e3c4a5e8644c6900414883761bb7f2e8955a01603214",
+    "query_count": 80253,
+    "semantic_fingerprint": "d71ed07a3f895e26a7702ece31c2829aba391ab92b69119201e2888cd27bff2a"
+  },
+  "ground_truth_rematerialized": false,
+  "lock_fingerprint": "f3af337e862b27d36e9a29968c7071482411329c1de8dc9918c80b3398c5bcb7",
+  "locked_at": "2026-08-18T15:54:48+08:00",
+  "main_metrics": {
+    "B0": {
+      "hit_rate_at_12": 0.06848061577382154,
+      "map_at_12": 0.01507260929160742,
+      "ndcg_at_12": 0.02326953128715582,
+      "recall_at_12": 0.03556462947587783
+    },
+    "L1_600": {
+      "hit_rate_at_12": 0.14434890261461655,
+      "map_at_12": 0.03144863029531143,
+      "ndcg_at_12": 0.04851479410723566,
+      "recall_at_12": 0.07091106044833446
+    }
+  },
+  "methodology_changed": false,
+  "metric_digest_physical_fingerprints": {
+    "B0": "14c297eada27bb93300baa709c10f15e68ec55d68c357114b177ed1252c27066",
+    "L1_600": "6926fb01030aa84d5022cdcb0561de47001eec1e0fc273a394e8405172dccd51"
+  },
+  "metric_fingerprints": {
+    "B0": {
+      "physical_fingerprint": "eb45f73989475b573a3279a013b19f3505a510bab8a17c3287e9b2d337be2232",
+      "query_count": 80253,
+      "query_metric_merkle_fingerprint": "026239f514f18e703e95b325f4fe46bde0740c994ddebbc9c68f20abe988067a"
+    },
+    "L1_600": {
+      "physical_fingerprint": "27adfc67ad9e5bab3c19159d14bc15f52b43c5bc96d2cf6dd0bb83b66e1594e6",
+      "query_count": 80253,
+      "query_metric_merkle_fingerprint": "d431910200ad474c4658442b3d74c622a2ba3679ab55d1ca164c1a454214ba3c"
+    }
+  },
+  "metric_recomputed": false,
+  "phase": "phase3_post_first7d_resource_contract_recovery_v1",
+  "population_rematerialized": false,
+  "prediction_global_merkle_fingerprints": {
+    "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+    "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+  },
+  "prediction_recomputed": false,
+  "public_metric_physical_fingerprint": "71b7d2bf65d72f10be7c7aa2daeebfc79d637cf6b48f907c23b9cbb6c93ad575",
+  "recovery_config_fingerprint": "61f8571ddbd5e98a288ce68403980805f75103cebe6e43067f40038f8b6dee7c",
+  "recovery_source_fingerprint": "2e8a030d43f829f61c7fd1bdd64f03d5cfae824ebbb2b64b3964f739db48b84e",
+  "recovery_type": "post_first7d_resource_contract_only",
+  "replay_physical_fingerprint": "5347446f20a726ecd8503b1e91cdbcbb31d5c4c6168ef66728a482cc51b8ca1f",
+  "reranking_executed": false,
+  "retrieval_retuned": false,
+  "segment_regression_review": "NO_FIRST7D_CRITICAL_SEGMENT_REGRESSION",
+  "stage": "4B-4",
+  "status": "FIRST7D_RESOURCE_CONTRACT_RECOVERED",
+  "superseded_original_gate_physical_fingerprint": "302f12094a6c1e3cfe2bec9ea0609aa51c719e70733a0e8ade559c241d811ab6",
+  "superseded_original_lock": {
+    "physical_fingerprint": "ccd7dd3b4103ee9d515d71494faef6f58a536c47b2e3378d5526061d79c6476b",
+    "semantic_fingerprint": "b3fa0a2a48b99a31c90fb85852951622ccc9a7ba2acaea196056dcac76db69c5"
+  },
+  "supersession_fingerprint": "2da9055bbb66364a9b32997c1187d00b2e37d9d9d74bd0db8e4423fe65c19aaf",
+  "test_authorized": false,
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "winner": "L1_600",
+  "winner_changed": false,
+  "winner_feature_set": "F1",
+  "winner_iteration": 600,
+  "winner_map_delta_vs_b0": 0.016376021003704014
+}

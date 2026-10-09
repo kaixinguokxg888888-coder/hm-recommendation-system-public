@@ -1,0 +1,15 @@
+{
+  "available_memory_at_conversion_start_bytes": 6634889216,
+  "cap_shopping_allowed": false,
+  "external_process_tree_monitor": true,
+  "frozen_absolute_conversion_cap_bytes": 4644422451,
+  "input_fingerprint": "257323b9bf830b7ec6bce333ed3b81ee11043f9ecb3c6346aefb6d5c3c8ac797",
+  "recovery_config_canonical_fingerprint": "677584aa34c13d01ed65495388ae3ea3f127dde002c6bf13bdc390b2444b9882",
+  "recovery_preregistration_fingerprint": "6ae57984e94cfea14fc9716eec67406892efbae766e26bf15f0abcc95ff89183",
+  "resource_preregistration_fingerprint": "1b17071991a5397761746f8cde63a83ee6b4a0d5ab717a6c20f826dd98e446a2",
+  "rss_fraction": 0.7,
+  "runtime_available_memory_is_observation_only": true,
+  "status": "FINAL_REFIT_CONVERSION_RESOURCE_PREREGISTERED_BEFORE_WORKER",
+  "worker_consumes_frozen_absolute_cap_only": true,
+  "worker_source_fingerprint": "c24b697f1d43fac5006962875974168228d3d35ae4c64ff0f570004f849aa092"
+}

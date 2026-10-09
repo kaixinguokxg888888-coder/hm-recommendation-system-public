@@ -1,0 +1,23 @@
+{
+  "binary_rebuilt": false,
+  "cause": "The promoted corrected audit omitted the legacy-compatible top-level raw_data_audit and privacy_audit fields. Post-promotion targeted and full pytest therefore failed the required formal-audit schema test. The entire attempt2 metadata chain is preserved as private evidence.",
+  "combined_matrix_rebuilt": false,
+  "failed_gate_physical_fingerprint": "df4bab1e19e3395ed6772af8a5a1c01e568c17b719c9e309cbaa32ef08c5b222",
+  "failed_lock_physical_fingerprint": "801cf97b4f9ee84cb69f1a2a05e2f0775ac96aa8b37f7e93d7abf4e35e8f0026",
+  "failed_lock_semantic_fingerprint": "b828e264a591842281f3758a13055365244dc74abd8e3afa2c418dd8d08f9dde",
+  "failed_preregistration_fingerprint": "6698781e6aa1402086bfdea383ab13626c403f064cdde1831ea71569bb7e300c",
+  "failed_source_fingerprint": "94dbfdb5ea18b785dbeea1e954c7777b5927316a6d0e6802017199b0ea3937d8",
+  "failed_test_audit_physical_fingerprint": "90c685c10281df5f1e448874583d1444286ef5d255dc3b28d603940ada662dc5",
+  "failed_test_nodeid": "tests/test_stage_4b4_phase4_post_training_recovery.py::test_formal_test_audit_is_sanitized_when_passed",
+  "failure_classification": "CORRECTED_AUDIT_SCHEMA_COMPATIBILITY_ERROR",
+  "failure_fingerprint": "042b54db4a33c1e3c975fe735ce030adcd00c597cd2718ace1f5aa348b3ea816",
+  "formal_metadata_requires_supersession": true,
+  "labels_opened": false,
+  "model_retrained": false,
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "prediction_recomputed": false,
+  "replay_recomputed": false,
+  "status": "FAILED_ATTEMPT2_SUPERSEDED_BEFORE_FINAL_ACCEPTANCE",
+  "test_access": false,
+  "validation_optimizer_rebuilt": false
+}

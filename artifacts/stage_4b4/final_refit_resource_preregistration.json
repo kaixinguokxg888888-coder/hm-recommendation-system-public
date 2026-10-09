@@ -1,0 +1,13 @@
+{
+  "available_memory_before_worker_bytes": 4001107968,
+  "combined_matrix_manifest_fingerprint": "257323b9bf830b7ec6bce333ed3b81ee11043f9ecb3c6346aefb6d5c3c8ac797",
+  "external_process_tree_monitor": true,
+  "frozen_absolute_rss_cap_bytes": 2800775577,
+  "phase4_preregistration_fingerprint": "9fb7e10ec734ea48c0f38129f3397a9aa79df8ad8702a98fa2ff57646a1d37d8",
+  "resource_preregistration_fingerprint": "8456620fcfdcf65e7760d305a22f002b1ddc3d14c605ea46032419d666d97ad0",
+  "rss_hard_fraction_of_available": 0.7,
+  "runtime_available_memory_is_observation_only": true,
+  "status": "FINAL_REFIT_RESOURCE_PREREGISTERED_BEFORE_WORKER",
+  "worker_consumes_frozen_absolute_cap_only": true,
+  "worker_source_fingerprint": "81a4fafc0d3dcbd9e207cac001d9b742b76d81f2cb6e2a1649f545e5b5b1708e"
+}

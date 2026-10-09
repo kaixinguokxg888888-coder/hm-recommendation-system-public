@@ -1,0 +1,5 @@
+﻿stage,phase,snapshot_id,model_variant,union_variant,two_tower_itemcf_jaccard,two_tower_trend_jaccard,two_tower_repurchase_jaccard,two_tower_ground_truth_hits,two_tower_exclusive_ground_truth_hits,users_with_two_tower_exclusive_hits
+3D,validation,validation_14d,TT0,T50,0.036007776359618694,0.035928604910501726,0.0,55185,27650,21341
+3D,validation,validation_14d,TT1,T50,0.05041658341605642,0.0326171934374346,0.0,65612,32741,24031
+3D,validation,validation_14d,TT1,T100,0.05041658341605642,0.0326171934374346,0.0,65612,32741,24031
+3D,test,test_14d,TT1,T100,0.049165586770898655,0.03800878004329516,0.0,60277,28881,21574

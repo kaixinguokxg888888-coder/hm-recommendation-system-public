@@ -1,0 +1,2 @@
+﻿task,execution_seconds,peak_rss_bytes,peak_temp_bytes,warning_count,failure_count,retry_count,historical_full_candidate_replay,ranking_training_executed,stage_status
+stage_4a_static_protocol_finalization,0.101578,37285888,0,0,0,0,False,False,PASSED_PROTOCOL_GATE

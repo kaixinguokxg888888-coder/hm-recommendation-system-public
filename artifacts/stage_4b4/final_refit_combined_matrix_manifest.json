@@ -1,0 +1,62 @@
+{
+  "adapter_fingerprint": "aed9098285baf2d4480f51b71073b7a53073d31f0ea3a87f8ad870b7297236ed",
+  "audit": {
+    "all_zero_optimizer_groups": 0,
+    "candidate_rank_order_mismatch": 0,
+    "categorical_metadata_mismatch": 0,
+    "duplicate_query_count": 0,
+    "duplicate_query_item_count": 0,
+    "feature_order_mismatch": 0,
+    "group_positional_mismatch": 0,
+    "snapshot_boundary_mismatch": 0
+  },
+  "combined_matrix_order_fingerprint": "1706c173c1397a490132a9c9e6e62ca9897f340f26132389bf2b9aedb9bdd127",
+  "feature_count": 52,
+  "feature_matrix_physical_fingerprint": "53b183460bd145b58597072352e37e32e9d78507efed2f15fee463da7cc6efe1",
+  "feature_snapshot_binding": {
+    "ranking_train_14d_v1": "2020-08-11",
+    "validation_14d": "2020-08-25"
+  },
+  "first7d_label_read_count": 0,
+  "group_physical_fingerprint": "71b0201f0e734227bf5cadab2a914285f74e5f831fb9b64f4a3fa107fe89841d",
+  "group_sum": 11568070,
+  "label_physical_fingerprint": "a44af8d7623920f46e18e9745fc90023eea6052136d1d7745b410af606b36480",
+  "manifest_fingerprint": "257323b9bf830b7ec6bce333ed3b81ee11043f9ecb3c6346aefb6d5c3c8ac797",
+  "matrix_dtype": "float32",
+  "ordering_version": "stage_4b4_final_refit_snapshot_query_order_v1",
+  "physical_fingerprints": {
+    "articles": "17aaebdb3e694e6c0833d7868f5c46f42dc13948264b976feed6b2ac0d81e8c6",
+    "boundaries": "036f5aa3cae2282fde4cb2e06f4454527134943087a3713544e1ca8fe1762a79",
+    "customers": "3c7d16cae96cb58a708d16c96febbc1eb9e8a0962038563bfd1efbe9a6af780e",
+    "features": "53b183460bd145b58597072352e37e32e9d78507efed2f15fee463da7cc6efe1",
+    "groups": "71b0201f0e734227bf5cadab2a914285f74e5f831fb9b64f4a3fa107fe89841d",
+    "labels": "a44af8d7623920f46e18e9745fc90023eea6052136d1d7745b410af606b36480",
+    "orders": "a2ed76c4bb0cbb78b069ef61777353f9039dddf22d6bd4c0f6241133ee9d2ac3",
+    "ranks": "d40f90cf34ee0e6f181329331d6a6e96a796e064dc4fcbf6521f35cee12aca34",
+    "snapshot_codes": "338b77dc54477aa174ce08ba5da1210da760be0d01f8687c0fcc51f71db4097c"
+  },
+  "positive_rows": 188770,
+  "preregistration_fingerprint": "9fb7e10ec734ea48c0f38129f3397a9aa79df8ad8702a98fa2ff57646a1d37d8",
+  "query_boundary_physical_fingerprint": "036f5aa3cae2282fde4cb2e06f4454527134943087a3713544e1ca8fe1762a79",
+  "query_count": 113793,
+  "row_count": 11568070,
+  "snapshot_order": [
+    "ranking_train_14d_v1",
+    "validation_14d"
+  ],
+  "snapshot_order_fingerprint": "673230d9870b63679f79969377af982ee82a723054b2b35a036336e4ce38137a",
+  "status": "COMBINED_FINAL_REFIT_MATRIX_FROZEN",
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "train_component_fingerprint": "1278d09b265142475e2bc5f2e6e3efe43d47fc263d03d8e46dbb0f113af09214",
+  "train_queries": 51497,
+  "train_rows": 5236056,
+  "validation_component_fingerprint": "20cb7a8dbeb5c053b6e54b021cc964cbd081cb77bed81b28b05897f6641435ed",
+  "validation_metric_read_count": 0,
+  "validation_queries": 62296,
+  "validation_rows": 6332014,
+  "wall_time_seconds": 141.71801980002783,
+  "zero_rows": 11379300
+}

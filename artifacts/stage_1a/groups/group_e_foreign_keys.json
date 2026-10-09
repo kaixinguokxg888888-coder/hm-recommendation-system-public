@@ -1,0 +1,89 @@
+{
+  "group_name": "group_e_foreign_keys",
+  "results": [
+    {
+      "check_id": "transactions.full.distinct_entities",
+      "table_name": "transactions",
+      "check_name": "Full distinct customer and article counts",
+      "check_type": "distinct_count",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "distinct_customer_count": 1362281,
+        "distinct_article_count": 104547
+      },
+      "expected_condition": "report full-scan distinct counts without emitting identifiers",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 8e-06,
+      "evidence_path": "artifacts/stage_1a/foreign_key_coverage.csv",
+      "notes": "只输出聚合计数。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_e_foreign_keys",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.customer_id.foreign_key",
+      "table_name": "transactions",
+      "check_name": "Full foreign-key coverage for customer_id",
+      "check_type": "foreign_key_candidate",
+      "severity": "warning",
+      "status": "PASS",
+      "observed_value": {
+        "relationship": "transactions.customer_id->customers.customer_id",
+        "non_null_transaction_rows": 31788324,
+        "distinct_transaction_keys": 1362281,
+        "unmatched_transaction_rows": 0,
+        "unmatched_distinct_keys": 0,
+        "row_match_rate": 1.0,
+        "distinct_key_match_rate": 1.0,
+        "execution_scope": "FULL_SCAN"
+      },
+      "expected_condition": "unmatched rows and unmatched distinct keys = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 4e-06,
+      "evidence_path": "artifacts/stage_1a/foreign_key_coverage.csv",
+      "notes": "使用 anti join；不输出任何未匹配 ID。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_e_foreign_keys",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.article_id.foreign_key",
+      "table_name": "transactions",
+      "check_name": "Full foreign-key coverage for article_id",
+      "check_type": "foreign_key_candidate",
+      "severity": "warning",
+      "status": "PASS",
+      "observed_value": {
+        "relationship": "transactions.article_id->articles.article_id",
+        "non_null_transaction_rows": 31788324,
+        "distinct_transaction_keys": 104547,
+        "unmatched_transaction_rows": 0,
+        "unmatched_distinct_keys": 0,
+        "row_match_rate": 1.0,
+        "distinct_key_match_rate": 1.0,
+        "execution_scope": "FULL_SCAN"
+      },
+      "expected_condition": "unmatched rows and unmatched distinct keys = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/foreign_key_coverage.csv",
+      "notes": "使用 anti join；不输出任何未匹配 ID。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_e_foreign_keys",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    }
+  ]
+}

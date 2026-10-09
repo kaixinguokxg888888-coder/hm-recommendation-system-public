@@ -1,0 +1,9 @@
+{
+  "duckdb_memory_limit_mb": 579,
+  "peak_rss_bytes": 575967232,
+  "peak_temp_bytes": 0,
+  "rss_hard_limit_bytes": 1315638272,
+  "simultaneous_prediction_versions": 1,
+  "task_count": 160,
+  "threads": 1
+}

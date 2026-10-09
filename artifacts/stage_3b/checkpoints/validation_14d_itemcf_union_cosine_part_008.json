@@ -1,0 +1,24 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 30.966393999988213,
+  "generated_at": "2026-08-03T14:48:58+08:00",
+  "group_name": "validation_14d_itemcf_union_cosine_part_008",
+  "memory_limit_mb": 628,
+  "output_files": [
+    "artifacts/stage_3b/private/unions/validation_14d/itemcf_union_cosine/part_008.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/unions/validation_14d/itemcf_union_cosine/part_008.parquet": "1be6224529e8a5f733e76ed9eddd5b8d34f746edf16b09a4cfee49ce66c3977e"
+  },
+  "output_size_bytes": 12954077,
+  "peak_rss_bytes": 602071040,
+  "run_fingerprint": "3c15698a27a6288b4e55a24071a1d41a50b506b81c8f3157b1d2a2c6e097c190",
+  "source_fingerprint": "e5304699d8ee4d0bb25348400cfd5ba5973c477d58916a9dd3e35d3f26f8a84f",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 175499781,
+  "threads": 1
+}

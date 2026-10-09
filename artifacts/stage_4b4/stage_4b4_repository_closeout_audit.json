@@ -1,0 +1,76 @@
+{
+  "agents_updated": true,
+  "background_worker_count": 0,
+  "closeout_audit_schema_status": "PASS",
+  "commit_message": "feat: complete stage 4b4 lambdarank ranking",
+  "commit_planned": true,
+  "commit_executed_at_audit_time": false,
+  "compile_status": "PASS",
+  "code_semantics_changed": false,
+  "documentation_recovery_attempts": 1,
+  "documentation_modified_during_mechanical_recovery": false,
+  "failed_test_before_recovery": "tests/test_stage_3a.py::test_existing_stage_3a_public_artifacts_pass_formal_sensitive_scan",
+  "formal_test_evaluation_count": 1,
+  "full_pytest_counts": {
+    "collected": 472,
+    "errors": 0,
+    "failed": 0,
+    "passed": 471,
+    "registered_obsolete_skips": 1,
+    "unexpected_skips": 0
+  },
+  "git_diff_check": "PASS",
+  "git_cached_diff_check": "PASS",
+  "ignore_status": "PASS",
+  "markdown_relative_link_status": "PASS",
+  "original_failed_test_after_recovery": "PASS",
+  "prior_closeout_attempt": {
+    "failed_check": "git diff --cached --check",
+    "original_audit_status": "INVALIDATED_BEFORE_MECHANICAL_RECOVERY",
+    "status": "CLOSEOUT_ENGINEERING_FAILURE",
+    "violations": [
+      "src/ranking_model/adapter.py: EOF blank line",
+      "src/ranking_model/fingerprint.py: EOF blank line"
+    ]
+  },
+  "privacy_path_status": "PASS",
+  "protected_artifact_count": 14,
+  "protected_artifacts_changed": 0,
+  "push_executed": false,
+  "raw_data_diff": {
+    "staged": 0,
+    "working_tree": 0
+  },
+  "raw_test_label_read_count": 1,
+  "readme_updated": true,
+  "recovery_type": "ONE_TIME_MECHANICAL_EOF_FORMAT_RECOVERY_AFTER_DOCUMENTATION_SCAN_COMPATIBILITY",
+  "root_cause": "README long SHA-256 and high-precision numeric tokens triggered the legacy sensitive scanner",
+  "scanner_modified": false,
+  "source_files_mechanically_corrected": [
+    "src/ranking_model/adapter.py",
+    "src/ranking_model/fingerprint.py"
+  ],
+  "source_modified_during_recovery": true,
+  "stage": "4B-4",
+  "stage4b4_targeted_counts": {
+    "collected": 138,
+    "errors": 0,
+    "failed": 0,
+    "passed": 137,
+    "registered_obsolete_skips": 1,
+    "unexpected_skips": 0
+  },
+  "registered_obsolete_skip": {
+    "classification": "REGISTERED_OBSOLETE_PHASE4_OPTIONAL_GATE_TEST",
+    "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+    "reason": "formal gate is created during finalization"
+  },
+  "mechanical_recovery_attempts": 1,
+  "metrics_or_bootstrap_recomputed": false,
+  "model_retrained": false,
+  "prediction_recomputed": false,
+  "status": "STAGE_4B4_REPOSITORY_CLOSEOUT_AUDIT_FINAL",
+  "test_labels_reopened": false,
+  "tests_modified": false,
+  "tracked_private_count": 0
+}

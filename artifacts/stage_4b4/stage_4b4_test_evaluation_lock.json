@@ -1,0 +1,74 @@
+{
+  "access_audit_fingerprint": "11b7dd13eee9696f0a20e812e940284cc6bc95cf845b8682ccb89b4cec1918ae",
+  "bootstrap_fingerprints": {
+    "config": "5943281f23851925fb4bf487ef90465885ad6eaa988db0909e00998c5bca9968",
+    "main_sample_identity": "0a1e8296dc142bc64562a64d051d727c5f0aee9a311bc6ef4e15980ea27ccff5",
+    "physical": "d5eb7c16d876c6456941150f327e90c8bccb2eac5b8c4b444530c21a21b3e36f",
+    "semantic": "23dd57191bf409bcfa44e1fbbee61928089aaa8384a7822ca3d20b9d47d662b5"
+  },
+  "code_source_fingerprint": "7899f61ca3f512ec63eb301470dea566e9f15aa7f327f646bbc62ada1a986cd1",
+  "config_fingerprint": "56d5e10297a126efdf51e140b6be2e6e021fb364d0832e0de3176ca003b40314",
+  "contract_gate_fingerprint": "dbf9411789a3a7ae397324b408fbe5b17971d9daa85d4551ec7834ef46fb5c91",
+  "engineering_audit_fingerprint": "0516fcf0052f1c5e384e4147143167aa48b523e0381976bb217180694655c729",
+  "fingerprint_manifest_fingerprint": "a990c113e48a98b42fd0fc2b7bf0e0e6495e2c2cc8271e756cda6c0c49d001d8",
+  "formal_test_evaluation_count": 1,
+  "ground_truth_fingerprints": {
+    "label_window": "043d11bb18e5deadc3336636a9ed05e5efb150345904172af7c14eccdd61f093",
+    "per_query_relevance": "bb0b5d64014bb9acdc79b3e609f72dde5f2b0cfc913c1522534c31f81d8522c7",
+    "physical": "3c3eb58fef3dbd11af5d65ca3d2602e5b84dc037cd68cddbc188a67d0ff5b987",
+    "schema": "c27c4f2fcca1913dd20dc8cade1b3eb9384c4df7e435f080cd273dfbf555abbf",
+    "semantic": "e31bfcf8474c45ffed193448f7cf4c4a632b8901ba1463dd54ea9d5e69482d4f"
+  },
+  "lock_fingerprint": "daddf4c1cb310f9075e06ebf6189932a58eeb0a96346385d0fb930e792bb1b88",
+  "locked_at": "2026-08-20T12:17:58+08:00",
+  "metric_fingerprints": {
+    "B0": {
+      "per_query_metric_physical_fingerprint": "3aba6247db2b6f83924161305c27a855ad32141345e452ec3da5324f77774d3b",
+      "per_query_metric_semantic_fingerprint": "2a1d050c9a53648644ffaf007fca259655e4ddf043b9c83e5d5d5cbd00b5f39e",
+      "query_count": 128333,
+      "query_digest_physical_fingerprint": "b8e56cd1628bc14508f8924826ae74e4b8a04e9c63fe8d466eaf167bb8c1cdd1"
+    },
+    "L1_FINAL_REFIT_600": {
+      "per_query_metric_physical_fingerprint": "e4f011293633d94fc5604b88b674f1c2d8485e3000cd46b8dfe7ccaeb0f20ae5",
+      "per_query_metric_semantic_fingerprint": "dbbd16321439ad6377d608efcfb7aa3e2470a0c8661b346340579dac4b46d23e",
+      "query_count": 128333,
+      "query_digest_physical_fingerprint": "1e6029bf53a63293d0b29537123923f690308c788396a18e2397b90e8ceb121d"
+    }
+  },
+  "model_retrained": false,
+  "phase": "phase5b_one_time_test_label_join_and_final_evaluation_v1",
+  "phase4_final_refit_lock": "358c25d19ecce3006428a293acd61564e0f6cd3fbdc0c156aa636ee41bef4bd8",
+  "phase5a_pre_label_lock": "34c8dcc52ee18c18766904d234e8fda0f2964e4805fee3175e9b45c375f7e8ca",
+  "population_fingerprints": {
+    "all": "f3ddc949d1422255e68a034d8af0b1b3698027e839daca33d556e9813add8b73",
+    "all_zero_membership": "e569bb978b626af2d11640e0b8871f6906598b0c5b8e132df6ff2f5a36b2b7bb",
+    "cold_history": "ae7608f98152bef6ba9bd7539b9659bad4b6c0847d898cc7c52942e901a17384",
+    "main": "c598357f6a1cc1a5fd5a90d90434dedfd1ba65e1b6f943e99633e0528c7c05bd",
+    "segments": "eeb037e00a6322abccfd69674d4e773cff68202df39d73e7f7feecfc8754562e"
+  },
+  "prediction_fingerprints": {
+    "B0": "b7a1f9b6268923dc4c27441b6ce559e90e339673a4bd5001402e91e05ddc75a9",
+    "L1_FINAL_REFIT_600": "5080c3cc2149aa7bebc3cbd3261f93e5162aefbf426a3d987fcda05df8ee9a0e"
+  },
+  "predictions_recomputed": false,
+  "preregistration_fingerprint": "7db815e8a818782811b22136ae02997c7365409a42b88ab25d5ab5da30bf844a",
+  "raw_test_label_source_read_count": 1,
+  "reranking_executed": false,
+  "resource_audit_fingerprint": "7f5d9f776ec22e27d6c0b59a9926690f39eb079d8a7e506b6a33d04450c9bce9",
+  "segment_fingerprints": {
+    "physical": "eefff96e252460602d58ccc67b2c662f22c65fd26b1b1d9dc5d7ba3af5af9d21",
+    "semantic": "8e4941e6f2ed80591e69087fb754f2ddeffda09b8f2067c88852fdd70f9afab5"
+  },
+  "segment_status": "NO_CRITICAL_SEGMENT_REGRESSION",
+  "stage": "4B-4",
+  "statistical_status": "POSITIVE_AND_SIGNIFICANT",
+  "status": "STAGE_4B4_PHASE5B_TEST_EVALUATION_COMPLETE",
+  "test_evaluation_executed": true,
+  "test_label_window": {
+    "label_end": "2020-09-22",
+    "label_start": "2020-09-09"
+  },
+  "test_labels_reopened": false,
+  "value_gate_status": "PASSED_FINAL_TEST_VALUE_GATE",
+  "winner_changed": false
+}

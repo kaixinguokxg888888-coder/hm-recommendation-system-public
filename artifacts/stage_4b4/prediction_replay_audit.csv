@@ -1,0 +1,8 @@
+﻿model_id,replay_partition,row_key_mismatch,raw_score_mismatch,predicted_rank_mismatch,query_digest_physical_mismatch,status
+B0,0,0,0,0,0,PASS
+L0_100,0,0,0,0,0,PASS
+L0_300,0,0,0,0,0,PASS
+L0_600,0,0,0,0,0,PASS
+L1_100,0,0,0,0,0,PASS
+L1_300,0,0,0,0,0,PASS
+L1_600,0,0,0,0,0,PASS

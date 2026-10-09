@@ -1,0 +1,17 @@
+{
+  "group_name": "group_c_user_segments",
+  "payload": {
+    "validation_14d": {
+      "private_path": "artifacts/stage_2b/private/user_segments_validation_14d.parquet",
+      "fingerprint": "3966f59fd05cec8e403780476ceea43023b40e48654bf7db1eaaad1eb3b01b2c"
+    },
+    "test_14d": {
+      "private_path": "artifacts/stage_2b/private/user_segments_test_14d.parquet",
+      "fingerprint": "8c96597c75133f88b914af9b37f9b5db75ba01e290e402baa971ffac744e2479"
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08"
+}

@@ -1,0 +1,21 @@
+gate_id,mandatory,status,evidence
+P5BG1,True,PASS,Phase 5A pre-label lock exact match
+P5BG2,True,PASS,B0/final prediction fingerprints exact match
+P5BG3,True,PASS,Phase 5B preregistration and pre-label gate before Test access
+P5BG4,True,PASS,Stage 4A Test label window exact match
+P5BG5,True,PASS,raw Test label source opened exactly once
+P5BG6,True,PASS,canonical ground-truth integrity
+P5BG7,True,PASS,evaluation population exact reconciliation
+P5BG8,True,PASS,all-zero relevance queries retained
+P5BG9,True,PASS,metric implementation/protocol exact match
+P5BG10,True,PASS,B0 metric completeness
+P5BG11,True,PASS,final-model metric completeness
+P5BG12,True,PASS,paired key/population alignment
+P5BG13,True,PASS,paired bootstrap deterministic identity
+P5BG14,True,PASS,segment diagnostic completeness
+P5BG15,True,PASS,final statistical/value status
+P5BG16,True,PASS,no model/candidate/feature/prediction mutation
+P5BG17,True,PASS,resource/checkpoint integrity
+P5BG18,True,PASS,privacy/raw-data/ignore/tracked-private/tests
+P5BG19,True,PASS,no label reopen and exactly one formal evaluation
+P5BG20,True,PASS,final Test evaluation lock canonical payload staged for independent persisted verification

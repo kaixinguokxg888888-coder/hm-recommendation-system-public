@@ -1,0 +1,24 @@
+{
+  "audit_slice": "first_complete_combined_query_label_free_v1",
+  "first7d_labels_read": false,
+  "first_reload": {
+    "audit_rows": 103,
+    "non_finite_scores": 0,
+    "rank_tiebreak_fingerprint": "0567b99499a83d66864589fab34f75cde8622868b703c4b00904a07e5f9e4dec",
+    "raw_score_fingerprint": "bb7eb22b48d1f88670dba8e0defad408aab118d3f0ea8c24769f6aa960aa2715"
+  },
+  "label_vector_opened": false,
+  "rank_tiebreak_exact_match": true,
+  "raw_score_exact_match": true,
+  "replay_fingerprint": "9241b2fe75b3cf8703a753ee1606e26fa84eb272d929f8767577157f15128cf6",
+  "second_reload": {
+    "audit_rows": 103,
+    "non_finite_scores": 0,
+    "rank_tiebreak_fingerprint": "0567b99499a83d66864589fab34f75cde8622868b703c4b00904a07e5f9e4dec",
+    "raw_score_fingerprint": "bb7eb22b48d1f88670dba8e0defad408aab118d3f0ea8c24769f6aa960aa2715"
+  },
+  "status": "PASS",
+  "test_access": false,
+  "validation_metric_computed": false,
+  "wall_time_seconds": 0.06336949998512864
+}

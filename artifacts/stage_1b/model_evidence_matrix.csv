@@ -1,0 +1,11 @@
+﻿candidate,data_support_evidence,data_limitations,applicable_users,engineering_cost,recruiting_demo_value,recommend_v1,role,cannot_conclude,execution_scope
+热门召回,Top 1% share=0.1863; Gini=0.7586,长尾与时变流行度风险,"all users, especially cold users",low,high,yes,V1 baseline,离线增益尚未验证,AGGREGATE_EVIDENCE
+时间趋势召回,734-day temporal series and channel/month aggregates available,需要严格只用切分点前窗口,all users,low-medium,high,yes,V1 candidate,最佳趋势窗口未知,AGGREGATE_EVIDENCE
+历史复购召回,user repeat rate=0.4921,重复记录不等于真实 quantity,users with history,low,high,yes,V1 candidate,A/B/C 最佳口径未知,AGGREGATE_EVIDENCE
+ItemCF,binary interactions=28575395; active-user coverage>=10=0.4730,短序列用户共现稀疏,warm users,medium,high,yes,V1 candidate,实际 recall/NDCG 尚未知,AGGREGATE_EVIDENCE
+商品内容/属性召回,untransacted articles=995; article attributes available,属性质量和语义相似度未验证,cold users/items,medium,high,yes,V1 cold-start component,属性权重未知,AGGREGATE_EVIDENCE
+矩阵分解,users=1362281; items=104547,时间漂移和冷启动,warm users/items,medium,medium-high,yes,baseline/enhancement,最佳隐式反馈权重未知,AGGREGATE_EVIDENCE
+双塔,"warm candidate upper bounds 7/14/28=0.8878,0.8395,0.7778",需要负采样、特征和线上检索工程,warm and feature-covered users/items,high,high,experiment,enhancement experiment,统计证据不能证明模型收益,AGGREGATE_EVIDENCE
+序列模型,binary sequence >=10 coverage=0.4730,大量短序列用户不适用；尚无训练样本,active users only,high,high,experiment,subgroup experiment,GRU4Rec/DIN/Transformer 优劣不可得出,AGGREGATE_EVIDENCE
+冷启动内容召回,"28-day cold rates user=0.0970, item=0.1200",依赖商品属性，用户侧内容有限,new users/items,medium,high,yes,V1 fallback,真实覆盖增益未知,AGGREGATE_EVIDENCE
+多样性重排,item Gini=0.7586,需要相关性候选和多样性指标,all served users,medium,high,experiment,V1 simple rule or later enhancement,业务多样性目标未知,AGGREGATE_EVIDENCE

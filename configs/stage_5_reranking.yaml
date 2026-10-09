@@ -1,0 +1,43 @@
+{
+  "stage": "5", "version": "1.0.0", "scope": "validation_only_5A_through_5E",
+  "snapshot_id": "validation_14d", "as_of_date": "2020-08-25", "model_id": "L1_600",
+  "top_k": 12, "candidate_budget": 500,
+  "variants": [
+    {"id":"R0","product_cap":null,"garment_cap":null,"tail_window":null},
+    {"id":"R1","product_cap":null,"garment_cap":null,"tail_window":null},
+    {"id":"R2","product_cap":2,"garment_cap":null,"tail_window":null},
+    {"id":"R3","product_cap":2,"garment_cap":4,"tail_window":null},
+    {"id":"R4_N20","product_cap":2,"garment_cap":4,"tail_window":20},
+    {"id":"R4_N30","product_cap":2,"garment_cap":4,"tail_window":30},
+    {"id":"R4_N50","product_cap":2,"garment_cap":4,"tail_window":50}
+  ],
+  "relaxation": {"garment_caps":[5,6],"product_caps":[3,4],"final_fill_unique_only":true},
+  "tail": {"semantics":"data_foundation.item_state.popularity_thresholds_and_popularity_bucket","threshold_population":"all_snapshot_history_seen_items","missing_support_policy":"reject_candidate_missing_support","zero_history_policy":"existing_zero_history_bucket","slots":1,"only_complete_level0_lists":true,"only_if_no_natural_tail":true},
+  "selection": {
+    "r0_loss_budget_relative":0.005,
+    "require_paired_ci_lower_within_budget":true,
+    "engineering_tolerance_notice":"0.5% is a preregistered engineering tolerance budget, not a statistically derived universal threshold.",
+    "r2_require_product_violation_decrease":true,"r2_require_unique_product_increase":true,
+    "r3_min_unique_garment_gain_vs_r2":0.10,
+    "r4_min_tail_count_gain_vs_r3":0.01,
+    "r4_extra_loss_budget_relative_vs_r3":0.001,
+    "r4_preference":"smallest_eligible_rank_window",
+    "fallback":"R1",
+    "post_results_policy_search_allowed":false
+  },
+  "bootstrap":{"iterations":1000,"seed":20260826,"confidence_level":0.95,"sampling_unit":"paired_customer_key","metrics":["map_at_12","ndcg_at_12","recall_at_12","hit_rate_at_12"]},
+  "execution":{"partitions":32,"batch_queries":128,"threads":1,"duckdb_memory_limit_mb":512,"temporary_disk_limit":"20GB","rss_fraction":0.70,"runtime_rss_cap_recomputation_allowed":false},
+  "upstream": {
+    "predictions":"artifacts/stage_4b4/private/predictions/formal/L1_600",
+    "ground_truth":"artifacts/stage_2b/private/ground_truth_validation_14d.parquet",
+    "population":"artifacts/stage_2b/private/evaluation_population_validation_14d.parquet",
+    "query_base":"artifacts/stage_4b4/private/phase2_validation_selection/query_base",
+    "articles":"data/raw/articles.parquet",
+    "article_key_map":"artifacts/stage_2a/private/article_key_map.parquet",
+    "canonical_articles":"artifacts/stage_4b3/private/aggregates/article_features.parquet",
+    "support":"artifacts/stage_4b4/private/validation_features/aggregates/item_features.parquet",
+    "validation_lock":"artifacts/stage_4b4/stage_4b4_validation_selection_lock.json"
+  },
+  "paths":{"public":"artifacts/stage_5","private":"artifacts/stage_5/private","checkpoints":"artifacts/stage_5/checkpoints","tmp":"artifacts/stage_5/tmp"},
+  "forbidden":{"test_label_read":true,"test_evaluation":true,"test_bootstrap":true,"upstream_write":true,"ranking_training":true,"retrieval_rebuild":true}
+}

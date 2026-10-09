@@ -1,0 +1,15 @@
+gate_id,description,status
+R1,original failure and invalid resource evidence preserved,PASS
+R2,recovery authorization identity,PASS
+R3,original preregistration available-memory identity,PASS
+R4,70% corrected-cap arithmetic identity,PASS
+R5,runner consumes frozen absolute cap,PASS
+R6,observed peak below corrected cap,PASS
+R7,First7d labels not reopened,PASS
+R8,ground-truth/population fingerprints unchanged,PASS
+R9,metrics/bootstrap fingerprints unchanged,PASS
+R10,prediction/winner/direction unchanged,PASS
+R11,original lock/gate superseded,PASS
+R12,recovered lock integrity,PASS
+R13,no final-refit/Test/reranking/retrieval,PASS
+R14,resource/privacy/checkpoint/Git/tests,PASS

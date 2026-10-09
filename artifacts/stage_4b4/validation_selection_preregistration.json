@@ -1,0 +1,63 @@
+{
+  "access": {
+    "final_refit_executed": false,
+    "first7d_read_count": 0,
+    "reranking_executed": false,
+    "retrieval_retuned": false,
+    "test_authorized": false,
+    "test_candidate_read_count": 0,
+    "test_feature_read_count": 0,
+    "test_label_read_count": 0,
+    "test_metric_read_count": 0,
+    "validation_label_read_count": 0,
+    "validation_labels_read": false
+  },
+  "config_fingerprint": "20052abb13b511ef50dd9b67e1110e89c2bc3e2ffdfe335fcbe36978e939391b",
+  "created_at": "2026-08-14T14:59:18+08:00",
+  "evaluator_fingerprint": "97b94905275f1bdae0be9711d228a36bea70b4e6ea7d2382e416c584a4a1a907",
+  "git_dirty_entry_count": 19,
+  "git_head": "45b50cee777409a1012599e7d6dffcdbb39c3da1",
+  "label_lineage": {
+    "ground_truth_physical_fingerprint": "c3aecba6c963b7907caea30ca7f5c91c53b0eff5c928392b2c7b6ac9115c1fe8",
+    "item_state_physical_fingerprint": "b2b683885d2fa8226c792a6781e39f03ff910246f3fcac46ae53d95a14e4c8f8",
+    "population_physical_fingerprint": "8a41ede0b724c1f5990d16cf91702adb926cb2fe0edf20d6500c3c4c3709d728",
+    "validation_label_content_open_count": 0
+  },
+  "phase": "phase2_validation_14d_selection_v1",
+  "phase1": {
+    "phase1_config_fingerprint": "3f7879e7c333d38ea5240a987afa09835bea9c8ed6353161c4e773524a5a58c0",
+    "phase1_gate_pass_count": 20,
+    "phase1_lock_physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+    "prediction_checkpoint_output_set_fingerprint": "84e28175f93f405cc92971813b2cc86fef021ddba7f5b042a4041866f7e59982",
+    "prediction_checkpoint_success_count": 32,
+    "prediction_global_merkle_fingerprints": {
+      "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+      "L0_100": "9533fc7e7ee2bb6cd6e2264433b1953c9317a866b68a3dcb0f3c1efb731c8df1",
+      "L0_300": "25aa218b12d12f8fb3d69ccf72136c518336260bf3b32c163cb14f57bfe086ce",
+      "L0_600": "13fd403694a2010d5b0f7121f6d69775a7704c846b46d3f3d739229a60e7224b",
+      "L1_100": "07b4b61017f71fc4b94f3392fd39d151e8823d20cd76d56c4861a91420559f88",
+      "L1_300": "18b5494893148e279c68002d6b34c0487b36550baa6efd674844214dedda41a7",
+      "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+    },
+    "upstream": {
+      "available_memory_at_start_bytes": 2405019648,
+      "disk_free_bytes": 523566747648,
+      "feature_schema_fingerprint": "5964882d45d0c3453fb49b3dac39fb187969989d364a63e7d4c18b3ed49896a3",
+      "lightgbm_version": "4.7.0",
+      "peak_rss_limit_bytes": 1683513753,
+      "train_optimizer_fingerprint": "3e634e20aafbf6737fbd4160b4eadd80a156e020b137462cdef616c26bf49fa8",
+      "validation_candidate_fingerprint": "1b48ebf8b8e30a847cd7f95a7da1f23f881763f1fed1a9fb1e369a0fb557c2e0"
+    }
+  },
+  "preregistration_fingerprint": "1b248fbc3fd407a605bb0d4e81fc35686b25fb26838a921d8974402aaddf8935",
+  "resource_contract": {
+    "available_memory_at_preregistration_bytes": 2404909056,
+    "disk_free_bytes": 523566575616,
+    "duckdb_memory_limit_mb": 802,
+    "rss_hard_limit_bytes": 1683436339,
+    "threads": 2
+  },
+  "source_fingerprint": "99203ba3d152feba141950db1262f1e6e75ce4c897f92d1e65b565ca8586cf2f",
+  "stage": "4B-4",
+  "status": "PREREGISTERED_BEFORE_LABEL_ACCESS"
+}

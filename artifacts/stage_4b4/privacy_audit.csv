@@ -1,0 +1,9 @@
+﻿check,actual,expected,violations,status
+tracked_private_artifacts,0,0,0,PASS
+raw_data_git_diff,0,0,0,PASS
+private_ignore_rules,3,3,0,PASS
+public_privacy_path_scan,0,0,0,PASS
+public_entity_value_policy,AGGREGATES_AND_FINGERPRINTS_ONLY,NO_RAW_OR_INTERNAL_ENTITY_VALUES,0,PASS
+validation_label_access,0,0,0,PASS
+first7d_access,0,0,0,PASS
+test_candidate_feature_label_metric_access,0,0,0,PASS

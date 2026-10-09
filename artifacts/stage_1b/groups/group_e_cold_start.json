@@ -1,0 +1,70 @@
+{
+  "group_name": "group_e_cold_start",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "7": {
+      "cutoff": "2020-09-16",
+      "test_rows": 240311,
+      "test_users": 68984,
+      "seen_test_users": 63412,
+      "new_test_users": 5572,
+      "user_cold_start_rate": 0.08077235300939348,
+      "test_items": 17986,
+      "seen_test_items": 17319,
+      "new_test_items": 667,
+      "item_cold_start_rate": 0.0370843989769821,
+      "cold_user_rows": 18143,
+      "cold_user_row_rate": 0.07549800050767547,
+      "cold_item_rows": 9564,
+      "cold_item_row_rate": 0.03979842787055108,
+      "cold_both_rows": 744,
+      "cold_both_row_rate": 0.00309598811540046,
+      "warm_user_item_rows": 213348,
+      "warm_candidate_upper_bound": 0.887799559737174
+    },
+    "14": {
+      "cutoff": "2020-09-09",
+      "test_rows": 495552,
+      "test_users": 128333,
+      "seen_test_users": 117366,
+      "new_test_users": 10967,
+      "user_cold_start_rate": 0.08545736482432421,
+      "test_items": 22640,
+      "seen_test_items": 21060,
+      "new_test_items": 1580,
+      "item_cold_start_rate": 0.06978798586572438,
+      "cold_user_rows": 37471,
+      "cold_user_row_rate": 0.07561466808730466,
+      "cold_item_rows": 44934,
+      "cold_item_row_rate": 0.09067464161177838,
+      "cold_both_rows": 2879,
+      "cold_both_row_rate": 0.005809682939429162,
+      "warm_user_item_rows": 416026,
+      "warm_candidate_upper_bound": 0.8395203732403461
+    },
+    "28": {
+      "cutoff": "2020-08-26",
+      "test_rows": 1043390,
+      "test_users": 233174,
+      "seen_test_users": 210553,
+      "new_test_users": 22621,
+      "user_cold_start_rate": 0.09701338914287184,
+      "test_items": 28297,
+      "seen_test_items": 24901,
+      "new_test_items": 3396,
+      "item_cold_start_rate": 0.1200127221966993,
+      "cold_user_rows": 79778,
+      "cold_user_row_rate": 0.07646038394080833,
+      "cold_item_rows": 163209,
+      "cold_item_row_rate": 0.15642185568195976,
+      "cold_both_rows": 11109,
+      "cold_both_row_rate": 0.010647025560912028,
+      "warm_user_item_rows": 811512,
+      "warm_candidate_upper_bound": 0.7777647859381439
+    }
+  }
+}

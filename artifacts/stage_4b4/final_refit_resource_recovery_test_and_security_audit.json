@@ -1,0 +1,224 @@
+{
+  "access": {
+    "first7d_read_count": 0,
+    "test_candidate_read_count": 0,
+    "test_feature_read_count": 0,
+    "test_label_read_count": 0,
+    "test_metric_read_count": 0,
+    "test_prediction_write_count": 0,
+    "validation_labels_reopened": false
+  },
+  "artifact_identity": {
+    "binary_physical_fingerprint": "df18e505648ad70924d9d59b2a5a888600f893427b1d6c543688666366c3e9d1",
+    "binary_rebuilt": false,
+    "binary_semantic_fingerprint": "8fe8fe6ed1c1cc3e7cd82f2f5845c15955a0f1f45b2c7a9f29f31a41dcf52af9",
+    "combined_matrix_rebuilt": false,
+    "model_physical_fingerprint": "1f2af19a79ed8d085d68d20fe9437f4eca7da3534a3852eb823f483c6bf96922",
+    "model_retrained": false,
+    "model_semantic_fingerprint": "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+    "prediction_recomputed": false,
+    "replay_audit_physical_fingerprint": "7e52482d421bc2bca85c7bce2209e74aa6993d10ddfa71defbc6fd57a775e347",
+    "replay_recomputed": false,
+    "validation_optimizer_rebuilt": false
+  },
+  "critical_phase4_test_skipped": false,
+  "engineering": {
+    "git_diff_check": {
+      "return_code": 0,
+      "status": "PASS",
+      "warning_categories": [
+        "LINE_ENDING_WARNING"
+      ]
+    },
+    "ignore": {
+      "probe_count": 3,
+      "status": "PASS"
+    },
+    "privacy": {
+      "audit_fingerprint": "3c3151c96d469e65449d34f9fae5f7fb7575db5019df9ca19da6aa9f71b685bf",
+      "scanned_file_count": 31,
+      "status": "PASS",
+      "violation_count": 0,
+      "violation_files": []
+    },
+    "python_compile": {
+      "return_code": 0,
+      "status": "PASS",
+      "warning_categories": []
+    },
+    "raw_data": {
+      "audit_fingerprint": "f6917e2973bf8256e14f9d072474b3cd0488d04f8ac40bf8d9539e0385b23c7f",
+      "changed_file_count": 0,
+      "staged_changed_file_count": 0,
+      "staged_return_code": 0,
+      "status": "PASS",
+      "stderr_is_not_diff_evidence": true,
+      "warning_categories": [
+        "GLOBAL_IGNORE_ACCESS_WARNING"
+      ],
+      "working_tree_changed_file_count": 0,
+      "working_tree_return_code": 0
+    },
+    "tracked_private": {
+      "return_code": 0,
+      "status": "PASS",
+      "tracked_file_count": 0
+    }
+  },
+  "git": {
+    "commit_created": false,
+    "push_executed": false
+  },
+  "parser_version": "pytest_hook_report_v1",
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "privacy_audit": {
+    "audit_fingerprint": "3c3151c96d469e65449d34f9fae5f7fb7575db5019df9ca19da6aa9f71b685bf",
+    "scanned_file_count": 31,
+    "status": "PASS",
+    "violation_count": 0,
+    "violation_files": []
+  },
+  "raw_data_audit": {
+    "audit_fingerprint": "f6917e2973bf8256e14f9d072474b3cd0488d04f8ac40bf8d9539e0385b23c7f",
+    "changed_file_count": 0,
+    "staged_changed_file_count": 0,
+    "staged_return_code": 0,
+    "status": "PASS",
+    "stderr_is_not_diff_evidence": true,
+    "warning_categories": [
+      "GLOBAL_IGNORE_ACCESS_WARNING"
+    ],
+    "working_tree_changed_file_count": 0,
+    "working_tree_return_code": 0
+  },
+  "root_cause": "AUDIT_PARSER_ERROR",
+  "skip_details": [
+    {
+      "classification": "EXPECTED_OBSOLETE_ARTIFACT_SKIP",
+      "code_location": "tests/test_stage_4b4_phase4.py:190",
+      "evidence": "The optional test targets legacy final_refit_contract_gate.csv (P4G1-P4G13); the formal recovered gate is final_refit_resource_recovery_gate.csv (R1-R16), whose dedicated tests execute and pass.",
+      "is_expected": true,
+      "is_phase4_required_gate": false,
+      "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+      "reason": "formal gate is created during finalization",
+      "suite": "targeted"
+    },
+    {
+      "classification": "EXPECTED_OBSOLETE_ARTIFACT_SKIP",
+      "code_location": "tests/test_stage_4b4_phase4.py:190",
+      "evidence": "The optional test targets legacy final_refit_contract_gate.csv (P4G1-P4G13); the formal recovered gate is final_refit_resource_recovery_gate.csv (R1-R16), whose dedicated tests execute and pass.",
+      "is_expected": true,
+      "is_phase4_required_gate": false,
+      "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+      "reason": "formal gate is created during finalization",
+      "suite": "full"
+    }
+  ],
+  "status": "PASS",
+  "test_security_audit_fingerprint": "2663212862052b337b5fdbd002dec8f5c54ec23f1fe25c1db21ac2763dcf912a",
+  "tests": {
+    "full": {
+      "collection_errors": [],
+      "command": [
+        "python",
+        "scripts/stage_4b4_pytest_structured_worker.py",
+        "--output",
+        "<private-results>/full.json",
+        "--",
+        "-ra",
+        "-q"
+      ],
+      "counts": {
+        "collected": 447,
+        "errors": 0,
+        "failed": 0,
+        "outcome_total": 447,
+        "passed": 446,
+        "skipped": 1,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "public_paths_sanitized": true,
+      "return_code": 0,
+      "skipped": [
+        {
+          "code_location": "tests/test_stage_4b4_phase4.py:190",
+          "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+          "reason": "formal gate is created during finalization"
+        }
+      ],
+      "status": "PASS",
+      "stderr_summary": "empty",
+      "stdout_summary": "pytest output retained in Git-ignored private evidence",
+      "structured_result_version": "pytest_hook_report_v1"
+    },
+    "reconciliation_targeted": {
+      "collection_errors": [],
+      "command": [
+        "python",
+        "scripts/stage_4b4_pytest_structured_worker.py",
+        "--output",
+        "<private-results>/reconciliation_targeted.json",
+        "--",
+        "tests/test_stage_4b4_phase4_pytest_reconciliation.py",
+        "-ra",
+        "-q"
+      ],
+      "counts": {
+        "collected": 9,
+        "errors": 0,
+        "failed": 0,
+        "outcome_total": 9,
+        "passed": 9,
+        "skipped": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "public_paths_sanitized": true,
+      "return_code": 0,
+      "skipped": [],
+      "status": "PASS",
+      "stderr_summary": "empty",
+      "stdout_summary": "pytest output retained in Git-ignored private evidence",
+      "structured_result_version": "pytest_hook_report_v1"
+    },
+    "targeted": {
+      "collection_errors": [],
+      "command": [
+        "python",
+        "scripts/stage_4b4_pytest_structured_worker.py",
+        "--output",
+        "<private-results>/targeted.json",
+        "--",
+        "tests/test_stage_4b4_phase4.py",
+        "tests/test_stage_4b4_phase4_resource_recovery.py",
+        "tests/test_stage_4b4_phase4_post_training_recovery.py",
+        "-ra",
+        "-q"
+      ],
+      "counts": {
+        "collected": 60,
+        "errors": 0,
+        "failed": 0,
+        "outcome_total": 60,
+        "passed": 59,
+        "skipped": 1,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "public_paths_sanitized": true,
+      "return_code": 0,
+      "skipped": [
+        {
+          "code_location": "tests/test_stage_4b4_phase4.py:190",
+          "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+          "reason": "formal gate is created during finalization"
+        }
+      ],
+      "status": "PASS",
+      "stderr_summary": "empty",
+      "stdout_summary": "pytest output retained in Git-ignored private evidence",
+      "structured_result_version": "pytest_hook_report_v1"
+    }
+  }
+}

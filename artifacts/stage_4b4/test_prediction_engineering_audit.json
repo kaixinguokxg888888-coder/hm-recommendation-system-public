@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "access_audit": "PASS",
+    "background_worker_audit": "PASS",
+    "full_pytest": "PASS",
+    "git_diff_check": "PASS",
+    "ignore_audit": "PASS",
+    "phase5a_targeted_tests": "PASS",
+    "privacy_path_scan": "PASS",
+    "python_compile": "PASS",
+    "raw_data_staged_diff": "PASS",
+    "raw_data_worktree_diff": "PASS",
+    "stage4b4_targeted_tests": "PASS",
+    "tracked_private_audit": "PASS"
+  },
+  "compile_return_code": 0,
+  "full_pytest": {
+    "collected": 455,
+    "errors": 0,
+    "failed": 0,
+    "passed": 454,
+    "result_fingerprint": "a59b6d263e36ecc3e6cd81241b8c4038fe0430dbdd2fc6376b4f737a0ec260b6",
+    "skipped": 1,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "git_diff_check_return_code": 0,
+  "ignore_probe_count": 3,
+  "phase": "phase5a_test_candidate_feature_prediction_freeze_v1",
+  "phase5a_targeted": {
+    "collected": 8,
+    "errors": 0,
+    "failed": 0,
+    "passed": 8,
+    "result_fingerprint": "9d461f40fa3ba70dd94402701c11680a8db7c41c3d85c42e526968979994d660",
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "privacy_path_violation_count": 0,
+  "raw_data_staged_changed_count": 0,
+  "raw_data_worktree_changed_count": 0,
+  "recorded_at": "2026-08-19T23:29:00+08:00",
+  "skip_details": [
+    {
+      "classification": "EXPECTED_OBSOLETE_ARTIFACT_SKIP",
+      "is_phase5a_required_test": false,
+      "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+      "reason": "formal gate is created during finalization",
+      "suite": "stage4b4_targeted_and_full"
+    }
+  ],
+  "stage": "4B-4",
+  "stage4b4_targeted": {
+    "collected": 121,
+    "errors": 0,
+    "failed": 0,
+    "passed": 120,
+    "result_fingerprint": "0845d965bfd929b34639a865b8bffade21ea7465786a00a15428b3fd4da6cf87",
+    "skipped": 1,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "status": "PASS",
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "tracked_private_artifact_count": 0,
+  "unexpected_required_phase5a_skip_count": 0
+}

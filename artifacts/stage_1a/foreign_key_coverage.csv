@@ -1,0 +1,3 @@
+﻿relationship,non_null_transaction_rows,distinct_transaction_keys,unmatched_transaction_rows,unmatched_distinct_keys,row_match_rate,distinct_key_match_rate,execution_scope
+transactions.customer_id->customers.customer_id,31788324,1362281,0,0,1.0,1.0,FULL_SCAN
+transactions.article_id->articles.article_id,31788324,104547,0,0,1.0,1.0,FULL_SCAN

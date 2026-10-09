@@ -1,0 +1,33 @@
+{
+  "group_name": "group_b_user_activity",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "users_with_transactions": 1362281,
+    "one_binary_interaction_users": 150490,
+    "one_binary_interaction_user_rate": 0.11046913228621702,
+    "users_at_least_binary_interactions": {
+      "5": 897229,
+      "10": 644315,
+      "20": 410431
+    },
+    "coverage_rates": {
+      "5": 0.6586225602500512,
+      "10": 0.47296776509398575,
+      "20": 0.3012821877424702
+    },
+    "raw_interactions": 31788324,
+    "binary_interactions": 28575395,
+    "same_day_excess": 3212929,
+    "recent_gap_quantiles_days": {
+      "p25": 48.0,
+      "p50": 151.0,
+      "p75": 398.0,
+      "p90": 608.0,
+      "p99": 724.0
+    }
+  }
+}

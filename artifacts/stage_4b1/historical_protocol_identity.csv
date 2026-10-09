@@ -1,0 +1,14 @@
+﻿protocol_field,historical_value,frozen_value,status
+candidate_contract_version,"""stage_3e_candidate_contract_v1""","""stage_3e_candidate_contract_v1""",PASS
+candidate_protocol_version,"""source_rank_cap_pre_dedup_v1""","""source_rank_cap_pre_dedup_v1""",PASS
+model,"""TT1""","""TT1""",PASS
+quota,"""T100""","""T100""",PASS
+locked_epoch,1,1,PASS
+candidate_budget,500,500,PASS
+source_caps,"{""itemcf"":200,""repurchase"":50,""trend"":100,""two_tower"":100}","{""itemcf"":200,""repurchase"":50,""trend"":100,""two_tower"":100}",PASS
+insertion_order,"[""repurchase"",""itemcf"",""two_tower"",""trend"",""popularity_fallback""]","[""repurchase"",""itemcf"",""two_tower"",""trend"",""popularity_fallback""]",PASS
+quota_semantics,"""source_rank_cap_before_cross_source_dedup""","""source_rank_cap_before_cross_source_dedup""",PASS
+duplicate_semantics,"""duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance""","""duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance""",PASS
+fallback_semantics,"""popularity_unique_fill_to_500""","""popularity_unique_fill_to_500""",PASS
+source_score_semantics,"""source_local_raw_scores_never_summed_or_cross_source_calibrated""","""source_local_raw_scores_never_summed_or_cross_source_calibrated""",PASS
+ann,"{""algorithm"":""hnsw"",""ef_construction"":200,""ef_search"":200,""exact_rerank"":true,""initial_query_k"":1000,""m"":32,""mean_overlap_min"":0.98,""metric"":""cosine"",""p5_overlap_min"":0.95,""retry_query_k"":2000}","{""algorithm"":""hnsw"",""ef_construction"":200,""ef_search"":200,""exact_rerank"":true,""initial_query_k"":1000,""m"":32,""mean_overlap_min"":0.98,""metric"":""cosine"",""p5_overlap_min"":0.95,""retry_query_k"":2000}",PASS

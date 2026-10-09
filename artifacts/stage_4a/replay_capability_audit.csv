@@ -1,0 +1,9 @@
+﻿component,status,evidence,reason
+repurchase,READY,src/retrieval/repurchase.py,Core function accepts as_of_date and filters history.
+itemcf,NEEDS_STAGE4B_ADAPTATION,src/retrieval/stage3b/runner.py,Core cutoff logic exists; formal runner snapshot registry and lineage need ranking_train registration.
+tt1_training,NEEDS_STAGE4B_ADAPTATION,src/retrieval/stage3d/runner.py,Snapshot-scoped causal training/full-refit exists; runner paths and formal lock flow cover only Validation/Test.
+tt1_full_refit,NEEDS_STAGE4B_ADAPTATION,src/retrieval/stage3d/runner.py,Locked epoch full-refit exists; historical checkpoint role and lineage must be added in Stage 4B.
+ann,NEEDS_STAGE4B_ADAPTATION,src/retrieval/stage3d/ann.py,ANN is embedding/index specific; historical snapshot wiring and audit lineage must be added.
+trend,READY,src/retrieval/trend.py,Core function accepts as_of_date and computes the trailing window only.
+popularity,READY,src/retrieval/popularity.py,Core function accepts as_of_date and filters future interactions.
+fusion,NEEDS_STAGE4B_ADAPTATION,src/retrieval/stage3d/union.py,Frozen union primitive is parameterized; Stage 3E formalizer currently admits only Validation/Test snapshots.

@@ -1,0 +1,14 @@
+﻿gate_id,description,status
+P2G1,preregistration before label access,PASS
+P2G2,Phase 1 frozen artifact identity,PASS
+P2G3,Validation-only label window and B semantics,PASS
+P2G4,full500 prediction membership remains frozen,PASS
+P2G5,main/cold population counts,PASS
+P2G6,all-zero query and future-positive denominators retained,PASS
+P2G7,canonical MAP/NDCG/Recall/HitRate,PASS
+P2G8,seven-version aggregate completeness,PASS
+P2G9,paired bootstrap fixed replay contract,PASS
+P2G10,deterministic winner selection,PASS
+P2G11,partition 0 metric replay,PASS
+P2G12,atomic immutable selection lock,PASS
+P2G13,First7d/final-refit/Test/re-ranking remain forbidden,PASS

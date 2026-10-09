@@ -1,0 +1,24 @@
+{
+  "attempt": 4,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 0.7194280999246985,
+  "generated_at": "2026-08-03T17:17:51+08:00",
+  "group_name": "public_aggregation",
+  "memory_limit_mb": 612,
+  "output_files": [
+    "artifacts/stage_3b/stage_3b_manifest.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/stage_3b_manifest.csv": "1dd8ac3563fa063ff8c1c2db14170e1088864a4b244381967e99d6524e9269e1"
+  },
+  "output_size_bytes": 5749,
+  "peak_rss_bytes": 44539904,
+  "run_fingerprint": "cc59e05b15c7066b5cb87ed4c8ae0a539311245f68cb0d92fb515430c211228f",
+  "source_fingerprint": "905832868bdfb7ce9a13ce718a8bf1641c616754de24e77d7b815ef658273803",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 1371205021,
+  "threads": 1
+}

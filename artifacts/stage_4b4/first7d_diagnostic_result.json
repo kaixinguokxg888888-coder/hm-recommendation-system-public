@@ -1,0 +1,25 @@
+{
+  "confidence_status": "POSITIVE_AND_SIGNIFICANT",
+  "critical_regression_slices": [],
+  "diagnostic_id": "ranking_validation_first7d_diagnostic",
+  "direction_status": "ROBUSTNESS_DIRECTION_PASS",
+  "main_metrics": {
+    "B0": {
+      "hit_rate_at_12": 0.06848061577382154,
+      "map_at_12": 0.01507260929160742,
+      "ndcg_at_12": 0.02326953128715582,
+      "recall_at_12": 0.03556462947587783
+    },
+    "L1_600": {
+      "hit_rate_at_12": 0.14434890261461655,
+      "map_at_12": 0.03144863029531143,
+      "ndcg_at_12": 0.04851479410723566,
+      "recall_at_12": 0.07091106044833446
+    }
+  },
+  "segment_regression_review": "NO_FIRST7D_CRITICAL_SEGMENT_REGRESSION",
+  "status": "FIRST7D_DIAGNOSTIC_COMPLETE",
+  "winner": "L1_600",
+  "winner_changed": false,
+  "winner_map_delta_vs_b0": 0.016376021003704014
+}

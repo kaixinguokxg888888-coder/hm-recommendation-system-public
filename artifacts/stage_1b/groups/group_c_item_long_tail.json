@@ -1,0 +1,43 @@
+{
+  "group_name": "group_c_item_long_tail",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "transacted_items": 104547,
+    "untransacted_articles": 995,
+    "raw_interactions": 31788324,
+    "gini_raw": 0.7585822040155648,
+    "hhi_raw": 7.434153963909557e-05,
+    "top_shares_raw": {
+      "top_1pct": 0.18625171934198229,
+      "top_5pct": 0.44048858945819225,
+      "top_10pct": 0.6075121167130422,
+      "top_20pct": 0.7910549798095678
+    },
+    "raw_popularity_quantiles": {
+      "p01": 1.0,
+      "p05": 2.0,
+      "p10": 4.0,
+      "p25": 14.0,
+      "p50": 65.0,
+      "p75": 286.0,
+      "p90": 793.0,
+      "p95": 1318.0,
+      "p99": 3185.079999999987
+    },
+    "binary_popularity_quantiles": {
+      "p01": 1.0,
+      "p05": 2.0,
+      "p10": 3.0,
+      "p25": 13.0,
+      "p50": 59.0,
+      "p75": 260.0,
+      "p90": 721.0,
+      "p95": 1193.699999999997,
+      "p99": 2817.079999999987
+    }
+  }
+}

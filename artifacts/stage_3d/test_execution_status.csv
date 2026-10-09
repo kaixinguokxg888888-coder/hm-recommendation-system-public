@@ -1,0 +1,2 @@
+﻿stage,phase,snapshot_id,locked_model,locked_quota,test_authorized,run_status,reason
+3D,test,test_14d,TT1,T100,True,SUCCESS,Exactly one locked Test comparison completed

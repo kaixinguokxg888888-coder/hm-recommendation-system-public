@@ -1,0 +1,2 @@
+﻿snapshot_id,as_of_date,algorithm,metric,m,ef_construction,ef_search,initial_query_k,retry_query_k,exact_rerank,audit_user_count,mean_overlap_recall,p5_overlap_recall,mean_threshold,p5_threshold,retry_rate,index_size_bytes,ann_index_fingerprint,status
+ranking_train_14d_v1,2020-08-11,hnsw,cosine,32,200,200,1000,2000,True,2000,0.9972819999999999,0.988,0.98,0.95,0.0,52920744,f91e20be1850f1849a7be692a320ac4524f7e61506b0a772a1802613128fdf56,PASS

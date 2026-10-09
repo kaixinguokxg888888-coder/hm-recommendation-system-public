@@ -1,0 +1,89 @@
+{
+  "stage": "4B-4",
+  "phase": "phase3_post_first7d_resource_contract_recovery_v1",
+  "recovery_type": "post_first7d_resource_contract_only",
+  "authorization": "chatgpt_post_first7d_resource_recovery_2026-08-18",
+  "base_phase3_config_fingerprint": "4ef6dfcd30b52bc75efbdd58c0cd0c5be271f45577b02a511b266d9bf2a5b369",
+  "base_phase3_preregistration_fingerprint": "9b90a83a0c37808db6635c80652ae5f10d5161767e6983346ba116606179b2d9",
+  "resource_correction": {
+    "invalid_registered_fraction": 0.65,
+    "formal_required_fraction": 0.70,
+    "available_memory_at_original_preregistration_bytes": 1857146880,
+    "invalid_preregistered_cap_bytes": 1207145472,
+    "invalid_runtime_recomputed_cap_bytes": 1315638272,
+    "corrected_formal_cap_bytes": 1300002816,
+    "observed_peak_rss_bytes": 575967232,
+    "observed_peak_fraction_of_corrected_cap": 0.4430507572069752,
+    "formal_gate_expression": "575967232 <= 1300002816"
+  },
+  "recovery_permissions": {
+    "first7d_label_reopen_allowed": false,
+    "ground_truth_rematerialization_allowed": false,
+    "population_rematerialization_allowed": false,
+    "metric_recomputation_allowed": false,
+    "bootstrap_recomputation_allowed": false,
+    "prediction_recomputation_allowed": false,
+    "winner_change_allowed": false,
+    "methodology_changed": false
+  },
+  "expected": {
+    "base_phase3_config_physical_fingerprint": "e3c42461c2453f58781fc68a458753e265a1812ce6c922bb45ab07b3cfb9b971",
+    "base_preregistration_physical_fingerprint": "62ab8a0826a281601c1f766d30a3f8d1f81bad01ba30ce4faadabf25c0b20635",
+    "base_access_audit_physical_fingerprint": "5428d085d753d2f0a33020902fd40908381ff9b9f9ff63f352dc3162504c3d83",
+    "base_lock_semantic_fingerprint": "b3fa0a2a48b99a31c90fb85852951622ccc9a7ba2acaea196056dcac76db69c5",
+    "base_lock_physical_fingerprint": "ccd7dd3b4103ee9d515d71494faef6f58a536c47b2e3378d5526061d79c6476b",
+    "base_gate_physical_fingerprint": "302f12094a6c1e3cfe2bec9ea0609aa51c719e70733a0e8ade559c241d811ab6",
+    "base_resource_audit_physical_fingerprint": "7566ccd3f5df1dd722413bfb09d5f512a93637134d4a28826a4dee943be65a0e",
+    "base_final_audit_physical_fingerprint": "847af4bc02ffd0aa4504e87cab482d7cdc22e8c9b6be1d7ed3ffe481ceda0c1c",
+    "base_result_physical_fingerprint": "39796768d4024433b84682686e3c0c5eed521aa8e0d5e6a9810eb159c594a8a6",
+    "base_report_physical_fingerprint": "9222fc716fe222b719424430cdc1c2d110f6525f4ced5b8c0385df6a31fefbe7",
+    "first7d_ground_truth_physical_fingerprint": "c2b007dd9dc77b0d6036a82fd6ca638426857ab251011b92d9d1124e54a63202",
+    "first7d_population_physical_fingerprint": "7b90950db5776e1447d5e3c4a5e8644c6900414883761bb7f2e8955a01603214",
+    "aggregate_metrics_physical_fingerprint": "71b7d2bf65d72f10be7c7aa2daeebfc79d637cf6b48f907c23b9cbb6c93ad575",
+    "bootstrap_physical_fingerprint": "21ca34b46b12e5c6d91acab9d0b090995308db89df1aae58936006b426a79f1c",
+    "replay_physical_fingerprint": "5347446f20a726ecd8503b1e91cdbcbb31d5c4c6168ef66728a482cc51b8ca1f",
+    "bootstrap_replay_physical_fingerprint": "4be5e3ed33a0e814621449b0503dab588a56dbbe492e76d9bfc6be0c1f61a835",
+    "prediction_manifest_physical_fingerprint": "8a06b13ca2b4783a2a9fdf410511d8b7b309a864a7ba3958403805f9f3f93fa5",
+    "checkpoint_set_fingerprint": "6a2248b6b79ab4ff8149a49f22eacd1afd36b772513a6079f19511b23c5fb17c",
+    "checkpoint_success_count": 160,
+    "materialization_checkpoint_physical_fingerprint": "b33dcfd3a442362bb843405bfa765cff7562cb86c283080ab96910779790a71a",
+    "metric_physical_fingerprints": {
+      "B0": "eb45f73989475b573a3279a013b19f3505a510bab8a17c3287e9b2d337be2232",
+      "L1_600": "27adfc67ad9e5bab3c19159d14bc15f52b43c5bc96d2cf6dd0bb83b66e1594e6"
+    },
+    "metric_digest_physical_fingerprints": {
+      "B0": "14c297eada27bb93300baa709c10f15e68ec55d68c357114b177ed1252c27066",
+      "L1_600": "6926fb01030aa84d5022cdcb0561de47001eec1e0fc273a394e8405172dccd51"
+    },
+    "prediction_global_merkle_fingerprints": {
+      "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+      "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+    }
+  },
+  "paths": {
+    "base_phase3_config": "configs/stage_4b4_first7d_diagnostic.yaml",
+    "base_preregistration": "artifacts/stage_4b4/first7d_diagnostic_preregistration.json",
+    "base_access_audit": "artifacts/stage_4b4/first7d_diagnostic_access_audit.json",
+    "base_lock": "artifacts/stage_4b4/stage_4b4_first7d_lock.json",
+    "base_gate": "artifacts/stage_4b4/first7d_diagnostic_contract_gate.csv",
+    "base_resource_audit": "artifacts/stage_4b4/first7d_diagnostic_resource_audit.json",
+    "base_final_audit": "artifacts/stage_4b4/first7d_diagnostic_final_audit.csv",
+    "base_result": "artifacts/stage_4b4/first7d_diagnostic_result.json",
+    "base_report": "docs/stages/stage_4b4_first7d_diagnostic.md",
+    "first7d_ground_truth": "artifacts/stage_4b4/private/phase3_first7d_diagnostic/ground_truth_first7d.parquet",
+    "first7d_population": "artifacts/stage_4b4/private/phase3_first7d_diagnostic/evaluation_population_first7d.parquet",
+    "query_metrics": "artifacts/stage_4b4/private/phase3_first7d_diagnostic/query_metrics",
+    "query_metric_digests": "artifacts/stage_4b4/private/phase3_first7d_diagnostic/query_metric_digests",
+    "phase3_checkpoints": "artifacts/stage_4b4/checkpoints/phase3_first7d_diagnostic",
+    "aggregate_metrics": "artifacts/stage_4b4/first7d_diagnostic_metrics.csv",
+    "bootstrap": "artifacts/stage_4b4/first7d_diagnostic_bootstrap.csv",
+    "replay": "artifacts/stage_4b4/first7d_diagnostic_replay_audit.csv",
+    "bootstrap_replay": "artifacts/stage_4b4/first7d_diagnostic_bootstrap_replay.csv",
+    "prediction_manifest": "artifacts/stage_4b4/prediction_fingerprint_manifest.csv",
+    "supersession_manifest": "artifacts/stage_4b4/first7d_resource_contract_supersession.json",
+    "recovery_audit": "artifacts/stage_4b4/first7d_resource_contract_recovery_audit.csv",
+    "recovered_gate": "artifacts/stage_4b4/first7d_resource_contract_recovered_gate.csv",
+    "recovered_lock": "artifacts/stage_4b4/stage_4b4_first7d_lock_recovered.json",
+    "recovery_final_audit": "artifacts/stage_4b4/first7d_resource_contract_recovery_final_audit.csv"
+  }
+}

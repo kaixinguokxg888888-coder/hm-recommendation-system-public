@@ -1,0 +1,13 @@
+audit_id,status,observed
+RC01,PASS,POST_FIRST7D_IMPLEMENTATION_FAILURE preserved
+RC02,PASS,original fraction=0.65
+RC03,PASS,original available=1857146880
+RC04,PASS,invalid preregistered cap=1207145472
+RC05,PASS,invalid runtime cap=1315638272
+RC06,PASS,corrected 70% cap=1300002816
+RC07,PASS,peak RSS=575967232
+RC08,PASS,575967232 <= 1300002816
+RC09,PASS,runtime available is observation-only
+RC10,PASS,label reopen=0;total read=1
+RC11,PASS,metrics/bootstrap recomputed=false
+RC12,PASS,winner/direction unchanged

@@ -1,0 +1,11 @@
+﻿dataset_fingerprint,population_version,feedback_version,snapshot_id,popularity_bucket,seen_item,cold_item,zero_history_dimension_item,item_count,label_positive_count,label_user_item_pairs,history_p50,history_p90,as_of_date
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,validation_14d,head,True,False,False,10118,160001,160001,59,721,2020-08-25
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,validation_14d,mid,True,False,False,40711,212458,212458,59,721,2020-08-25
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,validation_14d,tail,True,False,False,50322,85366,85366,59,721,2020-08-25
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,validation_14d,zero_history,False,True,True,1816,31898,31898,59,721,2020-08-25
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,validation_14d,zero_history,False,False,True,2575,0,0,59,721,2020-08-25
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,test_14d,head,True,False,False,10313,142187,142187,59,720,2020-09-08
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,test_14d,mid,True,False,False,41418,192933,192933,59,720,2020-09-08
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,test_14d,tail,True,False,False,51236,64886,64886,59,720,2020-09-08
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,test_14d,zero_history,False,True,True,1580,38374,38374,59,720,2020-09-08
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,test_14d,zero_history,False,False,True,995,0,0,59,720,2020-09-08

@@ -1,0 +1,20 @@
+﻿gate_id,mandatory,status,reason,stage_status
+G1_UPSTREAM_LINEAGE,True,PASS,All declared upstream fingerprints and formal statuses match.,PASSED_PROTOCOL_GATE
+G2_STAGE3E_CONTRACT_IDENTITY,True,PASS,Stage 3E contract v1 and locked TT1-T100 identity match.,PASSED_PROTOCOL_GATE
+G3_RANKING_CALENDAR_VALIDITY,True,PASS,All calendar windows and request cutoffs validate.,PASSED_PROTOCOL_GATE
+G4_OUTER_TRAIN_CONTAINMENT,True,PASS,2020-08-25 <= outer Train end 2020-08-25,PASSED_PROTOCOL_GATE
+G5_VALIDATION_TEST_ISOLATION,True,PASS,Train/Validation/Test are disjoint and Test is not selectable.,PASSED_PROTOCOL_GATE
+G6_FIRST7D_DIAGNOSTIC_ISOLATION,True,PASS,Diagnostic is a Validation subset and ends before Test.,PASSED_PROTOCOL_GATE
+G7_HISTORICAL_REPLAY_CONTRACT,True,PASS,Replay semantics are frozen; Stage 4B adaptations are explicitly recorded.,PASSED_PROTOCOL_GATE
+G8_FEATURE_TIME_CONTRACT,True,PASS,feature_timestamp <= corresponding snapshot as_of_date.,PASSED_PROTOCOL_GATE
+G9_LABEL_NEGATIVE_SEMANTICS,True,PASS,B-feedback labels and deterministic cap=100 are frozen; label=0 is unobserved purchase.,PASSED_PROTOCOL_GATE
+G10_CANDIDATE_LABEL_SEPARATION,True,PASS,Future labels may annotate but never alter candidate membership.,PASSED_PROTOCOL_GATE
+G11_FINAL_REFIT_DISCIPLINE,True,PASS,Final refit uses locked settings and retains snapshot-time features.,PASSED_PROTOCOL_GATE
+G12_TEST_LOCK_DISCIPLINE,True,PASS,Ranking lock precedes final refit/Test; Test selection is forbidden.,PASSED_PROTOCOL_GATE
+G13_NO_RANKING_IMPLEMENTATION,True,PASS,No Stage 4B model/dataset/feature/prediction/rerank implementation found.,PASSED_PROTOCOL_GATE
+G14_PRIVACY,True,PASS,"No entity values, local absolute paths, or local username found.",PASSED_PROTOCOL_GATE
+G15_RANKING_POPULATION_CONTRACT,True,PASS,Historical warm optimization population is frozen; query population semantics cannot alter candidate membership.,PASSED_PROTOCOL_GATE
+G16_DETERMINISTIC_NEGATIVE_HASH_CONTRACT,True,PASS,UTF-8 SHA-256 payload and digest/article tie-break are fully specified; built-in hash is forbidden.,PASSED_PROTOCOL_GATE
+G17_FIRST7D_POST_SELECTION_ONLY,True,PASS,First7d runs once after locking the 14d winner and cannot select or retune.,PASSED_PROTOCOL_GATE
+G18_HISTORICAL_FINGERPRINT_SEMANTICS,True,PASS,Protocol identity is cross-snapshot; semantic fingerprint equality applies only to formal/replay of the same historical snapshot.,PASSED_PROTOCOL_GATE
+G19_STAGE4B_NOT_ENTERED_DURING_STAGE4A,True,PASS,FINAL ACCEPTED permits future Stage 4B protocol consumption under a separate Prompt; Stage 4B was not entered during Stage 4A.,PASSED_PROTOCOL_GATE

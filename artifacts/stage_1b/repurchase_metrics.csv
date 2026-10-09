@@ -1,0 +1,22 @@
+﻿metric,value,feedback_scope,execution_scope,group_count,user_count,max_count
+raw_rows_A,31788324,A/B/C comparison,FULL_SCAN,,,
+binary_user_item_days_B,28575395,A/B/C comparison,FULL_SCAN,,,
+daily_strength_sum_C,31788324,A/B/C comparison,FULL_SCAN,,,
+same_day_excess,3212929,A/B/C comparison,FULL_SCAN,,,
+same_article_repeat_groups,3515413,aggregate,FULL_SCAN,,,
+users_with_same_article_repeat,670345,aggregate,FULL_SCAN,,,
+user_repeat_rate,0.49207542349926336,aggregate,FULL_SCAN,,,
+repeat_excess_rows,4481885,aggregate,FULL_SCAN,,,
+repeat_excess_row_rate,0.14099154771418587,aggregate,FULL_SCAN,,,
+cross_day_repeat_groups,1141216,aggregate,FULL_SCAN,,,
+users_with_cross_day_repeat,377478,aggregate,FULL_SCAN,,,
+cross_day_excess_days,1268956,aggregate,FULL_SCAN,,,
+repurchase_gap_quantiles_days,"{""p01"": 1.0, ""p25"": 3.0, ""p50"": 8.0, ""p75"": 39.0, ""p90"": 147.0, ""p99"": 421.0}",aggregate,FULL_SCAN,,,
+same_product_repeat_groups,4946329,aggregate,FULL_SCAN,,,
+users_with_product_repeat,865466,aggregate,FULL_SCAN,,,
+same_product_different_article_groups,2338909,aggregate,FULL_SCAN,,,
+users_with_same_product_different_article,666426,aggregate,FULL_SCAN,,,
+recent_history_department_overlap,"{""users_in_both_windows"": 210553, ""mean_jaccard"": 0.0716121271035151, ""quantiles"": {""p10"": 0.0, ""p25"": 0.0, ""p50"": 0.05263157894736842, ""p75"": 0.10344827586206896, ""p90"": 0.16666666666666663}}",aggregate,FULL_SCAN,,,
+repeat_preference_product_type_no,,,FULL_SCAN,5584621,1086987,654
+repeat_preference_department_no,,,FULL_SCAN,6266213,1069053,572
+repeat_preference_garment_group_no,,,FULL_SCAN,4991557,1129008,662

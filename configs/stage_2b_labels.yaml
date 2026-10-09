@@ -1,0 +1,40 @@
+{
+  "stage": "2B",
+  "population_version": "1.0.0",
+  "split_manifest": "artifacts/stage_2a/split_manifest.csv",
+  "stage_2a_private": "artifacts/stage_2a/private",
+  "paths": {
+    "artifact_directory": "artifacts/stage_2b",
+    "private_directory": "artifacts/stage_2b/private",
+    "checkpoint_directory": "artifacts/stage_2b/checkpoints",
+    "temp_directory": "artifacts/stage_2b/tmp",
+    "report": "docs/stages/stage_2b_labels_and_evaluation_population.md"
+  },
+  "segments": {
+    "cold": [0, 0],
+    "short_history": [1, 4],
+    "warm": [5, 20],
+    "active": [21, null]
+  },
+  "positive_buckets": ["1", "2", "3-5", "6-10", "10+"],
+  "popularity": {
+    "tail_below_quantile": 0.5,
+    "head_at_or_above_quantile": 0.9,
+    "rule": "seen-item history B frequency: tail < P50; mid >= P50 and < P90; head >= P90"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 256,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "max_temp_directory_size": "20GB"
+  },
+  "groups": [
+    "group_a_ground_truth",
+    "group_b_evaluable_users",
+    "group_c_user_segments",
+    "group_d_item_state",
+    "group_e_evaluation_protocol",
+    "group_f_leakage_report"
+  ]
+}

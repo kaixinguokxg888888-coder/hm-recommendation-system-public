@@ -1,0 +1,24 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 503.0303087999346,
+  "generated_at": "2026-08-03T13:38:00+08:00",
+  "group_name": "validation_14d_iuf_neighbors",
+  "memory_limit_mb": 1024,
+  "output_files": [
+    "artifacts/stage_3b/private/neighbors_validation_14d_iuf.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/neighbors_validation_14d_iuf.parquet": "eab19adc3b176a415862213afc600836c60edf13d5a48a3af2b1a261809bac64"
+  },
+  "output_size_bytes": 183570127,
+  "peak_rss_bytes": 1073045504,
+  "run_fingerprint": "1b7715446551f1ad388b845ce2a409a047a919bc20e586f34c5cad2517e692b1",
+  "source_fingerprint": "6464f9f62189460eb3572f78ce3ab12b9a4f9ac55d71be576ff5e34be1bbff84",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 12124291072,
+  "threads": 1
+}

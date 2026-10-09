@@ -1,0 +1,8 @@
+﻿model_id,partition_count,row_count,query_count,rows_per_query,query_size_violations,duplicate_query_keys,duplicate_article_keys,candidate_rank_violations,predicted_rank_violations,nonfinite_raw_scores,tie_break_violations,baseline_raw_score_violations,wall_time_seconds,status
+B0,32,70679500,141359,500,0,0,0,0,0,0,0,0,16.985588,PASS
+L0_100,32,70679500,141359,500,0,0,0,0,0,0,0,0,23.67109,PASS
+L0_300,32,70679500,141359,500,0,0,0,0,0,0,0,0,25.205095,PASS
+L0_600,32,70679500,141359,500,0,0,0,0,0,0,0,0,24.351103,PASS
+L1_100,32,70679500,141359,500,0,0,0,0,0,0,0,0,24.266444,PASS
+L1_300,32,70679500,141359,500,0,0,0,0,0,0,0,0,24.895519,PASS
+L1_600,32,70679500,141359,500,0,0,0,0,0,0,0,0,24.352974,PASS

@@ -1,0 +1,61 @@
+{
+  "group_name": "group_d_calendar_audit",
+  "payload": {
+    "validation_14d": {
+      "start": "2020-08-26",
+      "end": "2020-09-08",
+      "days": 14,
+      "missing_dates": 0,
+      "complete_week_cycles": 2,
+      "transaction_rows_A": 547838,
+      "weekend_share": 0.28293035532401917,
+      "active_users_daily_mean": 12545.07142857143,
+      "active_items_daily_mean": 9151.357142857143,
+      "channel_1_share": 0.3325289592908853,
+      "channel_2_share": 0.6674710407091148
+    },
+    "test_14d": {
+      "start": "2020-09-09",
+      "end": "2020-09-22",
+      "days": 14,
+      "missing_dates": 0,
+      "complete_week_cycles": 2,
+      "transaction_rows_A": 495552,
+      "weekend_share": 0.298826359292264,
+      "active_users_daily_mean": 11307.357142857143,
+      "active_items_daily_mean": 8370.07142857143,
+      "channel_1_share": 0.30971926255973137,
+      "channel_2_share": 0.6902807374402686
+    },
+    "test_7d": {
+      "start": "2020-09-16",
+      "end": "2020-09-22",
+      "days": 7,
+      "missing_dates": 0,
+      "complete_week_cycles": 1,
+      "transaction_rows_A": 240311,
+      "weekend_share": 0.2841526188980113,
+      "active_users_daily_mean": 11020.42857142857,
+      "active_items_daily_mean": 8205.42857142857,
+      "channel_1_share": 0.310023261523609,
+      "channel_2_share": 0.689976738476391
+    },
+    "test_28d": {
+      "start": "2020-08-26",
+      "end": "2020-09-22",
+      "days": 28,
+      "missing_dates": 0,
+      "complete_week_cycles": 4,
+      "transaction_rows_A": 1043390,
+      "weekend_share": 0.29048006977256824,
+      "active_users_daily_mean": 11926.214285714286,
+      "active_items_daily_mean": 8760.714285714286,
+      "channel_1_share": 0.3216956267550964,
+      "channel_2_share": 0.6783043732449037
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22"
+}

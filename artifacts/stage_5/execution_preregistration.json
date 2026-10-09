@@ -1,0 +1,14 @@
+{
+  "config_fingerprint": "950f9a626caee4b7daa1aae1ad76513138b3bf73b30e20200823799a811ea952",
+  "protection_manifest": "c06178290ecf2283a04af719b38b8d1b5aa2b1aaca6cf5425457848a4c611509",
+  "source_fingerprint": "30e59f21fa27888cb0b02b6168236fda07a584736fa040aa1d366a01ae0e1edd",
+  "variants": [
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4_N20",
+    "R4_N30",
+    "R4_N50"
+  ]
+}

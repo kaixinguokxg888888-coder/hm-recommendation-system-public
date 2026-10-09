@@ -1,0 +1,102 @@
+{
+  "group_name": "group_c_date_value_ranges",
+  "results": [
+    {
+      "check_id": "transactions.full.date.range",
+      "table_name": "transactions",
+      "check_name": "Transaction date range and parse quality",
+      "check_type": "date_range",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "min_date": "2018-09-20",
+        "max_date": "2020-09-22",
+        "parse_failure_count": 0
+      },
+      "expected_condition": "all non-null dates parse; report min and max",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/value_ranges.csv",
+      "notes": "日期范围来自完整 transaction 文件。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_c_date_value_ranges",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.price.profile",
+      "table_name": "transactions",
+      "check_name": "Full price range and quantiles",
+      "check_type": "numeric_profile",
+      "severity": "warning",
+      "status": "PASS",
+      "observed_value": {
+        "min": 1.694915254237288e-05,
+        "max": 0.5915254237288136,
+        "mean": 0.02782927385390111,
+        "quantiles": {
+          "p01": 0.0035762711864406,
+          "p25": 0.0158135593220338,
+          "p50": 0.0254067796610169,
+          "p75": 0.0338813559322033,
+          "p99": 0.1002203389830508
+        },
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      "expected_condition": "finite non-negative prices; report range, mean, quantiles and zero count",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/value_ranges.csv",
+      "notes": "零价格只记录，不在本阶段解释或处理。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_c_date_value_ranges",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.age.profile",
+      "table_name": "customers",
+      "check_name": "Full age range, quantiles and buckets",
+      "check_type": "numeric_profile",
+      "severity": "warning",
+      "status": "PASS",
+      "observed_value": {
+        "min": 16.0,
+        "max": 99.0,
+        "mean": 36.386964565794,
+        "quantiles": {
+          "p01": 18.0,
+          "p25": 24.0,
+          "p50": 32.0,
+          "p75": 49.0,
+          "p99": 71.0
+        },
+        "null_count": 15861,
+        "out_of_range": 0,
+        "age_0_17": 9553,
+        "age_18_24": 347616,
+        "age_25_64": 955348,
+        "age_65_120": 43602
+      },
+      "expected_condition": "non-null ages in [0, 120]; report quantiles and buckets",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 7e-06,
+      "evidence_path": "artifacts/stage_1a/value_ranges.csv",
+      "notes": "年龄缺失和分桶仅用于数据质量评估。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_c_date_value_ranges",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    }
+  ]
+}

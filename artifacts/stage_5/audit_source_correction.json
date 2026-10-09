@@ -1,0 +1,51 @@
+{
+  "algorithm_or_config_changed": false,
+  "allowed_changed_methods": [
+    "audit_tests",
+    "freeze",
+    "scan_public",
+    "write_report"
+  ],
+  "business_ast_identity": true,
+  "changed_files": [
+    "src/reranking/runner.py"
+  ],
+  "final_audit_source_fingerprint": "e20f64701c1652dbee8c727c5957eccb1b8cd5b05b0642061bbf3e3a9f092623",
+  "final_business_ast_fingerprint": "996ab1e90062682f8243d990ec1cdf13249988749828c0acb92dc85fc1f63b0c",
+  "final_file_fingerprints": {
+    "scripts/run_stage_5_reranking.py": "e3484e78ad2b5600bc1b2f496c4c4a281527fcc1aa1d00fb915d6df5adcfbe5d",
+    "src/reranking/__init__.py": "4a2835096eaa9faebb1b3bd844865c8ac27261b7d707b5a67eb693a37b8bda47",
+    "src/reranking/config.py": "0faa1c7bb88faea43886d3118a19f289ab945ec0c6fdb6772df02f1fc6594a00",
+    "src/reranking/contracts.py": "ed43b20f8ff55f198a04e44b2961514a8d29987fdf01bd4c71c7cf459c28db11",
+    "src/reranking/evaluation.py": "d6a6f7947310463e0e0f8f42e91d5c8be57d85734f5b8dd5aed83552c45d041f",
+    "src/reranking/greedy.py": "65b6c452b7e96ac9ed4ad0f0f7e162e06f874f7d757eb3bda47ae7849d758a59",
+    "src/reranking/metadata.py": "5b4b34b15b56570bca54fefacbf403ed9a54b071539bd83df5c0617f791d4d70",
+    "src/reranking/runner.py": "8e9d68c3457fe8e03dd4019ee4df0d085594945576854ef3dbc0e7ddc9444fe0"
+  },
+  "frozen_result_byte_identity": true,
+  "frozen_result_fingerprints": {
+    "artifacts/stage_5/semantic_fingerprint_manifest.csv": "3271727127cfce3040902d6943e82f8d28c530ab335f90d9331d049bd4aa83c5",
+    "artifacts/stage_5/tail_exploration_subgroup.csv": "fe3a3b54a03a5f2ea757ba5ac8ef811a9fe4e926f03d4f9448d730aecce5c37e",
+    "artifacts/stage_5/validation_ablation_summary.csv": "4fbb62f3f0656251e326913a4ccd06a08fd0e93d4a0f2911ce0b98c03d7413ec",
+    "artifacts/stage_5/validation_diagnostics.csv": "c185280f6d872d72b2589dc2cc0316c521e3315cbf3ba7abdb621ddac927513b",
+    "artifacts/stage_5/validation_generation_manifest.json": "32f1c61c17f91787f791b80fbf7f1e835a8f121752fdf95818a2d2e33f689948",
+    "artifacts/stage_5/validation_metrics.csv": "c872cf8c2a3b08e803322cd1dff9466d2008b5debea591bac8edd381135ecdf2",
+    "artifacts/stage_5/validation_paired_comparison.csv": "089ea7c8b2e8aafd6a130c8b69b4ed3d77106fde59cc1b8470948e620559f4de",
+    "artifacts/stage_5/validation_selection.json": "670dc4a46ed0e71d30820b70ed0ebb77d73dda89bac0a8f4702e2ae751826832"
+  },
+  "producer_business_ast_fingerprint": "996ab1e90062682f8243d990ec1cdf13249988749828c0acb92dc85fc1f63b0c",
+  "producer_file_fingerprints": {
+    "scripts/run_stage_5_reranking.py": "e3484e78ad2b5600bc1b2f496c4c4a281527fcc1aa1d00fb915d6df5adcfbe5d",
+    "src/reranking/__init__.py": "4a2835096eaa9faebb1b3bd844865c8ac27261b7d707b5a67eb693a37b8bda47",
+    "src/reranking/config.py": "0faa1c7bb88faea43886d3118a19f289ab945ec0c6fdb6772df02f1fc6594a00",
+    "src/reranking/contracts.py": "ed43b20f8ff55f198a04e44b2961514a8d29987fdf01bd4c71c7cf459c28db11",
+    "src/reranking/evaluation.py": "d6a6f7947310463e0e0f8f42e91d5c8be57d85734f5b8dd5aed83552c45d041f",
+    "src/reranking/greedy.py": "65b6c452b7e96ac9ed4ad0f0f7e162e06f874f7d757eb3bda47ae7849d758a59",
+    "src/reranking/metadata.py": "5b4b34b15b56570bca54fefacbf403ed9a54b071539bd83df5c0617f791d4d70",
+    "src/reranking/runner.py": "6421196112e9a5c238f4c211135b7c96bf887046ba3cf60121936ca8d3d23bf9"
+  },
+  "producer_source_fingerprint": "30e59f21fa27888cb0b02b6168236fda07a584736fa040aa1d366a01ae0e1edd",
+  "reason": "The public scanner confuses 10-digit RSS byte counts with string article IDs; pytest duplicate quiet flags suppress summary counts.",
+  "status": "PASS",
+  "validation_evaluation_or_bootstrap_repeated": false
+}

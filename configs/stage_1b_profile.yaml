@@ -1,0 +1,58 @@
+{
+  "config_version": "1.0.0",
+  "result_version": "1.0.0",
+  "data_paths": {
+    "articles": "data/raw/articles.parquet",
+    "customers": "data/raw/customers.parquet",
+    "transactions": "data/raw/transactions_train.parquet"
+  },
+  "contracts_path": "configs/data_contracts.yaml",
+  "duckdb": {
+    "database": ":memory:",
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 256,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "temp_directory": "artifacts/stage_1b/tmp",
+    "max_temp_directory_size": "20GB",
+    "preserve_insertion_order": false
+  },
+  "query_timeout_policy": {
+    "seconds_per_query": 1800,
+    "action": "interrupt_query_and_stop_heavier_groups"
+  },
+  "retry_policy": {
+    "max_attempts": 1,
+    "retry_on": []
+  },
+  "analysis": {
+    "evaluation_windows_days": [7, 14, 28],
+    "activity_buckets": [
+      {"label": "1", "min": 1, "max": 1},
+      {"label": "2", "min": 2, "max": 2},
+      {"label": "3-5", "min": 3, "max": 5},
+      {"label": "6-10", "min": 6, "max": 10},
+      {"label": "11-20", "min": 11, "max": 20},
+      {"label": "21-50", "min": 21, "max": 50},
+      {"label": "51-100", "min": 51, "max": 100},
+      {"label": "100+", "min": 101, "max": null}
+    ],
+    "sequence_thresholds": [5, 10, 20],
+    "preference_recent_window_days": 28
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_1b",
+    "checkpoint_directory": "artifacts/stage_1b/checkpoints",
+    "group_directory": "artifacts/stage_1b/groups",
+    "report": "docs/stages/stage_1b_recommendation_feasibility_profile.md"
+  },
+  "groups": [
+    "group_a_temporal_activity",
+    "group_b_user_activity",
+    "group_c_item_long_tail",
+    "group_d_repurchase_stability",
+    "group_e_cold_start",
+    "group_f_time_split",
+    "group_g_model_evidence"
+  ]
+}

@@ -1,0 +1,4 @@
+﻿table_name,field_name,metric,value,execution_scope
+transactions,t_dat,date_range,"{""min_date"": ""2018-09-20"", ""max_date"": ""2020-09-22"", ""parse_failure_count"": 0}",FULL_SCAN
+transactions,price,numeric_profile,"{""min"": 1.694915254237288e-05, ""max"": 0.5915254237288136, ""mean"": 0.02782927385390111, ""quantiles"": {""p01"": 0.0035762711864406, ""p25"": 0.0158135593220338, ""p50"": 0.0254067796610169, ""p75"": 0.0338813559322033, ""p99"": 0.1002203389830508}, ""negative_count"": 0, ""zero_count"": 0}",FULL_SCAN
+customers,age,numeric_profile,"{""min"": 16.0, ""max"": 99.0, ""mean"": 36.386964565794, ""quantiles"": {""p01"": 18.0, ""p25"": 24.0, ""p50"": 32.0, ""p75"": 49.0, ""p99"": 71.0}, ""null_count"": 15861, ""out_of_range"": 0, ""age_0_17"": 9553, ""age_18_24"": 347616, ""age_25_64"": 955348, ""age_65_120"": 43602}",FULL_SCAN

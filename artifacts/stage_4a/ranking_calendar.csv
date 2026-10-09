@@ -1,0 +1,5 @@
+﻿snapshot_id,purpose,candidate_snapshot_id,as_of_date,request_date,history_cutoff,label_start,label_end,label_window_days,candidate_contract_version,candidate_protocol_version,is_model_selection,is_test,is_independent_request_snapshot
+ranking_train_14d_v1,ranking_model_training,,2020-08-11,2020-08-12,2020-08-11,2020-08-12,2020-08-25,14,stage_3e_candidate_contract_v1,source_rank_cap_pre_dedup_v1,False,False,True
+validation_14d,ranking_model_selection,,2020-08-25,2020-08-26,2020-08-25,2020-08-26,2020-09-08,14,stage_3e_candidate_contract_v1,source_rank_cap_pre_dedup_v1,True,False,True
+test_14d,locked_ranking_final_test,,2020-09-08,2020-09-09,2020-09-08,2020-09-09,2020-09-22,14,stage_3e_candidate_contract_v1,source_rank_cap_pre_dedup_v1,False,True,True
+ranking_validation_first7d_diagnostic,short_horizon_direction_diagnostic,validation_14d,2020-08-25,2020-08-26,2020-08-25,2020-08-26,2020-09-01,7,stage_3e_candidate_contract_v1,source_rank_cap_pre_dedup_v1,False,False,False

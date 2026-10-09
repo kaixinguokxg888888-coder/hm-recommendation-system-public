@@ -1,0 +1,33 @@
+{
+  "group_name": "group_a_ground_truth",
+  "payload": {
+    "validation_14d": {
+      "positive_pairs": 489723,
+      "label_users": 141359,
+      "label_user_item_days": 498874,
+      "label_daily_strength_sum": 547838,
+      "multi_day_positive_pairs": 8908,
+      "min_label_date": "2020-08-26",
+      "max_label_date": "2020-09-08",
+      "private_path": "artifacts/stage_2b/private/ground_truth_validation_14d.parquet",
+      "ground_truth_fingerprint": "c3aecba6c963b7907caea30ca7f5c91c53b0eff5c928392b2c7b6ac9115c1fe8",
+      "as_of_date": "2020-08-25"
+    },
+    "test_14d": {
+      "positive_pairs": 438380,
+      "label_users": 128333,
+      "label_user_item_days": 447772,
+      "label_daily_strength_sum": 495552,
+      "multi_day_positive_pairs": 9110,
+      "min_label_date": "2020-09-09",
+      "max_label_date": "2020-09-22",
+      "private_path": "artifacts/stage_2b/private/ground_truth_test_14d.parquet",
+      "ground_truth_fingerprint": "755cdb8a263ac2ff7bcb8e21b7176c4459d846486733f06870513971497ea779",
+      "as_of_date": "2020-09-08"
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08"
+}

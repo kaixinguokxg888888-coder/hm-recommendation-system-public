@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 10.6066518999869,
+  "generated_at": "2026-08-03T15:36:02+08:00",
+  "group_name": "test_14d_user_item_sets_part_031",
+  "memory_limit_mb": 1017,
+  "output_files": [
+    "artifacts/stage_3b/private/user_items/test_14d/part_031.parquet",
+    "artifacts/stage_3b/private/user_items/test_14d/scale_031.json"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/user_items/test_14d/part_031.parquet": "0b4a1c6270483b71145bea05eede56e964b96ec71e780a83e44c5d0248258853",
+    "artifacts/stage_3b/private/user_items/test_14d/scale_031.json": "f8b179c7fd047a3938329874514d1b1c45d53ff47cf50c87efbafcfe4ab35cf6"
+  },
+  "output_size_bytes": 2918711,
+  "peak_rss_bytes": 276230144,
+  "run_fingerprint": "3c15698a27a6288b4e55a24071a1d41a50b506b81c8f3157b1d2a2c6e097c190",
+  "source_fingerprint": "e5304699d8ee4d0bb25348400cfd5ba5973c477d58916a9dd3e35d3f26f8a84f",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 913545336,
+  "threads": 1
+}

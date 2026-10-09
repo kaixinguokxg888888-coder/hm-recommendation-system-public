@@ -1,0 +1,3 @@
+﻿projection,queries,rows,missing_rows,extra_rows,rank_mismatch,provenance_mismatch,status
+candidate,130001,65000500,0,0,0,0,PASS
+optimizer,51497,5236056,0,0,0,0,PASS

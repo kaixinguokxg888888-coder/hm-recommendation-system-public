@@ -1,0 +1,30 @@
+{
+  "combined_matrix_manifest_fingerprint": "257323b9bf830b7ec6bce333ed3b81ee11043f9ecb3c6346aefb6d5c3c8ac797",
+  "phase1_lock": {
+    "physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+    "semantic_fingerprint": ""
+  },
+  "phase2_lock": {
+    "physical_fingerprint": "2880fb7a4cf864b56ac595e8f6ce8498d938e2ecf20579f1358eff19d03a86cc",
+    "semantic_fingerprint": "83a4bfd2dfc76084126eccb2291b2da91d6214756159b0f07f159b8cce001780"
+  },
+  "phase3_recovered_lock": {
+    "physical_fingerprint": "76dc0eea99b9ec3f68c3f33fc9081d76bf3b55da90d491699719f90c9477742a",
+    "semantic_fingerprint": "f3af337e862b27d36e9a29968c7071482411329c1de8dc9918c80b3398c5bcb7"
+  },
+  "phase4_config_fingerprint": "4d0b82c03d8280a5ffde25c73463116af1e5c0c5de6a792cfc492cee0c6dcb64",
+  "phase4_preregistration_fingerprint": "9fb7e10ec734ea48c0f38129f3397a9aa79df8ad8702a98fa2ff57646a1d37d8",
+  "source_fingerprint": "0ea5aef6bc838cce2e925a3501190b64b77a5821fe74d6bb0951515ddc6cb72f",
+  "status": "FINAL_REFIT_TRAINING_INPUTS_FROZEN",
+  "train_feature_snapshot": {
+    "as_of_date": "2020-08-11",
+    "snapshot_id": "ranking_train_14d_v1"
+  },
+  "train_optimizer_membership_fingerprint": "3e634e20aafbf6737fbd4160b4eadd80a156e020b137462cdef616c26bf49fa8",
+  "training_lineage_fingerprint": "2ec0b1cee6d8dba15064ea6100dfe0d7a97d4257a02067b31784f108074248f6",
+  "validation_feature_snapshot": {
+    "as_of_date": "2020-08-25",
+    "snapshot_id": "validation_14d"
+  },
+  "validation_optimizer_membership_fingerprint": "6217903bdf6419fe8b2823dddcc996a01523bcafd33adaa1f683988aba1e3db8"
+}

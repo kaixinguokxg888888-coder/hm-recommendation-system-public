@@ -1,0 +1,30 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 30.981099599972367,
+  "generated_at": "2026-08-03T16:25:28+08:00",
+  "group_name": "test_single_route_evaluation",
+  "memory_limit_mb": 814,
+  "output_files": [
+    "artifacts/stage_3b/private/user_metrics_test_14d_itemcf_iuf.parquet",
+    "artifacts/stage_3b/test_itemcf_metrics_overall.csv",
+    "artifacts/stage_3b/test_itemcf_metrics_by_segment.csv",
+    "artifacts/stage_3b/test_itemcf_coverage.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/user_metrics_test_14d_itemcf_iuf.parquet": "dd0f79fb3d70ae5ab7148eba1dba0a49f0de75912e3db37628f42e7c8bb63f24",
+    "artifacts/stage_3b/test_itemcf_coverage.csv": "3abe8b774cab5a1a6a1372665ff22c77cc04a6cf400ff8aa50aa22cd79660be8",
+    "artifacts/stage_3b/test_itemcf_metrics_by_segment.csv": "0f3b00970ffbab4c32ccaa12d629ed0e2264a99d5df77e456ca1c2dafb411f0f",
+    "artifacts/stage_3b/test_itemcf_metrics_overall.csv": "a89049e5eea50cc2ca38a4fd15a00d97b2c93cda714727f04a42b355b4caa274"
+  },
+  "output_size_bytes": 575278,
+  "peak_rss_bytes": 217673728,
+  "run_fingerprint": "3c15698a27a6288b4e55a24071a1d41a50b506b81c8f3157b1d2a2c6e097c190",
+  "source_fingerprint": "e5304699d8ee4d0bb25348400cfd5ba5973c477d58916a9dd3e35d3f26f8a84f",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 913545336,
+  "threads": 1
+}

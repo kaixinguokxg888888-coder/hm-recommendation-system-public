@@ -1,0 +1,471 @@
+{
+  "group_name": "group_b_null_format",
+  "results": [
+    {
+      "check_id": "articles.full.null_profile",
+      "table_name": "articles",
+      "check_name": "Full-column null profile",
+      "check_type": "null_profile",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "article_id": "<redacted>",
+        "product_code": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "prod_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "product_type_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "product_type_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "product_group_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "graphical_appearance_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "graphical_appearance_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "colour_group_code": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "colour_group_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "perceived_colour_value_id": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "perceived_colour_value_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "perceived_colour_master_id": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "perceived_colour_master_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "department_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "department_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "index_code": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "index_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "index_group_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "index_group_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "section_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "section_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "garment_group_no": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "garment_group_name": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "detail_desc": {
+          "null_count": 416,
+          "null_rate": 0.003941558810710428
+        }
+      },
+      "expected_condition": "report every column null count and rate without repair",
+      "rows_scanned": 105542,
+      "scan_scope": "FULL_SCAN: entire data/raw/articles.parquet; 105542 rows; 1/1 row groups",
+      "execution_seconds": 1e-05,
+      "evidence_path": "artifacts/stage_1a/null_profile.csv",
+      "notes": "全量聚合结果；未填补或删除空值。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.null_profile",
+      "table_name": "customers",
+      "check_name": "Full-column null profile",
+      "check_type": "null_profile",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "customer_id": "<redacted>",
+        "FN": {
+          "null_count": 895050,
+          "null_rate": 0.6523783145526902
+        },
+        "Active": {
+          "null_count": 907576,
+          "null_rate": 0.6615081852505138
+        },
+        "club_member_status": {
+          "null_count": 6062,
+          "null_rate": 0.00441843175556495
+        },
+        "fashion_news_frequency": {
+          "null_count": 16011,
+          "null_rate": 0.011669995189434249
+        },
+        "age": {
+          "null_count": 15861,
+          "null_rate": 0.011560664149623172
+        },
+        "postal_code": "<redacted>"
+      },
+      "expected_condition": "report every column null count and rate without repair",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 3e-06,
+      "evidence_path": "artifacts/stage_1a/null_profile.csv",
+      "notes": "全量聚合结果；未填补或删除空值。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.null_profile",
+      "table_name": "transactions",
+      "check_name": "Full-column null profile",
+      "check_type": "null_profile",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "t_dat": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "customer_id": "<redacted>",
+        "article_id": "<redacted>",
+        "price": {
+          "null_count": 0,
+          "null_rate": 0.0
+        },
+        "sales_channel_id": {
+          "null_count": 0,
+          "null_rate": 0.0
+        }
+      },
+      "expected_condition": "report every column null count and rate without repair",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 6e-06,
+      "evidence_path": "artifacts/stage_1a/null_profile.csv",
+      "notes": "全量聚合结果；未填补或删除空值。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "articles.full.article_id.not_null",
+      "table_name": "articles",
+      "check_name": "article_id null count",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "null_count": 0
+      },
+      "expected_condition": "null_count = 0",
+      "rows_scanned": 105542,
+      "scan_scope": "FULL_SCAN: entire data/raw/articles.parquet; 105542 rows; 1/1 row groups",
+      "execution_seconds": 4e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "articles.full.article_id.format",
+      "table_name": "articles",
+      "check_name": "article_id format violations",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 105542,
+      "scan_scope": "FULL_SCAN: entire data/raw/articles.parquet; 105542 rows; 1/1 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.customer_id.not_null",
+      "table_name": "customers",
+      "check_name": "customer_id null count",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "null_count": 0
+      },
+      "expected_condition": "null_count = 0",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 5e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.customer_id.format",
+      "table_name": "customers",
+      "check_name": "customer_id format violations",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 7e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.postal_code.format",
+      "table_name": "customers",
+      "check_name": "postal_code format violations",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 6e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.customer_id.format",
+      "table_name": "transactions",
+      "check_name": "transaction customer_id format violations",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 1e-05,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.article_id.format",
+      "table_name": "transactions",
+      "check_name": "transaction article_id format violations",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 6e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.t_dat.parse",
+      "table_name": "transactions",
+      "check_name": "transaction date parse failures",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 1.3e-05,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.price.invalid",
+      "table_name": "transactions",
+      "check_name": "non-finite or negative prices",
+      "check_type": "format_or_validity",
+      "severity": "error",
+      "status": "PASS",
+      "observed_value": {
+        "violation_count": 0
+      },
+      "expected_condition": "violation_count = 0",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 1.2e-05,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "customers.full.age.boundaries",
+      "table_name": "customers",
+      "check_name": "Age invalid, boundary and extreme counts",
+      "check_type": "range_profile",
+      "severity": "warning",
+      "status": "PASS",
+      "observed_value": {
+        "below_0": 0,
+        "equal_0": 0,
+        "above_120": 0,
+        "age_100_120": 0
+      },
+      "expected_condition": "below_0 = 0 and above_120 = 0; report boundaries",
+      "rows_scanned": 1371980,
+      "scan_scope": "FULL_SCAN: entire data/raw/customers.parquet; 1371980 rows; 2/2 row groups",
+      "execution_seconds": 8e-06,
+      "evidence_path": "artifacts/stage_1a/audit_results.csv",
+      "notes": "极端年龄仅统计，不自动修正。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    },
+    {
+      "check_id": "transactions.full.sales_channel.frequency",
+      "table_name": "transactions",
+      "check_name": "Observed sales-channel values and frequencies",
+      "check_type": "observed_domain",
+      "severity": "info",
+      "status": "PASS",
+      "observed_value": {
+        "frequencies": [
+          {
+            "sales_channel_id": 1,
+            "row_count": 9408462,
+            "execution_scope": "FULL_SCAN"
+          },
+          {
+            "sales_channel_id": 2,
+            "row_count": 22379862,
+            "execution_scope": "FULL_SCAN"
+          }
+        ]
+      },
+      "expected_condition": "discover full-scan values without a hard-coded domain",
+      "rows_scanned": 31788324,
+      "scan_scope": "FULL_SCAN: entire data/raw/transactions_train.parquet; 31788324 rows; 31/31 row groups",
+      "execution_seconds": 6e-06,
+      "evidence_path": "artifacts/stage_1a/value_ranges.csv",
+      "notes": "这是本地完整 transaction 文件的观察集合。",
+      "error_message": "",
+      "execution_scope": "FULL_SCAN",
+      "query_group": "group_b_null_format",
+      "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "result_version": "1.0.0"
+    }
+  ]
+}

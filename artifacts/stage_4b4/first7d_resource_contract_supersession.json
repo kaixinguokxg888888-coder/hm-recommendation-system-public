@@ -1,0 +1,30 @@
+{
+  "failure_status": "POST_FIRST7D_IMPLEMENTATION_FAILURE",
+  "original_config": {
+    "canonical_fingerprint": "4ef6dfcd30b52bc75efbdd58c0cd0c5be271f45577b02a511b266d9bf2a5b369",
+    "physical_fingerprint": "e3c42461c2453f58781fc68a458753e265a1812ce6c922bb45ab07b3cfb9b971",
+    "status": "PRESERVED_INVALID_RESOURCE_CONTRACT_EVIDENCE"
+  },
+  "original_gate": {
+    "formal_status": "NOT_FORMAL_DUE_TO_RESOURCE_CONTRACT_IDENTITY_FAILURE",
+    "physical_fingerprint": "302f12094a6c1e3cfe2bec9ea0609aa51c719e70733a0e8ade559c241d811ab6",
+    "status": "SUPERSEDED"
+  },
+  "original_lock": {
+    "formal_status": "NOT_FORMAL_DUE_TO_RESOURCE_CONTRACT_IDENTITY_FAILURE",
+    "physical_fingerprint": "ccd7dd3b4103ee9d515d71494faef6f58a536c47b2e3378d5526061d79c6476b",
+    "semantic_fingerprint": "b3fa0a2a48b99a31c90fb85852951622ccc9a7ba2acaea196056dcac76db69c5",
+    "status": "SUPERSEDED"
+  },
+  "original_preregistration": {
+    "physical_fingerprint": "62ab8a0826a281601c1f766d30a3f8d1f81bad01ba30ce4faadabf25c0b20635",
+    "semantic_fingerprint": "9b90a83a0c37808db6635c80652ae5f10d5161767e6983346ba116606179b2d9",
+    "status": "PRESERVED_INVALID_RESOURCE_CONTRACT_EVIDENCE"
+  },
+  "phase": "phase3_post_first7d_resource_contract_recovery_v1",
+  "reason": "RESOURCE_CONTRACT_IDENTITY_FAILURE",
+  "recorded_at": "2026-08-18T15:54:48+08:00",
+  "stage": "4B-4",
+  "status": "RESOURCE_CONTRACT_SUPERSESSION_RECORDED",
+  "supersession_fingerprint": "2da9055bbb66364a9b32997c1187d00b2e37d9d9d74bd0db8e4423fe65c19aaf"
+}

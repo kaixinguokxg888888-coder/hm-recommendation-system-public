@@ -1,0 +1,132 @@
+{
+  "stage": "3D",
+  "stage_version": "1.0.0",
+  "candidate_protocol_version": "source_rank_cap_pre_dedup_v1",
+  "input_manifests": {
+    "split": "artifacts/stage_2a/split_manifest.csv",
+    "population": "artifacts/stage_2b/evaluation_population_manifest.csv",
+    "stage_3a": "artifacts/stage_3a/stage_3a_manifest.csv",
+    "stage_3b": "artifacts/stage_3b/stage_3b_manifest.csv",
+    "stage_3c": "artifacts/stage_3c/stage_3c_manifest.csv"
+  },
+  "upstream": {
+    "stage_2a_private": "artifacts/stage_2a/private",
+    "stage_2b_private": "artifacts/stage_2b/private",
+    "stage_3a_private": "artifacts/stage_3a/private",
+    "stage_3b_private": "artifacts/stage_3b/private",
+    "stage_3c_private": "artifacts/stage_3c/private",
+    "stage_3a_lock": "artifacts/stage_3a/stage_3a_lock.json",
+    "stage_3b_lock": "artifacts/stage_3b/stage_3b_lock.json",
+    "stage_3c_lock": "artifacts/stage_3c/stage_3c_lock.json"
+  },
+  "snapshots": ["validation_14d", "test_14d"],
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "population_version": "1.0.0",
+  "candidate_universe_version": "history_seen_items_v1",
+  "training_samples": {
+    "positive_semantics": "B_first_time_acquisition_with_strictly_earlier_context_v1",
+    "max_training_targets_per_user": 3,
+    "max_history_items": 20,
+    "history_decay_version": "inverse_log2_rank_plus_1_v1",
+    "internal_dev_rule": "mixed_user_key_seed_mod_20_eq_0_v1",
+    "internal_dev_modulus": 20,
+    "internal_dev_residue": 0,
+    "partitions": 32
+  },
+  "canonical_fields": [
+    {"semantic_group":"taxonomy","semantic_field":"product_type","source_column":"product_type_no","display_column":"product_type_name"},
+    {"semantic_group":"taxonomy","semantic_field":"product_group","source_column":"product_group_name","display_column":"product_group_name"},
+    {"semantic_group":"taxonomy","semantic_field":"garment_group","source_column":"garment_group_no","display_column":"garment_group_name"},
+    {"semantic_group":"taxonomy","semantic_field":"section","source_column":"section_no","display_column":"section_name"},
+    {"semantic_group":"appearance","semantic_field":"graphical_appearance","source_column":"graphical_appearance_no","display_column":"graphical_appearance_name"},
+    {"semantic_group":"appearance","semantic_field":"colour_group","source_column":"colour_group_code","display_column":"colour_group_name"},
+    {"semantic_group":"appearance","semantic_field":"perceived_colour_value","source_column":"perceived_colour_value_id","display_column":"perceived_colour_value_name"},
+    {"semantic_group":"appearance","semantic_field":"perceived_colour_master","source_column":"perceived_colour_master_id","display_column":"perceived_colour_master_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"department","source_column":"department_no","display_column":"department_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"index","source_column":"index_code","display_column":"index_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"index_group","source_column":"index_group_no","display_column":"index_group_name"}
+  ],
+  "model": {
+    "variants": ["TT0", "TT1"],
+    "output_dimension": 64,
+    "article_id_embedding_dimension": 64,
+    "user_id_embedding_dimension": 32,
+    "attribute_embedding_dimension": 8,
+    "hidden_dimension": 128,
+    "max_history_items": 20,
+    "max_training_targets_per_user": 3,
+    "temperature": 0.07,
+    "l2_normalize_output": true
+  },
+  "training": {
+    "framework": "pytorch_cpu",
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.00001,
+    "batch_size": 512,
+    "epochs": 3,
+    "gradient_clip_norm": 1.0,
+    "seed": 20260805,
+    "dataloader_num_workers": 0,
+    "checkpoint_selection": "minimum_internal_dev_loss_across_three_epochs"
+  },
+  "final_refit": {
+    "required_for_formal_candidates": true,
+    "reinitialize_after_epoch_selection": true,
+    "sample_scope": "all_eligible_samples_without_internal_dev_holdout",
+    "epoch_source": "locked_validation_selected_epoch",
+    "validation_models": ["locked_model_only"],
+    "test_models": ["locked_model_only"]
+  },
+  "ann": {
+    "algorithm": "hnsw",
+    "metric": "cosine",
+    "m": 32,
+    "ef_construction": 200,
+    "ef_search_candidates": [200, 400],
+    "initial_query_k": 1000,
+    "retry_query_k": 2000,
+    "audit_max_users": 2000,
+    "audit_mean_overlap_recall_min": 0.98,
+    "audit_p5_overlap_recall_min": 0.95,
+    "exact_block_items": 8192
+  },
+  "union": {
+    "candidate_budget": 500,
+    "quota_semantics": "source_rank_cap_before_cross_source_dedup",
+    "variants": {
+      "Q0": {"repurchase":50,"itemcf":300,"two_tower":0,"trend":100},
+      "T50": {"repurchase":50,"itemcf":250,"two_tower":50,"trend":100},
+      "T100": {"repurchase":50,"itemcf":200,"two_tower":100,"trend":100}
+    },
+    "insertion_order": ["repurchase","itemcf","two_tower","trend","popularity_fallback"],
+    "duplicate_semantics": "duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance",
+    "fallback": "popularity_unique_fill_to_500",
+    "near_tie_tolerance": 0.0005,
+    "strong_pass_delta": 0.002,
+    "severe_segment_regression_delta": -0.002
+  },
+  "selection": {
+    "model_order": ["t50_recall_at_500_desc","t50_hit_rate_at_500_desc","two_tower_exclusive_hits_desc","declined_user_rate_asc","single_route_candidate_user_coverage_desc","ann_query_cost_asc","TT0_if_exact_tie"],
+    "quota_candidates_for_locked_model": ["T50", "T100"]
+  },
+  "bootstrap": {"iterations":1000,"seed":20260805,"confidence_level":0.95,"sampling_unit":"paired_user_block"},
+  "evaluation_k": [12,50,100,300,500],
+  "execution": {"candidate_partitions":32,"union_subpartitions":4,"embedding_batch_size":4096},
+  "duckdb": {"memory_fraction_of_available":0.35,"memory_min_mb":512,"memory_max_mb":1024,"threads":1,"preserve_insertion_order":false,"max_temp_directory_size":"20GB"},
+  "torch": {"num_threads":4,"interop_threads":1,"dataloader_num_workers":0,"dtype":"float32"},
+  "checkpoint": {"reuse_matching_success":true,"retry_failed":true,"require_output_fingerprint":true},
+  "test": {
+    "lock_path":"artifacts/stage_3d/stage_3d_lock.json",
+    "run_only_if_value_gate_passes":true,
+    "allowed_tasks":["locked_training_samples","locked_model_refit","locked_ann","locked_single_route","Q0","locked_union","overlap","exclusive_hits","quota_occupancy","bootstrap","public_aggregation"]
+  },
+  "paths": {
+    "articles":"data/raw/articles.parquet",
+    "artifact_directory":"artifacts/stage_3d",
+    "private_directory":"artifacts/stage_3d/private",
+    "checkpoint_directory":"artifacts/stage_3d/checkpoints",
+    "temp_directory":"artifacts/stage_3d/tmp",
+    "report":"docs/stages/stage_3d_two_tower_retrieval_and_incremental_recall.md"
+  }
+}

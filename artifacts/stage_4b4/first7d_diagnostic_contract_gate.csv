@@ -1,0 +1,14 @@
+﻿gate_id,description,status
+P3G1,pre-access preregistration is immutable,PASS
+P3G2,Phase 1 and Phase 2 frozen identity,PASS
+P3G3,exact First7d B-feedback window,PASS
+P3G4,only B0 and locked L1_600,PASS
+P3G5,frozen full500 candidate contract,PASS
+P3G6,main and cold populations separated,PASS
+P3G7,all-zero and full-positive denominators retained,PASS
+P3G8,four canonical metrics complete,PASS
+P3G9,paired bootstrap and exact replay,PASS
+P3G10,direction/confidence rules applied without selection,PASS
+P3G11,partition zero exact metric replay,PASS
+P3G12,atomic First7d lock and fingerprint,PASS
+P3G13,final-refit/Test/rerank/retuning remain forbidden,PASS

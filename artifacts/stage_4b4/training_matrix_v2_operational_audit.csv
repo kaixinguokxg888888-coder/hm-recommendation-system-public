@@ -1,0 +1,3 @@
+attempt,status,stage,wall_time_seconds,error,semantic_output_accepted
+1,FAILED,atomic_promotion,46.1,windows_memmap_reference_not_released,False
+2,PASS,full_build_and_position_audit,66.950952,,True

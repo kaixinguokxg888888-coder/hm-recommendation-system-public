@@ -1,0 +1,2 @@
+﻿stage,snapshot_id,test_run,locked_content_variant,locked_quota_variant,recommended_stage_status,reason,lock_fingerprint,run_status
+3C,test_14d,False,C3,Q0,FAILED_VALUE_GATE,Validation locked Q0 or failed value gate; Content Test variant prohibited,33add1cadcf062fc9c0d7d3a8b03e3f8be6e399c4d7b6b9ba7cbc1bd425f225b,SKIPPED_BY_PROTOCOL

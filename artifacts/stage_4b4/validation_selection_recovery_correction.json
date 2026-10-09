@@ -1,0 +1,16 @@
+{
+  "corrected_source_fingerprint": "97c2055a3bdddd0f791811a576bbe0453d8f6b5afdbc9e80fb1527ebf74ed0f4",
+  "failed_stage": "post_metric_paired_bootstrap",
+  "methodology_changed": false,
+  "original_source_fingerprint": "99203ba3d152feba141950db1262f1e6e75ce4c897f92d1e65b565ca8586cf2f",
+  "recorded_at": "2026-08-14T15:06:10+08:00",
+  "scope": "bootstrap_numpy_empty_check_and_restore_upstream_evaluator",
+  "preregistered_evaluator_fingerprint": "97b94905275f1bdae0be9711d228a36bea70b4e6ea7d2382e416c584a4a1a907",
+  "restored_upstream_evaluator_fingerprint": "08461b506074fa6b2d33aee26298b3270dde01394fd78f0fe8db63b738b6ee09",
+  "phase2_metric_outputs_changed": false,
+  "selection_lock_present_before_recovery": false,
+  "status": "RECOVERY_ONLY_SOURCE_CORRECTION",
+  "successful_materialization_checkpoints": 480,
+  "validation_label_read_count": 1,
+  "validation_label_reopened_for_recovery": false
+}

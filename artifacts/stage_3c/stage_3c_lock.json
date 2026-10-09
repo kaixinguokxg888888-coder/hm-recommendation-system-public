@@ -1,0 +1,52 @@
+{
+  "candidate_universe_version": "history_seen_items_v1",
+  "config_fingerprint": "d53e2cde19cb4b1a179bfbc5bace4037d1aadc67d63b8ddd7e63206a0b6a14ce",
+  "content_parameters": {
+    "candidate_max_k": 500,
+    "candidate_shortfall_fallback": false,
+    "max_seed_items_per_user": 20,
+    "seed_decay_version": "inverse_log2_rank_plus_1_v1",
+    "seen_item_exclusion": true,
+    "tie_break": [
+      "score_desc",
+      "seed_hit_count_desc",
+      "max_similarity_desc",
+      "article_key_asc"
+    ],
+    "top_neighbors_per_seed": 200
+  },
+  "created_at": "2026-08-04T19:31:30+08:00",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "lock_fingerprint": "33add1cadcf062fc9c0d7d3a8b03e3f8be6e399c4d7b6b9ba7cbc1bd425f225b",
+  "lock_version": "1.0.0",
+  "locked_content_variant": "C3",
+  "locked_quota_variant": "Q0",
+  "population_version": "1.0.0",
+  "quota_semantics": "source_rank_cap_before_cross_source_dedup",
+  "recommended_stage_status": "FAILED_VALUE_GATE",
+  "source_fingerprint": "4406edae1d8cdbd5bdb940882822d0ba23fa76f826ff0d43224e89151763b07e",
+  "source_rank_caps": {
+    "content": 0,
+    "itemcf": 300,
+    "repurchase": 50,
+    "trend": 100
+  },
+  "stage": "3C",
+  "stage_3a_lock_fingerprint": "c8c8f233f05001a1d600433068c1874a875f9ec47aa7d7b8d612e51cfbe2d134",
+  "stage_3b_lock_fingerprint": "049ba378c5bc69285ebb8387006c16514737082c3586142499ffcad3104af8c8",
+  "test_allowed": false,
+  "test_not_used_for_selection": true,
+  "validation_artifacts": {
+    "artifacts/stage_3c/q0_reproduction.csv": "74594774fdf50437b479433d9e5f5003d7ecbad6825961d0b285d5132237983b",
+    "artifacts/stage_3c/validation_bootstrap.csv": "d0ee4d5351a84f00783a77ae25739fa161fb53b7ce365eddd4f0931c2aff7308",
+    "artifacts/stage_3c/validation_content_single_route_metrics.csv": "6fd1eadd41403c3d462777fadedc7c725d672345d584ab78f6cdd4146ea03977",
+    "artifacts/stage_3c/validation_content_variant_selection.csv": "74099215dae9c2d22c41d3a4f3a70f9d8b2ab9b0d89e13b21de0b50b1a5e9732",
+    "artifacts/stage_3c/validation_marginal_recall.csv": "521e9cebd3c9374f24fd8705e8281d482d4ff7596c67feb7fc99ca8b8bab5b04",
+    "artifacts/stage_3c/validation_overlap_summary.csv": "176ad613fd4b99b8989a03148757f7ca0d34f49f8a46ceab0d2880387fd64fb5",
+    "artifacts/stage_3c/validation_phase_a_union_metrics.csv": "549e382f4f9d60c1c0b732835a1cd39747985af44c7f03a29a0cdd8154b759da",
+    "artifacts/stage_3c/validation_quota_metrics.csv": "e5d67c706b767f61698baf136e4519e6cffef187a2cf05ca3ae0481e1d4c373d",
+    "artifacts/stage_3c/validation_quota_occupancy.csv": "2ff0b45d7c99187a9ed1ddfbcbeed1d66b6abf6aa0798afd845fa94480d6d930",
+    "artifacts/stage_3c/validation_quota_selection.csv": "6018e200762372611c8331bbfd2bcb74a3e1ce91b5c0d98162fb7c3bce5316fb"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "evaluation_repeated": false,
+  "main_query_count": 129705,
+  "metric_differences_vs_existing": {
+    "hit_rate_at_12": 0.0,
+    "map_at_12": 6.938893903907228e-16,
+    "ndcg_at_12": 4.649058915617843e-16,
+    "recall_at_12": -2.4980018054066022e-15
+  },
+  "numerical_tolerance": 1e-14,
+  "r1_exact_four_metric_identity": true,
+  "stage5_summary_physical_fingerprint": "4fbb62f3f0656251e326913a4ccd06a08fd0e93d4a0f2911ce0b98c03d7413ec",
+  "status": "PASS",
+  "test_label_reads": 0,
+  "upstream_physical_fingerprint": "b928ad7f96304239afef9775a4104528cbaf843ef6be97960847200f8e9e30ef",
+  "validation_model": "L1_600"
+}

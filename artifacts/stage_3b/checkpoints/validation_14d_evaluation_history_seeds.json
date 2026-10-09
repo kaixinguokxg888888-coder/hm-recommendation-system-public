@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 25.135875799925998,
+  "generated_at": "2026-08-03T13:38:26+08:00",
+  "group_name": "validation_14d_evaluation_history_seeds",
+  "memory_limit_mb": 1024,
+  "output_files": [
+    "artifacts/stage_3b/private/evaluation_history_validation_14d.parquet",
+    "artifacts/stage_3b/private/seeds_validation_14d.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/evaluation_history_validation_14d.parquet": "3b74fc134566fbbe618a6826ebca5e9d6517e3a6d485916846862edb32fa03b7",
+    "artifacts/stage_3b/private/seeds_validation_14d.parquet": "8dafc8d4ef6a556b0356d6d8c0a5cecb4a6a71ac9139d64a2e897697a49d9d48"
+  },
+  "output_size_bytes": 34302775,
+  "peak_rss_bytes": 542519296,
+  "run_fingerprint": "1b7715446551f1ad388b845ce2a409a047a919bc20e586f34c5cad2517e692b1",
+  "source_fingerprint": "6464f9f62189460eb3572f78ce3ab12b9a4f9ac55d71be576ff5e34be1bbff84",
+  "spill_observed": false,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 0,
+  "threads": 1
+}

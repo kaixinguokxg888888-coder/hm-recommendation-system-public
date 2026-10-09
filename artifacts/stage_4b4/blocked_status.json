@@ -1,0 +1,15 @@
+{
+  "blocker": "train_L0 peak RSS exceeded the formal 70% start-available-memory boundary",
+  "failed_gate": "G17_RESOURCE_CHECKPOINT_PRIVACY",
+  "failed_task": "train_L0",
+  "formal_models_written": 0,
+  "formal_predictions_written": 0,
+  "pre_label_lock_created": false,
+  "ready_for_validation_label_join": false,
+  "stage": "4B-4",
+  "stage_status": "STOP_BLOCKED_BY_RESOURCE",
+  "status_scope": "HISTORICAL_INITIAL_ATTEMPT",
+  "superseded_by": "conflict_status.json",
+  "validation_labels_read": false,
+  "validation_metrics_computed": false
+}

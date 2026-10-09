@@ -1,0 +1,26 @@
+{
+  "attempt": 2,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 332.4143689000048,
+  "generated_at": "2026-07-28T16:18:18+08:00",
+  "group_name": "popularity_validation",
+  "memory_limit_mb": 596,
+  "output_files": [
+    "artifacts/stage_3a/private/ranking_validation_14d_popularity_global.parquet",
+    "artifacts/stage_3a/private/candidates_validation_14d_popularity_global.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3a/private/candidates_validation_14d_popularity_global.parquet": "314641f4a76aafa29ca3c4ae0609ef5c8eea4ac3537a1ac590b0cf7a34eb7e1a",
+    "artifacts/stage_3a/private/ranking_validation_14d_popularity_global.parquet": "cc9b1c2a85b15e1e99bb0c10b575347842f428e528d0f6b952aa2f98f54164a0"
+  },
+  "output_size_bytes": 10949548,
+  "peak_rss_bytes": 639557632,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 16666755956,
+  "threads": 1
+}

@@ -1,0 +1,15 @@
+population,query_count,included_in_main_average
+candidate_query_population,128333,False
+label_positive_query_population,128333,False
+main_evaluation_population,117366,True
+cold_history_diagnostic_population,10967,False
+main_candidate_positive_nonzero,54983,True
+main_all_zero_relevance,62383,True
+all_candidate_positive_nonzero,58656,False
+all_candidate_positive_zero,69677,False
+main_single_positive,33540,True
+main_multi_positive,83826,True
+short_history,8653,True
+warm,29722,True
+active,78991,True
+cold,10967,False

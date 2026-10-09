@@ -1,0 +1,3 @@
+﻿snapshot_id,user_count_mismatch,per_user_count_mismatch,membership_mismatch,rank_mismatch,provenance_mismatch,per_user_metric_mismatch,aggregate_metric_mismatch,recall_at_500,hit_rate_at_500,map_at_12,run_status
+validation_14d,0,0,0,0,0,0,0,0.2448639763673124,0.4802898885933464,0.012184760793980384,PASS
+test_14d,0,0,0,0,0,0,0,0.24138900164539004,0.46847468602491354,0.014657496029670704,PASS

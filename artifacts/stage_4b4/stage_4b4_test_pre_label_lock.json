@@ -1,0 +1,81 @@
+{
+  "access_audit_fingerprint": "2f3ae04437e0a5df91543fda8eb370d8b30f84c71a84c7a9a0f928dbfc93ef95",
+  "adapter_fingerprint": "aed9098285baf2d4480f51b71073b7a53073d31f0ea3a87f8ad870b7297236ed",
+  "categorical_fingerprint": "97d9bafa5b05c4057c73dd4ee81f0b2aed1e71196f0efff624bd76030b3a30b6",
+  "checkpoint_manifest_fingerprint": "eb64ffde161fb015d744465198749ff0677b8ccfcc313782a1976b5b7139bba3",
+  "code_source_fingerprint": "a368a9ac8203ef6dcc45da51acc90dd0e0f32f38de91da3d1972c157fc8fe1ed",
+  "config_fingerprint": "86e2ce4a9120cbe9b28743067903ec8f48fd57a36134561351c32e0ce35b34bd",
+  "contract_gate_fingerprint": "58d34ac53a6c9219a8435b5896c469e0dfaf68d92efc85fa5174efd3d554aa99",
+  "engineering_audit_fingerprint": "c7c5217dcb7c860db6eab90835e3dce56870bea72079384c6827779911c8297a",
+  "final_model_identity": {
+    "early_stopping_allowed": false,
+    "feature_set": "F1",
+    "fresh_initialization": true,
+    "model_id": "L1_FINAL_REFIT_600",
+    "objective": "lambdarank",
+    "retraining_allowed": false,
+    "rounds": 600,
+    "trees": 600,
+    "warm_start_allowed": false
+  },
+  "lock_fingerprint": "34c8dcc52ee18c18766904d234e8fda0f2964e4805fee3175e9b45c375f7e8ca",
+  "locked_at": "2026-08-19T23:16:35+08:00",
+  "model_retrained": false,
+  "phase": "phase5a_test_candidate_feature_prediction_freeze_v1",
+  "phase4_lock_fingerprint": "358c25d19ecce3006428a293acd61564e0f6cd3fbdc0c156aa636ee41bef4bd8",
+  "phase5b_pending_chatgpt_authorization": true,
+  "prediction_fingerprints": {
+    "B0": {
+      "binding": "902fb691c5379fa9205b9acefd8e3d11bc9454f26fbe263f63d7e5f369c17a22",
+      "global_merkle": "b7a1f9b6268923dc4c27441b6ce559e90e339673a4bd5001402e91e05ddc75a9",
+      "ranked_list": "564c6d3f30c98e46f69b4ed94ac126c9664812982a6ee43d868a29fe7ee1c7c8",
+      "raw_score": "edb3dbc1cd9edd1098868369a4411acdc1ae452ce4975ac06e51810feefd1af8"
+    },
+    "L1_FINAL_REFIT_600": {
+      "binding": "a83abb517bbf0306864ece4141aa51783475c9e5aac4d03890ac7cc8c1664445",
+      "global_merkle": "5080c3cc2149aa7bebc3cbd3261f93e5162aefbf426a3d987fcda05df8ee9a0e",
+      "ranked_list": "2f4396084540c1a49f8612248ecb352b4b2a565a3474453a5b9422b52b4f53fe",
+      "raw_score": "3837b398b6f3cd443ba4d23af316883f348119963be46475365e1ad4fa120ebd"
+    }
+  },
+  "prediction_replay_audit_fingerprint": "31a36a8b58cc384a54d55fed328c7c1d914d931eaf775f6e79f9eef840beed4c",
+  "prelabel_engineering_correction_fingerprint": "063a1dd71a077208dfa760b717fd84650d2c2c25af6279a6817116f6ba2d5445",
+  "preregistration_fingerprint": "da210aef75b6c39d04c7bcdff7f538f0f69f857485bc11d1ac1c3064412ff5e5",
+  "resource_audit_fingerprint": "51ad11d01da50ae38b09ac79ccc8491836609a3189ee7eb6202b09943d7c2b0d",
+  "stage": "4B-4",
+  "stage_3e_candidate_contract": {
+    "baseline_rank_rule": "candidate_rank_ASC_article_key_ASC",
+    "candidate_budget": 500,
+    "protocol": "source_rank_cap_pre_dedup_v1",
+    "source_score_semantics": "source_local_raw_scores_never_summed",
+    "version": "stage_3e_candidate_contract_v1"
+  },
+  "stage_4a_test_protocol": {
+    "as_of_date": "2020-09-08",
+    "request_date": "2020-09-09",
+    "snapshot_id": "test_14d"
+  },
+  "status": "STAGE_4B4_PHASE5A_TEST_PREDICTIONS_FROZEN",
+  "test_authorized": false,
+  "test_candidate_fingerprints": {
+    "global_merkle": "4fee32e52f3476b2360fd3e7df7f77d1a92931f246d4165756a89fa3958f65d8",
+    "physical": "840b4ee5042f464eff31b5e2c68167d35413b27effaabe558a0e7871c128564e",
+    "semantic": "fd94f546add97637e15652c800bc636f3c7723bc4ae7d9cb055f82d5e83e9948"
+  },
+  "test_candidates_frozen": true,
+  "test_evaluation_executed": false,
+  "test_feature_fingerprints": {
+    "lineage": "0dd955e3d1be653e5e3001b113385dbf2b6942e3b0bf5f9148163aae7cbf3b4c",
+    "physical": "ce5cacca30f985fee87f1d051c2832c88f804d84a4da93436349c465f3d40bff",
+    "schema": "5964882d45d0c3453fb49b3dac39fb187969989d364a63e7d4c18b3ed49896a3",
+    "semantic": "179abf06003e880ddf7ecd00d1d98c47282a4a4e078f5516695ca860720479f1",
+    "statistics": "daba710e957c1ff38a8d44036927d484e46a0b38a35832fdea8db4ade2f9a73b"
+  },
+  "test_features_frozen": true,
+  "test_label_read_count": 0,
+  "test_labels_joined": false,
+  "test_metrics_computed": false,
+  "test_population_fingerprint": "3a31e17a245ab93450b6c25470d662b19a31b88f04bb232afcc443a972d55541",
+  "test_predictions_frozen": true,
+  "winner_changed": false
+}

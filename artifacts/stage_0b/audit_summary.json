@@ -1,0 +1,37 @@
+{
+  "stage": "0B",
+  "executed_at": "2026-07-27T17:03:53+08:00",
+  "contract_version": "0.1.0",
+  "status_counts": {
+    "PASS": 27,
+    "WARN": 1
+  },
+  "result_count": 28,
+  "scan_scope": {
+    "articles": "完整文件 data/raw/articles.parquet；105542 行；1/1 row groups",
+    "customers": "完整文件 data/raw/customers.parquet；1371980 行；2/2 row groups",
+    "transactions": "文件 data/raw/transactions_train.parquet 的 row group 0 前 100000 行；该 row group 共 1048576 行；文件共 31788324 行/31 row groups",
+    "transaction_rows_materialized": 100000
+  },
+  "engine_error": "",
+  "tests": {
+    "command": "python -m pytest",
+    "passed": true,
+    "return_code": 0,
+    "execution_seconds": 0.798599,
+    "summary": "10 passed in 0.24s"
+  },
+  "failures": [
+    {
+      "check_id": "transactions.full_row.duplicates",
+      "status": "WARN",
+      "notes": "重复数只描述受限交易样本，不外推到全量。",
+      "error_message": ""
+    }
+  ],
+  "stage_1_recommendation": {
+    "decision": "有条件建议进入 Stage 1",
+    "reason": "三个 Parquet 的 DuckDB 受限读取、契约检查、统一协议和测试均可运行；进入 Stage 1 前仍须保留分步执行与资源护栏。"
+  },
+  "failures_and_errors": "- `transactions.full_row.duplicates`：WARN；重复数只描述受限交易样本，不外推到全量。"
+}

@@ -1,0 +1,8 @@
+﻿check,status,finding_count,scan_scope
+real_customer_ids,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+real_article_ids,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+postal_code_values,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+local_username,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+absolute_paths,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+interpreter_path,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"
+undeclared_64hex_value,PASS,0,"Stage 3E config, source, scripts, tests, public artifacts and report"

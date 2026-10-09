@@ -1,0 +1,42 @@
+{
+  "candidate_universe_version": {
+    "cold_history": "full_article_dimension_v1",
+    "warm": "history_seen_items_v1"
+  },
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "created_at": "2026-07-28T16:49:36+08:00",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "git_head": "e275cd592de9dc4cf4f0f5e1ec6576bde3a0f26e",
+  "lock_fingerprint": "ecc3b77a8e4294addea90f65d4caf0d5b03bcc382576fd50ff20f787fc27ff6c",
+  "lock_version": "1.0.0",
+  "locked_trend_window": 7,
+  "population_version": "1.0.0",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "stage": "3A",
+  "test_allowed_variants": [
+    "popularity:global",
+    "trend:window_7d",
+    "repurchase:pure",
+    "repurchase:popularity_fallback"
+  ],
+  "test_not_used_for_selection": true,
+  "test_snapshot": "test_14d",
+  "trend_candidate_windows": [
+    7,
+    14,
+    28
+  ],
+  "trend_selection_rule": [
+    "recall_at_500_desc",
+    "map_at_12_desc",
+    "candidate_user_coverage_desc",
+    "window_days_asc"
+  ],
+  "trend_selection_rule_version": "recall500_map12_coverage_shorter_v1",
+  "validation_metrics_fingerprint": "d9f75c68a671381e8fd9196c779f5405bae467288036b52a583b825ac107b6ad",
+  "validation_selection_fingerprint": "82f881f9e07b3b7aa918d30ea46d7f1b3bbc4edde9db95512b1a3bc922d07afe",
+  "validation_selection_path": "artifacts/stage_3a/trend_window_selection.csv",
+  "validation_snapshot": "validation_14d",
+  "working_tree_dirty": true
+}

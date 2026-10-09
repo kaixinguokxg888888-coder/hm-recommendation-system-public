@@ -1,0 +1,17 @@
+﻿slice,target,exact_replay,status
+evaluable_warm_users,all,True,PASS
+short_history,all,True,PASS
+warm,all,True,PASS
+active,all,True,PASS
+positive_count_eq_1,all,True,PASS
+positive_count_gt_1,all,True,PASS
+candidate_positive_zero,all,True,PASS
+candidate_positive_nonzero,all,True,PASS
+has_cold_positive,all,True,PASS
+cold_history_label_users,all,True,PASS
+evaluable_warm_users,seen_item,True,PASS
+evaluable_warm_users,cold_item,True,PASS
+evaluable_warm_users,head,True,PASS
+evaluable_warm_users,mid,True,PASS
+evaluable_warm_users,tail,True,PASS
+evaluable_warm_users,zero_history,True,PASS

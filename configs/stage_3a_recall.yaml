@@ -1,0 +1,78 @@
+{
+  "stage": "3A",
+  "stage_version": "1.0.0",
+  "candidate_protocol_version": "1.0.0",
+  "trend_selection_rule_version": "recall500_map12_coverage_shorter_v1",
+  "input_manifests": {
+    "split": "artifacts/stage_2a/split_manifest.csv",
+    "population": "artifacts/stage_2b/evaluation_population_manifest.csv"
+  },
+  "upstream": {
+    "stage_2a_private": "artifacts/stage_2a/private",
+    "stage_2b_private": "artifacts/stage_2b/private"
+  },
+  "snapshots": ["validation_14d", "test_14d"],
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "population_version": "1.0.0",
+  "candidate_universe_versions": {
+    "warm": "history_seen_items_v1",
+    "cold_history": "full_article_dimension_v1"
+  },
+  "candidate_max_k": 500,
+  "final_k": 12,
+  "evaluation_k": [12, 50, 100, 500],
+  "trend": {
+    "windows_days": [7, 14, 28],
+    "interval": "(as_of_date-window_days,as_of_date]",
+    "selection_order": [
+      "recall_at_500_desc",
+      "map_at_12_desc",
+      "candidate_user_coverage_desc",
+      "window_days_asc"
+    ]
+  },
+  "repurchase": {
+    "sort": [
+      "purchase_day_count_desc",
+      "last_purchase_date_desc",
+      "article_key_asc"
+    ],
+    "fallback": "preserve_pure_then_append_snapshot_popularity_unique_to_max_k"
+  },
+  "test": {
+    "lock_path": "artifacts/stage_3a/stage_3a_lock.json",
+    "locked_trend_window_source": "lock_artifact",
+    "allowed_variants": [
+      "popularity:global",
+      "trend:locked_window",
+      "repurchase:pure",
+      "repurchase:popularity_fallback"
+    ]
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_3a",
+    "private_directory": "artifacts/stage_3a/private",
+    "checkpoint_directory": "artifacts/stage_3a/checkpoints",
+    "temp_directory": "artifacts/stage_3a/tmp",
+    "report": "docs/stages/stage_3a_baseline_retrieval_and_evaluation.md"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 256,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "checkpoint": {
+    "reuse_matching_success": true,
+    "retry_failed": true,
+    "require_output_fingerprint": true
+  },
+  "fingerprint": {
+    "algorithm": "sha256",
+    "include_config": true,
+    "include_input_manifests": true,
+    "include_stage_3a_source": true
+  }
+}

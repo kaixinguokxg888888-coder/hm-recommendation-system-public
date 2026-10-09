@@ -1,0 +1,74 @@
+# Python 缓存与构建产物
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# 本地 Python 环境与敏感环境文件
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# 编辑器与操作系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 原始 H&M 数据必须由使用者在本地自行准备
+data/raw/**
+
+# Stage 0B 本地查询临时文件与 DuckDB 数据库
+artifacts/stage_0b/tmp/
+artifacts/stage_1a/tmp/
+artifacts/stage_1b/tmp/
+artifacts/stage_2a/tmp/
+artifacts/stage_2a/private/
+artifacts/stage_2b/tmp/
+artifacts/stage_2b/private/
+artifacts/stage_3a/tmp/
+artifacts/stage_3a/private/
+artifacts/stage_3b/tmp/
+artifacts/stage_3b/private/
+artifacts/stage_3b_preflight_tmp/
+artifacts/stage_3c/tmp/
+artifacts/stage_3c/private/
+artifacts/stage_3c/checkpoints/
+artifacts/stage_3d/tmp/
+artifacts/stage_3d/private/
+artifacts/stage_3d/checkpoints/
+artifacts/stage_3e/tmp/
+artifacts/stage_3e/private/
+artifacts/stage_3e/checkpoints/
+artifacts/stage_4b1/tmp/
+artifacts/stage_4b1/private/
+artifacts/stage_4b1/checkpoints/
+artifacts/stage_4b2/tmp/
+artifacts/stage_4b2/private/
+artifacts/stage_4b2/checkpoints/
+artifacts/stage_4b3/tmp/
+artifacts/stage_4b3/private/
+artifacts/stage_4b3/checkpoints/
+artifacts/stage_4b4/tmp/
+artifacts/stage_4b4/private/
+artifacts/stage_4b4/checkpoints/
+artifacts/stage_5/private/
+artifacts/stage_5/tmp/
+artifacts/stage_5/checkpoints/
+*.duckdb
+*.duckdb.wal
+
+# 常见本地临时文件
+*.log
+*.tmp
+*.bak

@@ -1,0 +1,16 @@
+{
+  "input_full500_scan_passes": 1,
+  "input_rows": 70679500,
+  "output_fingerprints": {
+    "R0": "1bef6bdc424ecf718d62f8e8f2a2004dc7d1d8c00578d73b311c0a5275ea27ed",
+    "R1": "7e22e2c98a6226068a4e1052881131bd3775cba540c3138562f6d61393f410ae",
+    "R2": "8d413c5440ee26b9f1e83359fd0362e86023fefca5020a1b14454c387d9996d9",
+    "R3": "fe7a177999f03c264d21df29a7344cd8ab55392d3fd7e189e98d3b27663d5c57",
+    "R4_N20": "57b45145463fc979b0bf1559e01a7de2d39860e7dd02125034a0f08b7752381e",
+    "R4_N30": "9b139ed9edeab55237e28a3c4f4bf05b308eb8d2432417303d4cd9eba1da3f83",
+    "R4_N50": "10e6722512d429ff08c63e48cdbea2c16002d92061a9ce8005e9bc1aaf531564"
+  },
+  "queries": 141359,
+  "r1_control_mismatch": 0,
+  "recommendation_outputs_frozen_before_labels": true
+}

@@ -1,0 +1,18 @@
+{
+  "binary_promoted": false,
+  "child_process_tree_peak_rss_bytes": 3211071488,
+  "frozen_absolute_conversion_cap_bytes": 4644422451,
+  "oom_observed": false,
+  "resource_audit_fingerprint": "6b9b7955896e614768273b8d2517d71c2e13f8db8c3159601fe5749ce7fc64da",
+  "resource_preregistration_fingerprint": "1b17071991a5397761746f8cde63a83ee6b4a0d5ab717a6c20f826dd98e446a2",
+  "rss_fraction": 0.7,
+  "rss_gate_exceeded": false,
+  "runtime_available_memory_max_bytes_observation_only": 6634160128,
+  "runtime_available_memory_min_bytes_observation_only": 3100749824,
+  "runtime_cap_recomputed": false,
+  "status": "PASS",
+  "temporary_binary_exists": true,
+  "temporary_binary_size_bytes": 475205984,
+  "wall_time_seconds": 15.992244299966842,
+  "worker_exit_code": 0
+}

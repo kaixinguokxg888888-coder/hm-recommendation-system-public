@@ -1,0 +1,89 @@
+{
+  "stage": "3C",
+  "stage_version": "1.0.0",
+  "candidate_protocol_version": "source_rank_cap_pre_dedup_v1",
+  "input_manifests": {
+    "split": "artifacts/stage_2a/split_manifest.csv",
+    "population": "artifacts/stage_2b/evaluation_population_manifest.csv",
+    "stage_3a": "artifacts/stage_3a/stage_3a_manifest.csv",
+    "stage_3b": "artifacts/stage_3b/stage_3b_manifest.csv"
+  },
+  "upstream": {
+    "stage_2a_private": "artifacts/stage_2a/private",
+    "stage_2b_private": "artifacts/stage_2b/private",
+    "stage_3a_private": "artifacts/stage_3a/private",
+    "stage_3b_private": "artifacts/stage_3b/private",
+    "stage_3a_lock": "artifacts/stage_3a/stage_3a_lock.json",
+    "stage_3b_lock": "artifacts/stage_3b/stage_3b_lock.json"
+  },
+  "snapshots": ["validation_14d", "test_14d"],
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "population_version": "1.0.0",
+  "candidate_universe_version": "history_seen_items_v1",
+  "canonical_fields": [
+    {"semantic_group":"taxonomy","semantic_field":"product_type","source_column":"product_type_no","display_column":"product_type_name"},
+    {"semantic_group":"taxonomy","semantic_field":"product_group","source_column":"product_group_name","display_column":"product_group_name"},
+    {"semantic_group":"taxonomy","semantic_field":"garment_group","source_column":"garment_group_no","display_column":"garment_group_name"},
+    {"semantic_group":"taxonomy","semantic_field":"section","source_column":"section_no","display_column":"section_name"},
+    {"semantic_group":"appearance","semantic_field":"graphical_appearance","source_column":"graphical_appearance_no","display_column":"graphical_appearance_name"},
+    {"semantic_group":"appearance","semantic_field":"colour_group","source_column":"colour_group_code","display_column":"colour_group_name"},
+    {"semantic_group":"appearance","semantic_field":"perceived_colour_value","source_column":"perceived_colour_value_id","display_column":"perceived_colour_value_name"},
+    {"semantic_group":"appearance","semantic_field":"perceived_colour_master","source_column":"perceived_colour_master_id","display_column":"perceived_colour_master_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"department","source_column":"department_no","display_column":"department_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"index","source_column":"index_code","display_column":"index_name"},
+    {"semantic_group":"merchandising_index","semantic_field":"index_group","source_column":"index_group_no","display_column":"index_group_name"}
+  ],
+  "content_variants": {
+    "C0": {"name":"coarse_uniform","groups":["taxonomy"],"idf":false,"group_balance":false},
+    "C1": {"name":"taxonomy_idf","groups":["taxonomy"],"idf":true,"group_balance":false},
+    "C2": {"name":"taxonomy_appearance_idf","groups":["taxonomy","appearance"],"idf":true,"group_balance":true},
+    "C3": {"name":"full_structured_group_balanced","groups":["taxonomy","appearance","merchandising_index"],"idf":true,"group_balance":true}
+  },
+  "idf": {"formula":"log((N+1)/(df+1))+1","scope":"snapshot_history_seen_items_only"},
+  "content": {
+    "max_seed_items_per_user": 20,
+    "seed_decay_version": "inverse_log2_rank_plus_1_v1",
+    "top_neighbors_per_seed": 200,
+    "candidate_max_k": 500,
+    "seen_item_exclusion": true,
+    "candidate_shortfall_fallback": false,
+    "tie_break": ["score_desc","seed_hit_count_desc","max_similarity_desc","article_key_asc"]
+  },
+  "union": {
+    "candidate_budget": 500,
+    "quota_semantics": "source_rank_cap_before_cross_source_dedup",
+    "variants": {
+      "Q0": {"repurchase":50,"itemcf":300,"content":0,"trend":100},
+      "Q1": {"repurchase":50,"itemcf":250,"content":50,"trend":100},
+      "Q2": {"repurchase":50,"itemcf":200,"content":100,"trend":100}
+    },
+    "insertion_order": ["repurchase","itemcf","content","trend","popularity_fallback"],
+    "duplicate_semantics": "duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance",
+    "fallback": "popularity_unique_fill_to_500",
+    "near_tie_tolerance": 0.0005,
+    "strong_pass_delta": 0.002
+  },
+  "selection": {
+    "content_order": ["q1_recall_at_500_desc","q1_hit_rate_at_500_desc","content_exclusive_hits_desc","declined_user_rate_asc","fewer_fields_asc","C0_C1_C2_C3"],
+    "quota_primary": "validation_recall_at_500_desc",
+    "quota_tie_break": ["less_content_cap","closer_to_Q0","declined_user_rate_asc","resource_cost_asc","Q1_before_Q2","Q0_without_meaningful_gain"]
+  },
+  "bootstrap": {"iterations":1000,"seed":20260804,"confidence_level":0.95,"sampling_unit":"paired_user_block"},
+  "evaluation_k": [12,50,100,300,500],
+  "execution": {"neighbor_block_rows":64,"candidate_partitions":32,"union_subpartitions":4},
+  "test": {
+    "lock_path":"artifacts/stage_3c/stage_3c_lock.json",
+    "run_only_if_locked_content_passes_validation":true,
+    "allowed_comparison":["Q0","locked_content_union"]
+  },
+  "paths": {
+    "articles":"data/raw/articles.parquet",
+    "artifact_directory":"artifacts/stage_3c",
+    "private_directory":"artifacts/stage_3c/private",
+    "checkpoint_directory":"artifacts/stage_3c/checkpoints",
+    "temp_directory":"artifacts/stage_3c/tmp",
+    "report":"docs/stages/stage_3c_content_retrieval_and_incremental_recall.md"
+  },
+  "duckdb": {"memory_fraction_of_available":0.35,"memory_min_mb":512,"memory_max_mb":1024,"threads":1,"preserve_insertion_order":false,"max_temp_directory_size":"20GB"},
+  "checkpoint": {"reuse_matching_success":true,"retry_failed":true,"require_output_fingerprint":true}
+}

@@ -1,0 +1,18 @@
+{
+  "final_refit_executed": false,
+  "first7d_read_count": 0,
+  "phase": "phase2_validation_14d_selection_v1",
+  "recorded_at": "2026-08-14T15:00:24+08:00",
+  "recorded_before_content_open": true,
+  "reranking_executed": false,
+  "retrieval_retuned": false,
+  "stage": "4B-4",
+  "test_authorized": false,
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "validation_label_read_count": 1,
+  "validation_label_window": "2020-08-26..2020-09-08",
+  "validation_labels_read": true
+}

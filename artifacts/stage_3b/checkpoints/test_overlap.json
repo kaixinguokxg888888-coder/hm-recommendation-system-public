@@ -1,0 +1,28 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 61.058084399905056,
+  "generated_at": "2026-08-03T16:52:28+08:00",
+  "group_name": "test_overlap",
+  "memory_limit_mb": 556,
+  "output_files": [
+    "artifacts/stage_3b/private/overlap_test_14d.parquet",
+    "artifacts/stage_3b/test_overlap_summary.csv",
+    "artifacts/stage_3b/test_marginal_recall.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/overlap_test_14d.parquet": "c26e61563b0364413ff9df9d73896fd0354dfc059febfc14f8791805d8f987b2",
+    "artifacts/stage_3b/test_marginal_recall.csv": "71ff968c151123d090d68f20c70715e102f490fcb71e19b895422da08c1ed3e9",
+    "artifacts/stage_3b/test_overlap_summary.csv": "724358d21beca05b1cce725fe992fad7ef5235b8fe6c703d6903e3463cddf011"
+  },
+  "output_size_bytes": 1350855,
+  "peak_rss_bytes": 1021890560,
+  "run_fingerprint": "3c15698a27a6288b4e55a24071a1d41a50b506b81c8f3157b1d2a2c6e097c190",
+  "source_fingerprint": "e5304699d8ee4d0bb25348400cfd5ba5973c477d58916a9dd3e35d3f26f8a84f",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 3252809117,
+  "threads": 1
+}

@@ -1,0 +1,11 @@
+{
+  "group_name": "group_e_leakage_checks",
+  "payload": {
+    "checks": 10,
+    "passed": 10
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22"
+}

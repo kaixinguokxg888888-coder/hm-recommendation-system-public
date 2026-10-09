@@ -1,0 +1,8 @@
+﻿check,violations,status
+static_attribute_code_not_null,0,PASS
+category_affinity_null_iff_cold_or_missing_category,0,PASS
+user_recency_repeat_null_iff_cold,0,PASS
+item_recency_null_iff_unseen,0,PASS
+user_item_recency_null_iff_unseen,0,PASS
+source_rank_score_null_iff_absent,0,PASS
+finite_float_features,0,PASS

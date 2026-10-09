@@ -1,0 +1,17 @@
+{
+  "group_name": "group_e_evaluation_protocol",
+  "payload": {
+    "validation_14d": {
+      "private_path": "artifacts/stage_2b/private/evaluation_population_validation_14d.parquet",
+      "fingerprint": "8a41ede0b724c1f5990d16cf91702adb926cb2fe0edf20d6500c3c4c3709d728"
+    },
+    "test_14d": {
+      "private_path": "artifacts/stage_2b/private/evaluation_population_test_14d.parquet",
+      "fingerprint": "1b191429aecdbcae215a9129579c46615e20763b8fe71b9d58b881541aaead2c"
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08"
+}

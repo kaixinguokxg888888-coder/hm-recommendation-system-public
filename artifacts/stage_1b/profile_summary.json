@@ -1,0 +1,307 @@
+{
+  "stage": "1B",
+  "executed_at": "2026-07-28T10:57:38+08:00",
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+  "result_version": "1.0.0",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "groups_expected": [
+    "group_a_temporal_activity",
+    "group_b_user_activity",
+    "group_c_item_long_tail",
+    "group_d_repurchase_stability",
+    "group_e_cold_start",
+    "group_f_time_split",
+    "group_g_model_evidence"
+  ],
+  "groups_successful": [
+    "group_a_temporal_activity",
+    "group_b_user_activity",
+    "group_c_item_long_tail",
+    "group_d_repurchase_stability",
+    "group_e_cold_start",
+    "group_f_time_split",
+    "group_g_model_evidence"
+  ],
+  "tests": {
+    "passed": true,
+    "return_code": 0,
+    "summary": "49 passed in 0.53s",
+    "execution_seconds": 1.165011
+  },
+  "stopped_after_resource_failure": false,
+  "environment": {
+    "python": "3.10.11",
+    "duckdb": "1.5.5",
+    "pyarrow": "24.0.0",
+    "psutil": "7.2.2",
+    "virtual_environment_active": true
+  },
+  "group_summaries": {
+    "group_a_temporal_activity": {
+      "min_date": "2018-09-20",
+      "max_date": "2020-09-22",
+      "day_count": 734,
+      "raw_rows": 31788324,
+      "binary_interactions": 28575395,
+      "same_day_excess": 3212929,
+      "min_month_rows": 594776,
+      "max_month_rows": 1906202,
+      "first_month_rows": 594776,
+      "last_month_rows": 798269,
+      "peak_complete_month": "2019-06",
+      "peak_complete_month_rows": 1906202,
+      "channel_1_zero_observation": "2020-04 渠道 1 为 0、渠道 2 为 1,340,882"
+    },
+    "group_b_user_activity": {
+      "users_with_transactions": 1362281,
+      "one_binary_interaction_users": 150490,
+      "one_binary_interaction_user_rate": 0.11046913228621702,
+      "users_at_least_binary_interactions": {
+        "5": 897229,
+        "10": 644315,
+        "20": 410431
+      },
+      "coverage_rates": {
+        "5": 0.6586225602500512,
+        "10": 0.47296776509398575,
+        "20": 0.3012821877424702
+      },
+      "raw_interactions": 31788324,
+      "binary_interactions": 28575395,
+      "same_day_excess": 3212929,
+      "recent_gap_quantiles_days": {
+        "p25": 48.0,
+        "p50": 151.0,
+        "p75": 398.0,
+        "p90": 608.0,
+        "p99": 724.0
+      },
+      "binary_users_21plus_share": 0.28980951800693106,
+      "binary_interactions_21plus_share": 0.7797131763182976
+    },
+    "group_c_item_long_tail": {
+      "transacted_items": 104547,
+      "untransacted_articles": 995,
+      "raw_interactions": 31788324,
+      "gini_raw": 0.7585822040155648,
+      "hhi_raw": 7.434153963909557e-05,
+      "top_shares_raw": {
+        "top_1pct": 0.18625171934198229,
+        "top_5pct": 0.44048858945819225,
+        "top_10pct": 0.6075121167130422,
+        "top_20pct": 0.7910549798095678
+      },
+      "raw_popularity_quantiles": {
+        "p01": 1.0,
+        "p05": 2.0,
+        "p10": 4.0,
+        "p25": 14.0,
+        "p50": 65.0,
+        "p75": 286.0,
+        "p90": 793.0,
+        "p95": 1318.0,
+        "p99": 3185.079999999987
+      },
+      "binary_popularity_quantiles": {
+        "p01": 1.0,
+        "p05": 2.0,
+        "p10": 3.0,
+        "p25": 13.0,
+        "p50": 59.0,
+        "p75": 260.0,
+        "p90": 721.0,
+        "p95": 1193.699999999997,
+        "p99": 2817.079999999987
+      }
+    },
+    "group_d_repurchase_stability": {
+      "raw_rows_A": 31788324,
+      "binary_user_item_days_B": 28575395,
+      "daily_strength_sum_C": 31788324,
+      "same_day_excess": 3212929,
+      "same_article_repeat_groups": 3515413,
+      "users_with_same_article_repeat": 670345,
+      "user_repeat_rate": 0.49207542349926336,
+      "repeat_excess_rows": 4481885,
+      "repeat_excess_row_rate": 0.14099154771418587,
+      "cross_day_repeat_groups": 1141216,
+      "users_with_cross_day_repeat": 377478,
+      "cross_day_excess_days": 1268956,
+      "repurchase_gap_quantiles_days": {
+        "p01": 1.0,
+        "p25": 3.0,
+        "p50": 8.0,
+        "p75": 39.0,
+        "p90": 147.0,
+        "p99": 421.0
+      },
+      "same_product_repeat_groups": 4946329,
+      "users_with_product_repeat": 865466,
+      "same_product_different_article_groups": 2338909,
+      "users_with_same_product_different_article": 666426,
+      "recent_history_department_overlap": {
+        "users_in_both_windows": 210553,
+        "mean_jaccard": 0.0716121271035151,
+        "quantiles": {
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 0.05263157894736842,
+          "p75": 0.10344827586206896,
+          "p90": 0.16666666666666663
+        }
+      }
+    },
+    "group_e_cold_start": {
+      "7": {
+        "cutoff": "2020-09-16",
+        "test_rows": 240311,
+        "test_users": 68984,
+        "seen_test_users": 63412,
+        "new_test_users": 5572,
+        "user_cold_start_rate": 0.08077235300939348,
+        "test_items": 17986,
+        "seen_test_items": 17319,
+        "new_test_items": 667,
+        "item_cold_start_rate": 0.0370843989769821,
+        "cold_user_rows": 18143,
+        "cold_user_row_rate": 0.07549800050767547,
+        "cold_item_rows": 9564,
+        "cold_item_row_rate": 0.03979842787055108,
+        "cold_both_rows": 744,
+        "cold_both_row_rate": 0.00309598811540046,
+        "warm_user_item_rows": 213348,
+        "warm_candidate_upper_bound": 0.887799559737174
+      },
+      "14": {
+        "cutoff": "2020-09-09",
+        "test_rows": 495552,
+        "test_users": 128333,
+        "seen_test_users": 117366,
+        "new_test_users": 10967,
+        "user_cold_start_rate": 0.08545736482432421,
+        "test_items": 22640,
+        "seen_test_items": 21060,
+        "new_test_items": 1580,
+        "item_cold_start_rate": 0.06978798586572438,
+        "cold_user_rows": 37471,
+        "cold_user_row_rate": 0.07561466808730466,
+        "cold_item_rows": 44934,
+        "cold_item_row_rate": 0.09067464161177838,
+        "cold_both_rows": 2879,
+        "cold_both_row_rate": 0.005809682939429162,
+        "warm_user_item_rows": 416026,
+        "warm_candidate_upper_bound": 0.8395203732403461
+      },
+      "28": {
+        "cutoff": "2020-08-26",
+        "test_rows": 1043390,
+        "test_users": 233174,
+        "seen_test_users": 210553,
+        "new_test_users": 22621,
+        "user_cold_start_rate": 0.09701338914287184,
+        "test_items": 28297,
+        "seen_test_items": 24901,
+        "new_test_items": 3396,
+        "item_cold_start_rate": 0.1200127221966993,
+        "cold_user_rows": 79778,
+        "cold_user_row_rate": 0.07646038394080833,
+        "cold_item_rows": 163209,
+        "cold_item_row_rate": 0.15642185568195976,
+        "cold_both_rows": 11109,
+        "cold_both_row_rate": 0.010647025560912028,
+        "warm_user_item_rows": 811512,
+        "warm_candidate_upper_bound": 0.7777647859381439
+      }
+    },
+    "group_f_time_split": {
+      "7": {
+        "cutoff": "2020-09-16",
+        "train_rows": 31548013,
+        "test_rows": 240311,
+        "train_users": 1356709,
+        "test_users": 68984,
+        "train_items": 103880,
+        "test_items": 17986,
+        "evaluable_users": 63412,
+        "test_user_train_visibility": 0.9192276469906066,
+        "one_test_positive_users": 19994,
+        "one_test_positive_user_rate": 0.28983532413313234,
+        "evaluable_users_history_lt5": 4135,
+        "evaluable_users_history_lt10": 9170,
+        "test_positive_quantiles": {
+          "p25": 1.0,
+          "p50": 2.0,
+          "p75": 4.0,
+          "p90": 7.0,
+          "p99": 17.0
+        },
+        "warm_user_row_rate": 0.9245019994923245,
+        "warm_item_row_rate": 0.9602015721294489,
+        "warm_user_item_candidate_upper_bound": 0.887799559737174
+      },
+      "14": {
+        "cutoff": "2020-09-09",
+        "train_rows": 31292772,
+        "test_rows": 495552,
+        "train_users": 1351314,
+        "test_users": 128333,
+        "train_items": 102967,
+        "test_items": 22640,
+        "evaluable_users": 117366,
+        "test_user_train_visibility": 0.9145426351756758,
+        "one_test_positive_users": 33063,
+        "one_test_positive_user_rate": 0.25763443541411796,
+        "evaluable_users_history_lt5": 8017,
+        "evaluable_users_history_lt10": 17778,
+        "test_positive_quantiles": {
+          "p25": 1.0,
+          "p50": 3.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "p99": 19.0
+        },
+        "warm_user_row_rate": 0.9243853319126953,
+        "warm_item_row_rate": 0.9093253583882216,
+        "warm_user_item_candidate_upper_bound": 0.8395203732403461
+      },
+      "28": {
+        "cutoff": "2020-08-26",
+        "train_rows": 30744934,
+        "test_rows": 1043390,
+        "train_users": 1339660,
+        "test_users": 233174,
+        "train_items": 101151,
+        "test_items": 28297,
+        "evaluable_users": 210553,
+        "test_user_train_visibility": 0.9029866108571282,
+        "one_test_positive_users": 51510,
+        "one_test_positive_user_rate": 0.2209079914570235,
+        "evaluable_users_history_lt5": 16034,
+        "evaluable_users_history_lt10": 35071,
+        "test_positive_quantiles": {
+          "p25": 2.0,
+          "p50": 3.0,
+          "p75": 6.0,
+          "p90": 10.0,
+          "p99": 23.0
+        },
+        "warm_user_row_rate": 0.9235396160591917,
+        "warm_item_row_rate": 0.8435781443180402,
+        "warm_user_item_candidate_upper_bound": 0.7777647859381439
+      }
+    },
+    "group_g_model_evidence": {
+      "candidate_count": 10,
+      "matrix_path": "artifacts/stage_1b/model_evidence_matrix.csv"
+    }
+  },
+  "stage_1c_recommendation": {
+    "decision": "有条件建议进入 Stage 1C",
+    "reason": "七个画像组和测试均完成，已有时间切分、冷启动、长尾、复购和模型适配证据；架构冻结前仍需评审反馈口径与窗口选择。"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "business_ast_identity": true,
+  "final_audit_source_fingerprint": "e20f64701c1652dbee8c727c5957eccb1b8cd5b05b0642061bbf3e3a9f092623",
+  "frozen_validation_result_byte_identity": true,
+  "git_diff_check": "PASS",
+  "producer_source_fingerprint": "30e59f21fa27888cb0b02b6168236fda07a584736fa040aa1d366a01ae0e1edd",
+  "protected_file_count": 359,
+  "protected_mutations": 0,
+  "public_scan": {
+    "files_checked": 28,
+    "status": "PASS",
+    "violation_count": 0
+  },
+  "pytest_full": {
+    "counts": {
+      "passed": 514,
+      "skipped": 1
+    },
+    "full_suite": true,
+    "result_physical_fingerprint": "a091c79671506ab3eda48301af2f4e057f26d4fcf8606b6ddc6d93cf7ec2bf9b",
+    "return_code": 0,
+    "status": "PASS",
+    "test_label_reads": 0
+  },
+  "pytest_targeted": {
+    "counts": {
+      "passed": 43
+    },
+    "full_suite": false,
+    "result_physical_fingerprint": "46a331b94c633e8ee64adf017fca9dadd900d4668ebf0ab05e8f1a087d1de987",
+    "return_code": 0,
+    "status": "PASS",
+    "test_label_reads": 0
+  },
+  "r1_output_and_metric_identity": true,
+  "recovered_worker_failure_count": 1,
+  "schema_violations": 0,
+  "status": "PASS",
+  "success_checkpoints": 257,
+  "test_bootstrap": false,
+  "test_evaluation": false,
+  "test_label_read": false,
+  "tracked_private_count": 0
+}

@@ -1,0 +1,9 @@
+{
+  "sample_semantic_fingerprint": "822dd4c634cc398f794c5bf65ecca450c09537f3269f5ee0b2d5e93c74d4d832",
+  "sampled_queries": 32,
+  "status": "PASS",
+  "synthetic_tests_required_separately": true,
+  "test_label_reads": 0,
+  "validation_label_reads": 0,
+  "variant_checks": 224
+}

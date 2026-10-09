@@ -1,0 +1,90 @@
+{
+  "stage": "4B-1",
+  "stage_version": "1.0.0",
+  "snapshot": {
+    "snapshot_id": "ranking_train_14d_v1",
+    "history_start": "2018-09-20",
+    "as_of_date": "2020-08-11",
+    "request_date": "2020-08-12",
+    "history_cutoff": "2020-08-11",
+    "query_user_label_start": "2020-08-12",
+    "query_user_label_end": "2020-08-25"
+  },
+  "frozen_retrieval": {
+    "candidate_contract_version": "stage_3e_candidate_contract_v1",
+    "candidate_protocol_version": "source_rank_cap_pre_dedup_v1",
+    "semantic_fingerprint_version": "candidate_semantic_sha256_user_merkle_v1",
+    "model": "TT1",
+    "quota": "T100",
+    "locked_epoch": 1,
+    "candidate_budget": 500,
+    "source_caps": {"repurchase": 50, "itemcf": 200, "two_tower": 100, "trend": 100},
+    "insertion_order": ["repurchase", "itemcf", "two_tower", "trend", "popularity_fallback"],
+    "quota_semantics": "source_rank_cap_before_cross_source_dedup",
+    "duplicate_semantics": "duplicates_consume_pre_dedup_source_rank_cap_and_merge_provenance",
+    "fallback_semantics": "popularity_unique_fill_to_500",
+    "source_score_semantics": "source_local_raw_scores_never_summed_or_cross_source_calibrated",
+    "ann": {
+      "algorithm": "hnsw",
+      "metric": "cosine",
+      "m": 32,
+      "ef_construction": 200,
+      "ef_search": 200,
+      "initial_query_k": 1000,
+      "retry_query_k": 2000,
+      "exact_rerank": true,
+      "mean_overlap_min": 0.98,
+      "p5_overlap_min": 0.95
+    }
+  },
+  "upstream": {
+    "stage_4a_config": "configs/stage_4a_ranking_time_protocol.yaml",
+    "stage_4a_manifest": "artifacts/stage_4a/stage_4a_manifest.csv",
+    "stage_4a_protocol_gate": "artifacts/stage_4a/protocol_gate.csv",
+    "stage_3e_config": "configs/stage_3e_candidate_contract.yaml",
+    "stage_3e_manifest": "artifacts/stage_3e/stage_3e_manifest.csv",
+    "stage_3e_candidate_contract_manifest": "artifacts/stage_3e/candidate_contract_manifest.csv",
+    "stage_3e_candidate_schema_manifest": "artifacts/stage_3e/candidate_schema_manifest.csv",
+    "stage_3e_contract_gate": "artifacts/stage_3e/contract_gate.csv",
+    "stage_3e_replay_audit": "artifacts/stage_3e/replay_audit.csv",
+    "stage_3e_zero_semantic_drift": "artifacts/stage_3e/zero_semantic_drift_audit.csv",
+    "stage_3d_config": "configs/stage_3d_two_tower.yaml",
+    "stage_3d_lock": "artifacts/stage_3d/stage_3d_lock.json",
+    "stage_3d_model_lineage": "artifacts/stage_3d/model_lineage.csv",
+    "stage_3b_config": "configs/stage_3b_itemcf.yaml",
+    "stage_3b_lock": "artifacts/stage_3b/stage_3b_lock.json",
+    "stage_3a_config": "configs/stage_3a_recall.yaml",
+    "stage_3a_lock": "artifacts/stage_3a/stage_3a_lock.json",
+    "stage_2a_private": "artifacts/stage_2a/private",
+    "articles": "data/raw/articles.parquet"
+  },
+  "execution": {
+    "partitions": 32,
+    "union_subpartitions": 4,
+    "arrow_batch_rows": 65536,
+    "formal_partition_order": "forward",
+    "replay_partition_order": "reverse",
+    "parquet_compression": "zstd"
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 512,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "checkpoint": {
+    "reuse_matching_success": true,
+    "retry_failed": true,
+    "require_input_physical_fingerprint": true,
+    "require_output_physical_fingerprint": true
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_4b1",
+    "private_directory": "artifacts/stage_4b1/private",
+    "checkpoint_directory": "artifacts/stage_4b1/checkpoints",
+    "temp_directory": "artifacts/stage_4b1/tmp",
+    "report": "docs/stages/stage_4b1_historical_candidate_replay.md"
+  }
+}

@@ -1,0 +1,3 @@
+﻿version_id,replay_partition,row_key_mismatch,raw_score_mismatch,predicted_rank_mismatch,query_digest_mismatch,fresh_process_model_reload,status
+B0,0,0,0,0,0,False,PASS
+L1_FINAL_REFIT_600,0,0,0,0,0,True,PASS

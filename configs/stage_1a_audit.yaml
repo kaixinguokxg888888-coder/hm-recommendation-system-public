@@ -1,0 +1,42 @@
+{
+  "config_version": "1.0.0",
+  "result_version": "1.0.0",
+  "data_paths": {
+    "articles": "data/raw/articles.parquet",
+    "customers": "data/raw/customers.parquet",
+    "transactions": "data/raw/transactions_train.parquet"
+  },
+  "contracts_path": "configs/data_contracts.yaml",
+  "duckdb": {
+    "database": ":memory:",
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 256,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "temp_directory": "artifacts/stage_1a/tmp",
+    "max_temp_directory_size": "20GB",
+    "preserve_insertion_order": false
+  },
+  "query_timeout_policy": {
+    "seconds_per_query": 1800,
+    "action": "interrupt_query_and_stop_heavier_groups"
+  },
+  "retry_policy": {
+    "max_attempts": 1,
+    "retry_on": []
+  },
+  "paths": {
+    "artifact_directory": "artifacts/stage_1a",
+    "checkpoint_directory": "artifacts/stage_1a/checkpoints",
+    "group_directory": "artifacts/stage_1a/groups",
+    "report": "docs/stages/stage_1a_full_data_quality_audit.md"
+  },
+  "groups": [
+    "group_a_metadata_schema",
+    "group_b_null_format",
+    "group_c_date_value_ranges",
+    "group_d_primary_keys",
+    "group_e_foreign_keys",
+    "group_f_transaction_duplicates"
+  ]
+}

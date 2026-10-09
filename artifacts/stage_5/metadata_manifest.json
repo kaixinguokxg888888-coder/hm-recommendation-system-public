@@ -1,0 +1,22 @@
+{
+  "as_of_date": "2020-08-25",
+  "config_fingerprint": "950f9a626caee4b7daa1aae1ad76513138b3bf73b30e20200823799a811ea952",
+  "join_row_expansion": 0,
+  "metadata_binding_fingerprint": "1e3216b983a34c58d48122ec5e4d3809a4d78387b7aa29659621c881f43dd289",
+  "missing_metadata_rows": 0,
+  "p50": 59,
+  "p90": 721,
+  "physical_fingerprint": "81bd7c1cc05257357556bb606daa5df3af57748079bf37a5959943ed235698e5",
+  "row_count": 105542,
+  "seen_item_count": 101151,
+  "snapshot_id": "validation_14d",
+  "source_fingerprints": {
+    "article_key_map": "e0fb73bf4189d6aab6a56855d254c20cf074888aa4b9c4417f63bfd2af7d018e",
+    "articles": "6d76cc999a0a30561ca9dda7aad9dc46b363d665417138d33f6f801e2422609d",
+    "canonical_articles": "e5c77bf8b30510be3523bca3e1021921206f4fd140af1310e9ba1353c569117d",
+    "support": "760dfed17206040e8586115ae0bd766e202e7f2988e84c9dfdcf048213a32b1e"
+  },
+  "static_attribute_effective_timestamp_verified": false,
+  "tail_helper_fingerprint": "64416f9d003dabd10e351097e7be00b96e247dab7cd55a67fd9575c94cc993b5",
+  "tail_semantics": "Stage 5 tail semantics are identical to the existing project-level history-safe item-state definition."
+}

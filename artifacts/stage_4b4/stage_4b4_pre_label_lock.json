@@ -1,0 +1,37 @@
+{
+  "config_fingerprint": "3f7879e7c333d38ea5240a987afa09835bea9c8ed6353161c4e773524a5a58c0",
+  "final_refit_executed": false,
+  "first7d_read_count": 0,
+  "phase": "phase1_pre_label_prediction_freeze_v1",
+  "pre_label_contract_gate": "PASSED",
+  "prediction_global_merkle_fingerprints": {
+    "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+    "L0_100": "9533fc7e7ee2bb6cd6e2264433b1953c9317a866b68a3dcb0f3c1efb731c8df1",
+    "L0_300": "25aa218b12d12f8fb3d69ccf72136c518336260bf3b32c163cb14f57bfe086ce",
+    "L0_600": "13fd403694a2010d5b0f7121f6d69775a7704c846b46d3f3d739229a60e7224b",
+    "L1_100": "07b4b61017f71fc4b94f3392fd39d151e8823d20cd76d56c4861a91420559f88",
+    "L1_300": "18b5494893148e279c68002d6b34c0487b36550baa6efd674844214dedda41a7",
+    "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+  },
+  "prediction_versions": [
+    "B0",
+    "L0_100",
+    "L0_300",
+    "L0_600",
+    "L1_100",
+    "L1_300",
+    "L1_600"
+  ],
+  "ready_for_validation_label_join": true,
+  "source_fingerprint": "5bfc3b5d5f09ecf736c27b97bacc904713cd3894865df30565a34cd90c4c7b7e",
+  "stage": "4B-4",
+  "test_authorized": false,
+  "test_candidate_read_count": 0,
+  "test_feature_read_count": 0,
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0,
+  "validation_label_read_count": 0,
+  "validation_labels_read": false,
+  "validation_predictions_frozen": true,
+  "winner_selected": false
+}

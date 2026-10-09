@@ -1,0 +1,102 @@
+{
+  "checks": {
+    "access_count_integrity": "PASS",
+    "aggregate_consistency": "PASS",
+    "all_zero_queries_retained_as_zero": "PASS",
+    "background_worker_audit": "PASS",
+    "bootstrap_deterministic_identity": "PASS",
+    "formal_metric_partition_completeness": "PASS",
+    "ground_truth_manifest_self_fingerprint": "PASS",
+    "paired_key_population_alignment": "PASS",
+    "prelabel_engineering_audit": "PASS",
+    "privacy_path_scan": "PASS",
+    "raw_data_staged_diff": "PASS",
+    "raw_data_worktree_diff": "PASS",
+    "resource_checkpoint_integrity": "PASS",
+    "tracked_private_audit": "PASS"
+  },
+  "engineering_audit_fingerprint": "0516fcf0052f1c5e384e4147143167aa48b523e0381976bb217180694655c729",
+  "formal_test_evaluation_count": 1,
+  "full_pytest": {
+    "collection_errors": [],
+    "counts": {
+      "collected": 472,
+      "errors": 0,
+      "failed": 0,
+      "outcome_total": 472,
+      "passed": 471,
+      "skipped": 1,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "result_fingerprint": "6f10073da031073f3017e602406a9e7025892c09d5b5629c7175343e911485da",
+    "return_code": 0,
+    "skipped": [
+      {
+        "code_location": "tests/test_stage_4b4_phase4.py:190",
+        "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+        "reason": "formal gate is created during finalization"
+      }
+    ],
+    "status": "PASS",
+    "structured_result_version": "pytest_hook_report_v1"
+  },
+  "phase": "phase5b_one_time_test_label_join_and_final_evaluation_v1",
+  "phase5b_targeted": {
+    "collection_errors": [],
+    "counts": {
+      "collected": 17,
+      "errors": 0,
+      "failed": 0,
+      "outcome_total": 17,
+      "passed": 17,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "result_fingerprint": "a0eed151363bc08b99eb1c274d69e0d88f1d2aaa5e759bca0d770269d6318c7b",
+    "return_code": 0,
+    "skipped": [],
+    "status": "PASS",
+    "structured_result_version": "pytest_hook_report_v1"
+  },
+  "postlabel_all_zero_nonzero_metric_count": 0,
+  "postlabel_metric_rows": {
+    "B0": 128333,
+    "L1_FINAL_REFIT_600": 128333
+  },
+  "postlabel_paired_query_count": 128333,
+  "prelabel_engineering_fingerprint": "6310d5207f279f05d6d94a4d1a1cc27c09ce2553eb722d8cf04390c2cfae3fc4",
+  "privacy_path_violation_count": 0,
+  "raw_data_diff_count": 0,
+  "recorded_at": "2026-08-20T12:17:58+08:00",
+  "stage": "4B-4",
+  "stage4b4_targeted": {
+    "collection_errors": [],
+    "counts": {
+      "collected": 138,
+      "errors": 0,
+      "failed": 0,
+      "outcome_total": 138,
+      "passed": 137,
+      "skipped": 1,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "result_fingerprint": "000c70ca54e80e0d611cfd9bd777d04aa5f54d94fa0b69b5eee727339d394320",
+    "return_code": 0,
+    "skipped": [
+      {
+        "code_location": "tests/test_stage_4b4_phase4.py:190",
+        "nodeid": "tests/test_stage_4b4_phase4.py::test_phase4_gate_has_exactly_thirteen_passes_when_present",
+        "reason": "formal gate is created during finalization"
+      }
+    ],
+    "status": "PASS",
+    "structured_result_version": "pytest_hook_report_v1"
+  },
+  "status": "PASS",
+  "test_label_read_count": 1,
+  "test_labels_reopened": false,
+  "tracked_private_artifact_count": 0
+}

@@ -1,0 +1,33 @@
+{
+  "binary_physical_fingerprint": "df18e505648ad70924d9d59b2a5a888600f893427b1d6c543688666366c3e9d1",
+  "binary_rebuilt_during_recovery": false,
+  "binary_semantic_fingerprint": "8fe8fe6ed1c1cc3e7cd82f2f5845c15955a0f1f45b2c7a9f29f31a41dcf52af9",
+  "checks": {
+    "binary_artifact_unchanged": true,
+    "binary_manifest_unchanged": true,
+    "combined_manifest_unchanged": true,
+    "model_artifact_unchanged": true,
+    "model_manifest_state": true,
+    "model_structure": true,
+    "no_background_training_or_replay_worker": true,
+    "original_recovery_source_binding": true,
+    "replay_evidence": true,
+    "validation_manifest_unchanged": true
+  },
+  "config_canonical_fingerprint": "6fd0055a6d5adb92dcb55bb87087b35f44695467d28b498c398cc40f90f4d425",
+  "identity_audit_fingerprint": "736dd9e55eb23766351be79b427c828020e3775b703f7c770255f3caadf28fe1",
+  "labels_read_during_recovery": false,
+  "model_physical_fingerprint": "1f2af19a79ed8d085d68d20fe9437f4eca7da3534a3852eb823f483c6bf96922",
+  "model_retrained_during_recovery": false,
+  "model_semantic_fingerprint": "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+  "prediction_recomputed_during_recovery": false,
+  "replay_audit_physical_fingerprint": "7e52482d421bc2bca85c7bce2209e74aa6993d10ddfa71defbc6fd57a775e347",
+  "replay_fingerprint": "9241b2fe75b3cf8703a753ee1606e26fa84eb272d929f8767577157f15128cf6",
+  "source_fingerprint": "5ef78e8f585a2c99e882fd4840cd69c493659b1df195a23fe571d1ad5b2a9b81",
+  "status": "POST_TRAINING_ARTIFACT_IDENTITY_VERIFIED",
+  "tree_audit": {
+    "features": 52,
+    "iterations": 600,
+    "trees": 600
+  }
+}

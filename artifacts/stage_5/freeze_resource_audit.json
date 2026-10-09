@@ -1,0 +1,10 @@
+{
+  "cap_exceeded": false,
+  "exit_code": 0,
+  "frozen_cap_bytes": 3210988748,
+  "peak_rss_bytes": 869089280,
+  "phase": "freeze",
+  "status": "PASS",
+  "temp_peak_bytes": 153579,
+  "wall_seconds": 71.84641829994507
+}

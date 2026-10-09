@@ -1,0 +1,9 @@
+check,actual,expected,mismatch,status
+optimizer_query_count,51497,51497,0,PASS
+query_membership_set,51497,51497,0,PASS
+group_size_by_query,51497,51497,0,PASS
+positive_count_by_query,51497,51497,0,PASS
+memmap_query_sequence_vs_global_query_order,0,51497,51497,FAIL
+group_size_sequence,22896,51497,28601,FAIL
+all_zero_groups_under_frozen_group_boundaries,6794,0,6794,FAIL
+total_positive_rows,86356,86356,0,PASS

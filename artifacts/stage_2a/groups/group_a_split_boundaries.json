@@ -1,0 +1,47 @@
+{
+  "group_name": "group_a_split_boundaries",
+  "payload": {
+    "D_max": "2020-09-22",
+    "history_start": "2018-09-20",
+    "snapshots": {
+      "validation_14d": {
+        "split_id": "validation_14d",
+        "history_start": "2018-09-20",
+        "history_end": "2020-08-25",
+        "label_start": "2020-08-26",
+        "label_end": "2020-09-08",
+        "window_days": 14,
+        "history_rows_A": 30744934,
+        "label_rows_A": 547838,
+        "history_users": 1339660,
+        "label_users": 141359,
+        "history_items": 101151,
+        "label_items": 23890,
+        "evaluable_users": 129705,
+        "cold_user_count": 11654,
+        "cold_item_count": 1816
+      },
+      "test_14d": {
+        "split_id": "test_14d",
+        "history_start": "2018-09-20",
+        "history_end": "2020-09-08",
+        "label_start": "2020-09-09",
+        "label_end": "2020-09-22",
+        "window_days": 14,
+        "history_rows_A": 31292772,
+        "label_rows_A": 495552,
+        "history_users": 1351314,
+        "label_users": 128333,
+        "history_items": 102967,
+        "label_items": 22640,
+        "evaluable_users": 117366,
+        "cold_user_count": 10967,
+        "cold_item_count": 1580
+      }
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22"
+}

@@ -1,0 +1,3 @@
+﻿model_variant,union_variant,recall_at_500,hit_rate_at_500,two_tower_exclusive_hits,declined_user_rate,selected,stage,phase,snapshot_id,run_status
+TT1,T50,0.2359142829954185,0.46776145869473035,32741,0.013723449365868702,False,3D,validation,validation_14d,SUCCESS
+TT1,T100,0.2448639763673124,0.4802898885933464,32741,0.025743032265525614,True,3D,validation,validation_14d,SUCCESS

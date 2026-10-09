@@ -1,0 +1,12 @@
+{
+  "group_name": "group_g_model_evidence",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "candidate_count": 10,
+    "matrix_path": "artifacts/stage_1b/model_evidence_matrix.csv"
+  }
+}

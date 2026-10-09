@@ -1,0 +1,147 @@
+{
+  "stage": "4B-4",
+  "stage_version": "5.0.0",
+  "phase": "phase5a_test_candidate_feature_prediction_freeze_v1",
+  "snapshot": {
+    "snapshot_id": "test_14d",
+    "as_of_date": "2020-09-08",
+    "request_date": "2020-09-09"
+  },
+  "versions": ["B0", "L1_FINAL_REFIT_600"],
+  "candidate_contract": {
+    "version": "stage_3e_candidate_contract_v1",
+    "protocol": "source_rank_cap_pre_dedup_v1",
+    "candidate_budget": 500,
+    "baseline_rank_rule": "candidate_rank_ASC_article_key_ASC",
+    "source_score_semantics": "source_local_raw_scores_never_summed"
+  },
+  "feature": {
+    "feature_set": "F1",
+    "feature_version": "core_plus_affinity_v1",
+    "feature_count": 52,
+    "primary_source_model_input": false,
+    "price_feature_status": "OMITTED_BY_LINEAGE_UNCERTAINTY",
+    "missing_value_semantics": {
+      "recency": "NULL",
+      "valid_count_absence": 0,
+      "known_category_no_history_affinity": 0,
+      "missing_user_or_category_affinity": "NULL"
+    }
+  },
+  "model": {
+    "model_id": "L1_FINAL_REFIT_600",
+    "feature_set": "F1",
+    "objective": "lambdarank",
+    "rounds": 600,
+    "trees": 600,
+    "fresh_initialization": true,
+    "retraining_allowed": false,
+    "warm_start_allowed": false,
+    "early_stopping_allowed": false
+  },
+  "prediction": {
+    "score_serialization": "python_float64_hex_v1",
+    "baseline_tie_break": ["candidate_rank_ASC", "article_key_ASC"],
+    "learned_tie_break": ["raw_score_DESC", "candidate_rank_ASC", "article_key_ASC"],
+    "output_schema": [
+      "snapshot_id", "customer_key", "article_key", "candidate_rank",
+      "raw_score", "predicted_rank", "version_id", "partition_id"
+    ],
+    "full_candidate_count_per_query": 500,
+    "optimizer_sampled_view_allowed": false
+  },
+  "fingerprints": {
+    "candidate_semantic": "candidate_semantic_sha256_user_merkle_v1",
+    "feature_schema": "ranking_feature_schema_sha256_v1",
+    "feature_semantic": "ranking_feature_semantic_sha256_query_merkle_v1",
+    "prediction_query": "ranking_prediction_query_digest_v1",
+    "prediction_global": "bound_raw_and_rank_merkle_v1",
+    "physical": "sha256_bytes_v1",
+    "lock": "canonical_json_self_sha256_v1"
+  },
+  "execution": {
+    "partitions": 32,
+    "query_partition_expression": "customer_key % 32",
+    "replay_partition": 0,
+    "duckdb_memory_limit_mb": 768,
+    "parquet_compression": "zstd",
+    "feature_and_prediction_fresh_processes": true,
+    "prediction_batch_queries": 128
+  },
+  "resource": {
+    "available_memory_at_preregistration_bytes": 2780811264,
+    "absolute_rss_cap_fraction": 0.70,
+    "absolute_rss_cap_bytes": 1946567884,
+    "runtime_cap_recomputation_allowed": false,
+    "external_process_tree_monitor": true,
+    "temporary_spill_cap": "20GB"
+  },
+  "expected": {
+    "phase4_lock_fingerprint": "358c25d19ecce3006428a293acd61564e0f6cd3fbdc0c156aa636ee41bef4bd8",
+    "candidate_queries": 128333,
+    "candidate_rows": 64166500,
+    "candidate_semantic_fingerprint": "fd94f546add97637e15652c800bc636f3c7723bc4ae7d9cb055f82d5e83e9948",
+    "stage3e_candidate_physical_fingerprint": "20209b5ca0123a714c8cee1f26c37e6aa91d0918d1689d7e2f79e28b4c7877d4",
+    "feature_schema_fingerprint": "5964882d45d0c3453fb49b3dac39fb187969989d364a63e7d4c18b3ed49896a3",
+    "adapter_fingerprint": "aed9098285baf2d4480f51b71073b7a53073d31f0ea3a87f8ad870b7297236ed",
+    "model_physical_fingerprint": "1f2af19a79ed8d085d68d20fe9437f4eca7da3534a3852eb823f483c6bf96922",
+    "model_semantic_fingerprint": "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+    "model_manifest_physical_fingerprint": "a68492fde15c0e4f59c93b40e57dbcd7d41d11bff2d850b315223ba9627b76f3",
+    "model_manifest_semantic_fingerprint": "8e79067006100b0372f85cba15d0c825863c656334ee1cd00e40882fc5d4721d",
+    "parameter_fingerprint": "e04109a59ac649ccc6b9f8d15cfaff0825b3dda59894d7d85660cf8d93b611b2"
+  },
+  "upstream": {
+    "stage_4a_config": "configs/stage_4a_ranking_time_protocol.yaml",
+    "stage_3e_config": "configs/stage_3e_candidate_contract.yaml",
+    "stage_3e_manifest": "artifacts/stage_3e/stage_3e_manifest.csv",
+    "stage_3e_candidate_manifest": "artifacts/stage_3e/candidate_contract_manifest.csv",
+    "stage_3e_candidate_schema": "artifacts/stage_3e/candidate_schema_manifest.csv",
+    "stage_3e_gate": "artifacts/stage_3e/contract_gate.csv",
+    "test_candidates": "artifacts/stage_3e/private/candidates/test_14d",
+    "test_history": "artifacts/stage_3d/private/history_test_14d.parquet",
+    "stage_4b3_config": "configs/stage_4b3_ranking_features.yaml",
+    "stage_4b3_schema": "artifacts/stage_4b3/feature_schema_manifest.csv",
+    "f1_adapter": "artifacts/stage_4b4/model_input_adapter_f1.json",
+    "phase4_lock": "artifacts/stage_4b4/stage_4b4_final_refit_lock.json",
+    "phase4_model_manifest": "artifacts/stage_4b4/final_refit_model_fingerprint_manifest.json",
+    "phase4_replay_audit": "artifacts/stage_4b4/final_refit_prediction_replay_audit.json",
+    "phase4_gate": "artifacts/stage_4b4/final_refit_resource_recovery_gate.csv",
+    "final_model": "artifacts/stage_4b4/private/final_refit/resource_recovery/models/L1_FINAL_REFIT_600.txt"
+  },
+  "paths": {
+    "public_directory": "artifacts/stage_4b4",
+    "private_directory": "artifacts/stage_4b4/private/test_prediction_freeze",
+    "checkpoint_directory": "artifacts/stage_4b4/checkpoints/test_prediction_freeze",
+    "temp_directory": "artifacts/stage_4b4/tmp/test_prediction_freeze",
+    "pre_access_audit": "artifacts/stage_4b4/test_prediction_pre_access_audit.csv",
+    "preregistration": "artifacts/stage_4b4/test_prediction_preregistration.json",
+    "partition_manifest": "artifacts/stage_4b4/test_candidate_feature_partition_manifest.csv",
+    "feature_statistics": "artifacts/stage_4b4/test_feature_statistics.csv",
+    "prediction_manifest": "artifacts/stage_4b4/test_prediction_fingerprint_manifest.csv",
+    "prediction_replay_audit": "artifacts/stage_4b4/test_prediction_replay_audit.csv",
+    "resource_audit": "artifacts/stage_4b4/test_prediction_resource_audit.csv",
+    "recovery_audit": "artifacts/stage_4b4/test_prediction_recovery_operational_audit.csv",
+    "access_audit": "artifacts/stage_4b4/test_prediction_access_audit.csv",
+    "contract_gate": "artifacts/stage_4b4/test_prediction_contract_gate.csv",
+    "pre_label_lock": "artifacts/stage_4b4/stage_4b4_test_pre_label_lock.json",
+    "manifest": "artifacts/stage_4b4/test_prediction_freeze_manifest.csv",
+    "report": "docs/stages/stage_4b4_test_prediction_freeze.md"
+  },
+  "artifact_policy": {
+    "private_git_ignored": true,
+    "public_aggregate_only": true,
+    "public_paths_repository_relative": true,
+    "raw_predictions_public": false
+  },
+  "access": {
+    "test_candidate_content_read_count": 0,
+    "test_feature_content_read_count": 0,
+    "test_label_content_read_count": 0,
+    "test_prediction_write_count": 0,
+    "test_metric_read_count": 0
+  },
+  "stop_conditions": [
+    "REPORT_CONFLICT", "BLOCKED_BY_RESOURCE", "TEST_LABEL_ACCESS_VIOLATION",
+    "PRE_LABEL_IMPLEMENTATION_FAILURE", "STOP_AFTER_PRE_LABEL_LOCK"
+  ]
+}

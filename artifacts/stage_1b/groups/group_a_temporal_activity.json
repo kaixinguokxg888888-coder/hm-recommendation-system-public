@@ -1,0 +1,20 @@
+{
+  "group_name": "group_a_temporal_activity",
+  "feedback_scopes": {
+    "A": "raw transaction rows",
+    "B": "binary t_dat + customer_id + article_id interactions",
+    "C": "daily interaction count; an intensity proxy, not true quantity"
+  },
+  "payload": {
+    "min_date": "2018-09-20",
+    "max_date": "2020-09-22",
+    "day_count": 734,
+    "raw_rows": 31788324,
+    "binary_interactions": 28575395,
+    "same_day_excess": 3212929,
+    "min_month_rows": 594776,
+    "max_month_rows": 1906202,
+    "first_month_rows": 594776,
+    "last_month_rows": 798269
+  }
+}

@@ -1,0 +1,4 @@
+﻿stage,phase,snapshot_id,model_variant,audit_user_count,ef_search,passed,mean_overlap_recall_at_500,median_overlap_recall_at_500,p5_overlap_recall_at_500,mean_ann_query_ms,mean_exact_query_ms,retry_rate,index_size_bytes,ann_audit_fingerprint,run_status
+3D,validation,validation_14d,TT0,2000,200,True,0.999576,1.0,0.998,2.165808502002619,42.31732165068388,0.0,53852268,dd8bdf9d32470167e5cfe9a21742493d39b14175409ce95c86afeb59b6211f41,SUCCESS
+3D,validation,validation_14d,TT1,2000,200,True,0.997159,0.998,0.988,1.5784595481818542,26.413661751314066,0.0,53852268,f67eee261f2a88026587df26c785de3eee636e828e2bd290d366e8580f409f89,SUCCESS
+3D,test,test_14d,TT1,2000,200,True,0.9971019999999998,0.998,0.988,1.603393400553614,27.193592999712564,0.0,54818508,92237185c2c445e3090a4234bfa131b12144db2e85ed3ad807294f220a39e1b6,SUCCESS

@@ -1,0 +1,33 @@
+{
+  "group_name": "group_f_time_split",
+  "status": "SUCCESS",
+  "started_at": "2026-07-28T10:47:31+08:00",
+  "finished_at": "2026-07-28T10:48:07+08:00",
+  "execution_seconds": 35.927155,
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "a5f0e25167a8c0495d75d78746bbb9589a7beda680237932df5f943ed6d6a369",
+  "rows_scanned": 31788324,
+  "peak_rss_bytes": 1132470272,
+  "current_attempt_peak_rss_bytes": 1132470272,
+  "temp_disk_peak_bytes": 538017792,
+  "current_attempt_temp_disk_peak_bytes": 538017792,
+  "output_files": [
+    "artifacts/stage_1b/time_split_comparison.csv",
+    "artifacts/stage_1b/groups/group_f_time_split.json"
+  ],
+  "output_file_sizes": {
+    "artifacts/stage_1b/time_split_comparison.csv": 1344,
+    "artifacts/stage_1b/groups/group_f_time_split.json": 2740
+  },
+  "error_message": "",
+  "attempts": 1,
+  "retried": false,
+  "spill_observed": true,
+  "oom_observed": false,
+  "duckdb_memory_limit_mb": 1024,
+  "duckdb_threads": 1,
+  "temp_directory": "artifacts/stage_1b/tmp",
+  "max_temp_directory_size": "20GB",
+  "attempt_history": [],
+  "last_action": "EXECUTED"
+}

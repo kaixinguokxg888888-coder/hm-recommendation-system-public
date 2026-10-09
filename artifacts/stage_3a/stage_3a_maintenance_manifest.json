@@ -1,0 +1,72 @@
+{
+  "stage": "3A",
+  "maintenance_version": "1.0.0",
+  "generated_at": "2026-07-28T19:33:43+08:00",
+  "issue": "正式公开产物扫描把合法 SHA-256 fingerprint 误判为 customer 值",
+  "root_cause": "旧实现先按任意 64 位十六进制值匹配，再使用调用方提供的全局 allowed_tokens 豁免；豁免没有验证值所在字段，既产生合法 fingerprint 误报，也存在普通字段被过宽豁免的风险",
+  "fix_scope": [
+    "敏感扫描改为显式 fingerprint 字段白名单",
+    "仅豁免白名单字段中的完整 64 位十六进制 SHA-256",
+    "增加正反例、现有 Stage 3A 公开产物、人口对账和冻结文件测试",
+    "补充 AP@12/MAP@12、评估人口和互补潜力报告勘误"
+  ],
+  "pre_fix_commit": "f33e07a",
+  "fix_commit": "6edd267",
+  "modified_files": [
+    "src/data_audit/stage1a.py",
+    "scripts/finalize_stage_3a_audit.py",
+    "tests/test_stage_1a.py",
+    "tests/test_stage_3a.py",
+    "docs/stages/stage_3a_baseline_retrieval_and_evaluation.md"
+  ],
+  "original_test_lock": {
+    "path": "artifacts/stage_3a/stage_3a_lock.json",
+    "file_fingerprint": "c8c8f233f05001a1d600433068c1874a875f9ec47aa7d7b8d612e51cfbe2d134",
+    "lock_fingerprint": "ecc3b77a8e4294addea90f65d4caf0d5b03bcc382576fd50ff20f787fc27ff6c",
+    "changed": false
+  },
+  "original_test_metric_files": [
+    {
+      "path": "artifacts/stage_3a/test_metrics_overall.csv",
+      "before_fingerprint": "ecfa40762661c7afe0f159ac9902e284936895e2e892009722c46cd7848a5b6e",
+      "after_fingerprint": "ecfa40762661c7afe0f159ac9902e284936895e2e892009722c46cd7848a5b6e",
+      "unchanged": true
+    },
+    {
+      "path": "artifacts/stage_3a/test_metrics_by_segment.csv",
+      "before_fingerprint": "d36d8b3122df62bcd553140ea5cbe892ae40a46199eaf07dce7111ca3b17276b",
+      "after_fingerprint": "d36d8b3122df62bcd553140ea5cbe892ae40a46199eaf07dce7111ca3b17276b",
+      "unchanged": true
+    },
+    {
+      "path": "artifacts/stage_3a/test_candidate_coverage.csv",
+      "before_fingerprint": "d18ba14aa5c163ea979952b7c003cb6c09fdea2fa66bb2c2d6a519f9d4f064c8",
+      "after_fingerprint": "d18ba14aa5c163ea979952b7c003cb6c09fdea2fa66bb2c2d6a519f9d4f064c8",
+      "unchanged": true
+    }
+  ],
+  "population_reconciliation": {
+    "validation_14d": {
+      "all_label_users": 141359,
+      "evaluable_warm_users": 129705,
+      "cold_history_label_users": 11654,
+      "matches_stage_2b_manifest": true
+    },
+    "test_14d": {
+      "all_label_users": 128333,
+      "evaluable_warm_users": 117366,
+      "cold_history_label_users": 10967,
+      "matches_stage_2b_manifest": true
+    }
+  },
+  "test_rerun": false,
+  "algorithm_logic_modified": false,
+  "candidate_protocol_modified": false,
+  "evaluation_metric_logic_modified": false,
+  "validation_selection_modified": false,
+  "test_lock_modified": false,
+  "test_candidates_modified": false,
+  "test_metrics_modified": false,
+  "candidate_universe_modified": false,
+  "stage_2a_or_2b_artifacts_modified": false
+}

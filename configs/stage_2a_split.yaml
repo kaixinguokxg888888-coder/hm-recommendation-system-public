@@ -1,0 +1,46 @@
+{
+  "stage": "2A",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "contract_version": "0.1.0",
+  "contracts_path": "configs/data_contracts.yaml",
+  "paths": {
+    "articles": "data/raw/articles.parquet",
+    "customers": "data/raw/customers.parquet",
+    "transactions": "data/raw/transactions_train.parquet",
+    "artifact_directory": "artifacts/stage_2a",
+    "private_directory": "artifacts/stage_2a/private",
+    "checkpoint_directory": "artifacts/stage_2a/checkpoints",
+    "temp_directory": "artifacts/stage_2a/tmp",
+    "report": "docs/stages/stage_2a_time_split_and_foundation.md"
+  },
+  "split": {
+    "primary_window_days": 14,
+    "quick_window_days": 7,
+    "robust_window_days": 28
+  },
+  "feedback": {
+    "cap_quantile": 0.99
+  },
+  "internal_ids": {
+    "strategy": "full_dimension_lexicographic_dense_key_v1",
+    "customer_key_start": 0,
+    "article_key_start": 0
+  },
+  "duckdb": {
+    "memory_fraction_of_available": 0.35,
+    "memory_min_mb": 256,
+    "memory_max_mb": 1024,
+    "threads": 1,
+    "preserve_insertion_order": false,
+    "max_temp_directory_size": "20GB"
+  },
+  "groups": [
+    "group_a_split_boundaries",
+    "group_b_feedback_layer",
+    "group_c_internal_ids",
+    "group_d_calendar_audit",
+    "group_e_leakage_checks",
+    "group_f_outputs_report"
+  ]
+}

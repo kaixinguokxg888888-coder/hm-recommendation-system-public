@@ -1,0 +1,24 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 41.05856669996865,
+  "generated_at": "2026-08-03T16:03:29+08:00",
+  "group_name": "test_14d_iuf_candidates_part_003",
+  "memory_limit_mb": 966,
+  "output_files": [
+    "artifacts/stage_3b/private/candidates/test_14d/iuf/part_003.parquet"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/private/candidates/test_14d/iuf/part_003.parquet": "9ffba79a2c6b95b0d19b083125b441477e07d3862933e2a9a7ed467fe0f52913"
+  },
+  "output_size_bytes": 28876647,
+  "peak_rss_bytes": 1066373120,
+  "run_fingerprint": "3c15698a27a6288b4e55a24071a1d41a50b506b81c8f3157b1d2a2c6e097c190",
+  "source_fingerprint": "e5304699d8ee4d0bb25348400cfd5ba5973c477d58916a9dd3e35d3f26f8a84f",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 1466833016,
+  "threads": 1
+}

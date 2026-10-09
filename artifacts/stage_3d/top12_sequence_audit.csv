@@ -1,0 +1,4 @@
+﻿stage,phase,snapshot_id,model_variant,union_variant,top12_sequence_changed_users,main_population_users,changed_user_ratio,mean_changed_positions_among_changed_users,comparison,run_status
+3D,validation,validation_14d,TT1,T50,1,129705,7.709803014532978e-06,11.0,TT1_T50_vs_Q0,SUCCESS
+3D,validation,validation_14d,TT1,T100,1,129705,7.709803014532978e-06,11.0,TT1_T100_vs_Q0,SUCCESS
+3D,test,test_14d,TT1,T100,0,117366,0.0,,TT1_T100_vs_Q0,SUCCESS

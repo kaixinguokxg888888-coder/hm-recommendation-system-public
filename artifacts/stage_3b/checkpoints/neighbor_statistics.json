@@ -1,0 +1,24 @@
+{
+  "attempt": 5,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 27.81246520008426,
+  "generated_at": "2026-08-03T17:17:41+08:00",
+  "group_name": "neighbor_statistics",
+  "memory_limit_mb": 604,
+  "output_files": [
+    "artifacts/stage_3b/neighbor_statistics.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3b/neighbor_statistics.csv": "385deca620594c181fc238be979443a03c55fb6a4434acbe1550d78a7e0074eb"
+  },
+  "output_size_bytes": 1686,
+  "peak_rss_bytes": 856764416,
+  "run_fingerprint": "cc59e05b15c7066b5cb87ed4c8ae0a539311245f68cb0d92fb515430c211228f",
+  "source_fingerprint": "905832868bdfb7ce9a13ce718a8bf1641c616754de24e77d7b815ef658273803",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 1371205021,
+  "threads": 1
+}

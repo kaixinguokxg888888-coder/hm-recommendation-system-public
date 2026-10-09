@@ -1,0 +1,10 @@
+{
+  "execution_seconds": 0.014345399977173656,
+  "group_name": "smoke",
+  "output_fingerprint": "36caa35e1bb1b39b51880467f7b09f1174eead70ad1292813c4c02a107ac20c0",
+  "peak_rss_bytes": 36155392,
+  "run_fingerprint": "e7e6cdcc58012d9c3feba33d1e3511bba52dcebb67793772b31dd31fb97b5cf8",
+  "scope": "SYNTHETIC_SMOKE_ONLY",
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 0
+}

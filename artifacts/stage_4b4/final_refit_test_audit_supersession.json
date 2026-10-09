@@ -1,0 +1,21 @@
+{
+  "corrected_physical_fingerprint": "bb550b02684eb30ddb377a28f7ba9e74681c205c5fef9c636f9a3bcbd3aa3ae9",
+  "current_gate_physical_fingerprint": "247abf2ba7bca7498202680859ba838a16ab62e6dbceb6159065b79246901521",
+  "current_lock_physical_fingerprint": "f8d10f4bc1d1c6def8e44273ffeb383a7e0fd5381cf6e1210f204023c1ddd0ea",
+  "current_lock_semantic_fingerprint": "358c25d19ecce3006428a293acd61564e0f6cd3fbdc0c156aa636ee41bef4bd8",
+  "current_report_physical_fingerprint": "501fbaf149f659289ab53d77e6a67d49c15cdd72225177a8820bf87ba24d51ab",
+  "original_conflict_deleted": false,
+  "original_gate_physical_fingerprint": "9e04a6acc9e5e4d7b7a4bb92e072fea1066f90081d108a354f401c0282170015",
+  "original_lock_physical_fingerprint": "1fa37804666881a1d67b0960bdb0a0ec61468789b743b6b93fcf7d709e7ab778",
+  "original_lock_semantic_fingerprint": "de1072d41e921c8cfe39275486a7a7f201dc9ffa26196b9b6fec8a6a6a52a3d6",
+  "original_physical_fingerprint": "f0ca5a19af80da95f6bd8a6054c8d9d54e21c2184baa03c9a0d7f7e7d975f97f",
+  "original_report_physical_fingerprint": "fa41b9957ae33678a3c5b161ae2597bf75945d7557eb376159deec016b11f83d",
+  "original_status": "PASS_WITH_NON_STRUCTURED_TRUNCATED_PYTEST_SUMMARY",
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "r15_r16_rebound": true,
+  "r1_to_r14_evidence_unchanged": true,
+  "status": "PASS",
+  "superseded_status": "SUPERSEDED_BY_STRUCTURED_PYTEST_AUDIT",
+  "supersession_fingerprint": "5902d660011d2096bed7e2a5d9acba2e624c09311bccc0ef1a8594826e11e961",
+  "supersession_reason": "AUDIT_PARSER_ERROR"
+}

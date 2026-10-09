@@ -1,0 +1,5 @@
+access,authorized,read_count_before_materialization,status
+validation_14d_ground_truth,True,0,PASS
+validation_14d_metric_recalculation,False,0,PASS
+first7d_supervision,False,0,PASS
+test_candidates_features_labels_predictions_metrics,False,0,PASS

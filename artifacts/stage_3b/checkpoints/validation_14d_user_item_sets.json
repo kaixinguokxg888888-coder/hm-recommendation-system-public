@@ -1,0 +1,15 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "879cbcbbff70bf991e691d730dcc9e6066b1174684433932edc4b6af8fed68b5",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "Out of Memory Error: failed to allocate data of size 64.0 MiB (568.3 MiB/581.7 MiB used)\n\nPossible solutions:\n* Reducing the number of threads (SET threads=X)\n* Disabling insertion-order preservation (SET preserve_insertion_order=false)\n* Increasing the memory limit (SET memory_limit='...GB')\n\nSee also https://duckdb.org/docs/stable/guides/performance/how_to_tune_workloads",
+  "execution_seconds": 3.8054986000061035,
+  "generated_at": "2026-08-03T11:27:41+08:00",
+  "group_name": "validation_14d_user_item_sets",
+  "peak_rss_bytes": 458772480,
+  "run_fingerprint": "8fff50007bac23d18b94ac322d70fc6f4e3e2a2cc29c3cb06779fb86722fe123",
+  "source_fingerprint": "499f3df67559ef6bc85a4476526028d23efcf4993d68b0c196f2f6db6c178a81",
+  "spill_observed": false,
+  "status": "FAILED",
+  "temp_disk_peak_bytes": 0
+}

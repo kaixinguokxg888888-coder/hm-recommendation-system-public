@@ -1,0 +1,19 @@
+{
+  "group_name": "group_d_calendar_audit",
+  "status": "SUCCESS",
+  "generated_at": "2026-07-28T13:12:59+08:00",
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "019ca88703c5a886e0d3e6526bd5569caa7a46feb8d702d1a79edece5b4df579",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22",
+  "execution_seconds": 0.906336400017608,
+  "peak_rss_bytes": 101654528,
+  "temp_disk_peak_bytes": 0,
+  "duckdb_memory_limit_mb": 1024,
+  "threads": 1,
+  "temp_directory": "artifacts/stage_2a/tmp",
+  "output": "artifacts/stage_2a/groups/group_d_calendar_audit.json",
+  "error_message": "",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927"
+}

@@ -1,0 +1,18 @@
+{
+  "group_name": "group_f_outputs_report",
+  "payload": {
+    "manifest_rows": 2,
+    "output_fingerprints": {
+      "artifacts/stage_2a/feedback_summary.csv": "7266a9f7332eeefd896efec18e65c830d249536a9bd732894b86e6ca257f9a35",
+      "artifacts/stage_2a/split_calendar_audit.csv": "e24362ef7f20e90a0c1f81e9d8627e64190d330734a4b6143e124c1b07b84ccd",
+      "artifacts/stage_2a/leakage_checks.csv": "b9f4c643bd7198d495287059b8ab023825f28fdb309b6eddce8efa478954f0d5",
+      "artifacts/stage_2a/private/feedback_daily.parquet": "08743fdf85342b4eb26157d096b2bd53ec580d385b56214eb3ed4b723d033b71",
+      "artifacts/stage_2a/private/customer_key_map.parquet": "10df1b071452dcc3d0ac4434721536078f9b46b2fcf356cd30310b8999647887",
+      "artifacts/stage_2a/private/article_key_map.parquet": "e0fb73bf4189d6aab6a56855d254c20cf074888aa4b9c4417f63bfd2af7d018e"
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22"
+}

@@ -1,0 +1,12 @@
+﻿semantic_group,semantic_field,canonical_source_column,display_column,data_type,missing_rate,cardinality,highest_frequency_rate,source_to_display_conflicts,display_to_source_conflicts,mapping_status,modeling_inclusion,exclusion_reason,candidate_coverage_validation,candidate_coverage_test
+taxonomy,product_type,product_type_no,product_type_name,BIGINT,0.0,132,0.10582516912698263,0,1,CONFLICT_RECORDED,True,,1.0,
+taxonomy,product_group,product_group_name,product_group_name,VARCHAR,0.0,19,0.4049667430975346,0,0,ONE_TO_ONE,True,,1.0,
+taxonomy,garment_group,garment_group_no,garment_group_name,BIGINT,0.0,21,0.20318925167232002,0,0,ONE_TO_ONE,True,,1.0,
+taxonomy,section,section_no,section_name,BIGINT,0.0,57,0.06911940270224176,0,1,CONFLICT_RECORDED,True,,1.0,
+appearance,graphical_appearance,graphical_appearance_no,graphical_appearance_name,BIGINT,0.0,30,0.4713478994144511,0,0,ONE_TO_ONE,True,,1.0,
+appearance,colour_group,colour_group_code,colour_group_name,BIGINT,0.0,50,0.21479600538174376,0,0,ONE_TO_ONE,True,,1.0,
+appearance,perceived_colour_value,perceived_colour_value_id,perceived_colour_value_name,BIGINT,0.0,8,0.40463512156297965,0,0,ONE_TO_ONE,True,,1.0,
+appearance,perceived_colour_master,perceived_colour_master_id,perceived_colour_master_name,BIGINT,0.0,20,0.21399063879782457,0,0,ONE_TO_ONE,True,,1.0,
+merchandising_index,department,department_no,department_name,BIGINT,0.0,299,0.019252998806162474,0,22,CONFLICT_RECORDED,True,,1.0,
+merchandising_index,index,index_code,index_name,VARCHAR,0.0,10,0.24635690057038903,0,0,ONE_TO_ONE,True,,1.0,
+merchandising_index,index_group,index_group_no,index_group_name,BIGINT,0.0,5,0.3765041405317314,0,0,ONE_TO_ONE,True,,1.0,

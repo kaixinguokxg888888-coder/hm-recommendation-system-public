@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 0.024103300005663186,
+  "generated_at": "2026-07-28T17:10:11+08:00",
+  "group_name": "report_generation",
+  "memory_limit_mb": 881,
+  "output_files": [
+    "docs/stages/stage_3a_baseline_retrieval_and_evaluation.md",
+    "README.md"
+  ],
+  "output_fingerprints": {
+    "README.md": "2e903e6a23a950987f013204c7c0f10a9dd9a8771d89ce51a95cbaee7cbbb0fb",
+    "docs/stages/stage_3a_baseline_retrieval_and_evaluation.md": "c791084c3a02cd4c7d33b504d0d6d36744f9f05f561809a91f7c231f312bb488"
+  },
+  "output_size_bytes": 13926,
+  "peak_rss_bytes": 37236736,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 913,
+  "threads": 1
+}

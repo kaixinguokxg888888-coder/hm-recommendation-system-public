@@ -1,0 +1,21 @@
+﻿gate_id,mandatory,status,evidence
+P5AG1,True,PASS,current Phase 4 lock exact match
+P5AG2,True,PASS,Stage 4A Test time protocol exact match
+P5AG3,True,PASS,Stage 3E Test candidate/population contract exact match
+P5AG4,True,PASS,pre-access audit and preregistration before content access
+P5AG5,True,PASS,Test query population exact reconciliation
+P5AG6,True,PASS,full500 candidate contract
+P5AG7,True,PASS,duplicate/rank/provenance audit
+P5AG8,True,PASS,Test history cutoff and no temporal leakage
+P5AG9,True,PASS,F1 schema/lineage/feature-order exact match
+P5AG10,True,PASS,categorical metadata and adapter exact match
+P5AG11,True,PASS,final model physical/semantic identity
+P5AG12,True,PASS,B0 prediction completeness and baseline identity
+P5AG13,True,PASS,L1_FINAL_REFIT_600 prediction completeness
+P5AG14,True,PASS,tie-break/non-finite/rank integrity
+P5AG15,True,PASS,prediction fingerprint and binding completeness
+P5AG16,True,PASS,deterministic replay for both versions
+P5AG17,True,PASS,resource/checkpoint/recovery integrity
+P5AG18,True,PASS,structured engineering audit PASS c7c5217dcb7c860db6eab90835e3dce56870bea72079384c6827779911c8297a
+P5AG19,True,PASS,zero Test-label and zero Test-metric access
+P5AG20,True,PASS,Test pre-label lock self-fingerprint staged for independent verification

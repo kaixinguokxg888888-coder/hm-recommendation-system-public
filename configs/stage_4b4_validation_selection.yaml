@@ -1,0 +1,116 @@
+{
+  "stage": "4B-4",
+  "phase": "phase2_validation_14d_selection_v1",
+  "snapshot": {
+    "snapshot_id": "validation_14d",
+    "as_of_date": "2020-08-25",
+    "label_start": "2020-08-26",
+    "label_end": "2020-09-08",
+    "feedback_semantics": "B_user_item_day_binary_v1"
+  },
+  "versions": ["B0", "L0_100", "L0_300", "L0_600", "L1_100", "L1_300", "L1_600"],
+  "evaluation": {
+    "cutoff": 12,
+    "primary_metric": "MAP@12",
+    "auxiliary_metrics": ["NDCG@12", "Recall@12", "HitRate@12"],
+    "map_denominator": "min(all_future_positive_count,12)",
+    "recall_denominator": "all_future_positive_count",
+    "ndcg_gain": "binary",
+    "ndcg_discount": "1/log2(rank+1)",
+    "all_zero_relevance_queries": "retained_as_zero",
+    "missed_future_positives": "retained_in_denominators",
+    "population": "evaluable_warm_users",
+    "cold_population": "cold_history_label_users"
+  },
+  "slices": {
+    "user": [
+      "evaluable_warm_users", "short_history", "warm", "active",
+      "positive_count_eq_1", "positive_count_gt_1", "candidate_positive_zero",
+      "candidate_positive_nonzero", "has_cold_positive", "no_cold_positive",
+      "cold_history_label_users"
+    ],
+    "target": ["seen_item", "cold_item", "head", "mid", "tail", "zero_history"]
+  },
+  "bootstrap": {
+    "method": "paired_user_block_percentile_v1",
+    "iterations": 1000,
+    "seed": 20260826,
+    "confidence_level": 0.95,
+    "comparison_baseline": "B0",
+    "selection_use": false
+  },
+  "selection": {
+    "rule": "lexicographic_exact_v1",
+    "metric_order": ["MAP@12", "NDCG@12", "Recall@12", "HitRate@12"],
+    "complexity_order": ["B0", "L0_100", "L0_300", "L0_600", "L1_100", "L1_300", "L1_600"],
+    "value_gate": {
+      "passed": "winner_is_learned_and_map_delta_gt_0_and_main_ci_lower_gt_0",
+      "inconclusive": "winner_is_learned_and_map_delta_gt_0_and_main_ci_lower_lte_0",
+      "failed": "winner_is_B0_or_map_delta_lte_0"
+    },
+    "critical_regression_slices": [
+      "short_history", "warm", "active", "positive_count_eq_1",
+      "positive_count_gt_1", "has_cold_positive", "cold_history_label_users"
+    ],
+    "critical_regression_rule": "winner_vs_B0_MAP_ci_upper_lt_0"
+  },
+  "expected": {
+    "query_count": 141359,
+    "main_query_count": 129705,
+    "cold_query_count": 11654,
+    "positive_pair_count": 489723,
+    "candidate_rows_per_version": 70679500,
+    "candidate_count_per_query": 500,
+    "partitions": 32,
+    "phase1_config_fingerprint": "3f7879e7c333d38ea5240a987afa09835bea9c8ed6353161c4e773524a5a58c0",
+    "phase1_lock_physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+    "ground_truth_physical_fingerprint": "c3aecba6c963b7907caea30ca7f5c91c53b0eff5c928392b2c7b6ac9115c1fe8",
+    "population_physical_fingerprint": "8a41ede0b724c1f5990d16cf91702adb926cb2fe0edf20d6500c3c4c3709d728",
+    "item_state_physical_fingerprint": "b2b683885d2fa8226c792a6781e39f03ff910246f3fcac46ae53d95a14e4c8f8",
+    "prediction_global_merkle_fingerprints": {
+      "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+      "L0_100": "9533fc7e7ee2bb6cd6e2264433b1953c9317a866b68a3dcb0f3c1efb731c8df1",
+      "L0_300": "25aa218b12d12f8fb3d69ccf72136c518336260bf3b32c163cb14f57bfe086ce",
+      "L0_600": "13fd403694a2010d5b0f7121f6d69775a7704c846b46d3f3d739229a60e7224b",
+      "L1_100": "07b4b61017f71fc4b94f3392fd39d151e8823d20cd76d56c4861a91420559f88",
+      "L1_300": "18b5494893148e279c68002d6b34c0487b36550baa6efd674844214dedda41a7",
+      "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+    }
+  },
+  "execution": {
+    "threads": 2,
+    "duckdb_memory_max_mb": 1536,
+    "memory_fraction_of_available": 0.35,
+    "rss_hard_fraction_of_available_at_preregistration": 0.70,
+    "max_temp_directory_size": "20GB",
+    "parquet_compression": "zstd",
+    "query_partition_expression": "customer_key % 32"
+  },
+  "paths": {
+    "phase1_config": "configs/stage_4b4_lambdarank.yaml",
+    "phase1_lock": "artifacts/stage_4b4/stage_4b4_pre_label_lock.json",
+    "phase1_gate": "artifacts/stage_4b4/contract_gate.csv",
+    "prediction_manifest": "artifacts/stage_4b4/prediction_fingerprint_manifest.csv",
+    "predictions": "artifacts/stage_4b4/private/predictions/formal",
+    "ground_truth": "artifacts/stage_2b/private/ground_truth_validation_14d.parquet",
+    "population": "artifacts/stage_2b/private/evaluation_population_validation_14d.parquet",
+    "item_state": "artifacts/stage_2b/private/item_state_validation_14d.parquet",
+    "public_directory": "artifacts/stage_4b4",
+    "private_directory": "artifacts/stage_4b4/private/phase2_validation_selection",
+    "checkpoint_directory": "artifacts/stage_4b4/checkpoints/phase2_validation_selection",
+    "temp_directory": "artifacts/stage_4b4/tmp/phase2_validation_selection",
+    "report": "docs/stages/stage_4b4_validation_selection.md",
+    "selection_lock": "artifacts/stage_4b4/stage_4b4_validation_selection_lock.json"
+  },
+  "forbidden": {
+    "first7d_read_count": 0,
+    "test_candidate_read_count": 0,
+    "test_feature_read_count": 0,
+    "test_label_read_count": 0,
+    "test_metric_read_count": 0,
+    "final_refit_executed": false,
+    "test_authorized": false,
+    "reranking_executed": false,
+    "retrieval_retuned": false
+  }
+}

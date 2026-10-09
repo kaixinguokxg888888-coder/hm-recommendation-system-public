@@ -1,0 +1,36 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 248.60058639995987,
+  "generated_at": "2026-07-28T17:09:55+08:00",
+  "group_name": "test_evaluation",
+  "memory_limit_mb": 923,
+  "output_files": [
+    "artifacts/stage_3a/private/user_metrics_test_14d_popularity_global.parquet",
+    "artifacts/stage_3a/private/user_metrics_test_14d_trend_window_7d.parquet",
+    "artifacts/stage_3a/private/user_metrics_test_14d_repurchase_pure.parquet",
+    "artifacts/stage_3a/private/user_metrics_test_14d_repurchase_popularity_fallback.parquet",
+    "artifacts/stage_3a/test_metrics_overall.csv",
+    "artifacts/stage_3a/test_metrics_by_segment.csv",
+    "artifacts/stage_3a/test_candidate_coverage.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3a/private/user_metrics_test_14d_popularity_global.parquet": "d49339996d48fda3098add9a3e4c607fd45e2365390610b8190dfd444b371e36",
+    "artifacts/stage_3a/private/user_metrics_test_14d_repurchase_popularity_fallback.parquet": "923ef600e91747b227f5c064c9fa4b643e5027369707ec1fe135e962179be408",
+    "artifacts/stage_3a/private/user_metrics_test_14d_repurchase_pure.parquet": "813c7297c263031cdcfa0202c663e90f608919f237e52958e726d351dce949d7",
+    "artifacts/stage_3a/private/user_metrics_test_14d_trend_window_7d.parquet": "71101fd9d9f5e90b982fe40fd193f3302654f0c31ff337b8a4da42695847c76d",
+    "artifacts/stage_3a/test_candidate_coverage.csv": "d18ba14aa5c163ea979952b7c003cb6c09fdea2fa66bb2c2d6a519f9d4f064c8",
+    "artifacts/stage_3a/test_metrics_by_segment.csv": "d36d8b3122df62bcd553140ea5cbe892ae40a46199eaf07dce7111ca3b17276b",
+    "artifacts/stage_3a/test_metrics_overall.csv": "ecfa40762661c7afe0f159ac9902e284936895e2e892009722c46cd7848a5b6e"
+  },
+  "output_size_bytes": 2410287,
+  "peak_rss_bytes": 1131319296,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 1687618449,
+  "threads": 1
+}

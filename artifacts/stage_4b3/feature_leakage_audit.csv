@@ -1,0 +1,8 @@
+﻿check,actual,expected,violations,status
+max_dynamic_feature_history_date,2020-08-11,<=2020-08-11,0,PASS
+future_window_reads,0,0,0,PASS
+validation_reads,0,0,0,PASS
+test_reads,0,0,0,PASS
+denylist_model_feature_violations,0,0,0,PASS
+full_data_normalization,0,0,0,PASS
+static_attribute_effective_timestamp,UNVERIFIABLE,LIMITATION_RECORDED,0,PASS_WITH_LIMITATION

@@ -1,0 +1,10 @@
+﻿event_id,stage,status,category,detail
+E1,P2,RECOVERED,OOM,Monolithic all-user history aggregation exceeded the dynamic 521MB limit.
+E2,P2,RECOVERED,OOM,Future-user semijoin history aggregation still exceeded the dynamic 525MB limit.
+E3,P1,RECOVERED,OOM,Monolithic raw-id ground-truth mapping exceeded the dynamic 488MB limit.
+E4,P3,RECOVERED,SQL_API,DuckDB required an explicit quoted label alias; no incomplete partition was accepted.
+E5,P8_P10,RECOVERED,TEMP_LIMIT_OOM,Global 65M provenance FULL JOIN reached the 20GB temp limit (18.6GiB used); query-contained partition audits replaced the global shuffle.
+E6,P8_P10,RECOVERED,SQL_API,Audit filename reference was qualified after a binder ambiguity.
+E7,PUBLIC,RECOVERED,CSV_API,Repository CSV helper required explicit fields; safe public writer now supplies them.
+W1,GIT_AUDIT,DISCLOSED,WARNING,Git could not read the user-level global ignore file under sandbox permissions; repository .gitignore checks still completed.
+C1,TARGETED_CORRECTION,CORRECTED,PUBLIC_AGGREGATE,Optimizer group mean changed from row-weighted AVG(window group size) to an independent query-level sampled/group reconciliation; private sampled rows and group artifact were already correct.

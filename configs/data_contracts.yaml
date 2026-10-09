@@ -1,0 +1,279 @@
+{
+  "contract_version": "0.1.0",
+  "tables": {
+    "articles": {
+      "file": "data/raw/articles.parquet",
+      "required_fields": {
+        "article_id": "string",
+        "product_code": "int64",
+        "prod_name": "string",
+        "product_type_no": "int64",
+        "product_type_name": "string",
+        "product_group_name": "string",
+        "graphical_appearance_no": "int64",
+        "graphical_appearance_name": "string",
+        "colour_group_code": "int64",
+        "colour_group_name": "string",
+        "perceived_colour_value_id": "int64",
+        "perceived_colour_value_name": "string",
+        "perceived_colour_master_id": "int64",
+        "perceived_colour_master_name": "string",
+        "department_no": "int64",
+        "department_name": "string",
+        "index_code": "string",
+        "index_name": "string",
+        "index_group_no": "int64",
+        "index_group_name": "string",
+        "section_no": "int64",
+        "section_name": "string",
+        "garment_group_no": "int64",
+        "garment_group_name": "string",
+        "detail_desc": "string"
+      },
+      "primary_key_candidate": ["article_id"],
+      "nullable_fields": [
+        "product_code", "prod_name", "product_type_no", "product_type_name",
+        "product_group_name", "graphical_appearance_no", "graphical_appearance_name",
+        "colour_group_code", "colour_group_name", "perceived_colour_value_id",
+        "perceived_colour_value_name", "perceived_colour_master_id",
+        "perceived_colour_master_name", "department_no", "department_name",
+        "index_code", "index_name", "index_group_no", "index_group_name",
+        "section_no", "section_name", "garment_group_no", "garment_group_name",
+        "detail_desc"
+      ],
+      "nullable_category_policy": "保留原始空值并报告，不在审计阶段填充或创建未知类别。",
+      "rules": [
+        {
+          "check_id": "articles.schema.required_fields",
+          "table": "articles",
+          "fields": ["article_id", "product_code", "prod_name", "product_type_no", "product_type_name", "product_group_name", "graphical_appearance_no", "graphical_appearance_name", "colour_group_code", "colour_group_name", "perceived_colour_value_id", "perceived_colour_value_name", "perceived_colour_master_id", "perceived_colour_master_name", "department_no", "department_name", "index_code", "index_name", "index_group_no", "index_group_name", "section_no", "section_name", "garment_group_no", "garment_group_name", "detail_desc"],
+          "rule_type": "required_fields",
+          "severity": "error",
+          "expected": "all fields exist with the declared Arrow types",
+          "rationale": "商品主表字段是后续数据契约和审计的输入边界。"
+        },
+        {
+          "check_id": "articles.article_id.not_null",
+          "table": "articles",
+          "field": "article_id",
+          "rule_type": "not_null",
+          "severity": "error",
+          "expected": "null_count = 0",
+          "rationale": "商品标识是主键与交易外键候选。"
+        },
+        {
+          "check_id": "articles.article_id.format",
+          "table": "articles",
+          "field": "article_id",
+          "rule_type": "regex",
+          "severity": "error",
+          "expected": "exactly 10 ASCII digits",
+          "rationale": "保持前导零并发现明显格式漂移。"
+        },
+        {
+          "check_id": "articles.article_id.candidate_key",
+          "table": "articles",
+          "fields": ["article_id"],
+          "rule_type": "candidate_key",
+          "severity": "error",
+          "expected": "duplicate_key_count = 0 within scan scope",
+          "rationale": "验证商品标识作为候选主键的逻辑。"
+        },
+        {
+          "check_id": "articles.attributes.null_profile",
+          "table": "articles",
+          "fields": ["product_code", "prod_name", "product_type_no", "product_type_name", "product_group_name", "graphical_appearance_no", "graphical_appearance_name", "colour_group_code", "colour_group_name", "perceived_colour_value_id", "perceived_colour_value_name", "perceived_colour_master_id", "perceived_colour_master_name", "department_no", "department_name", "index_code", "index_name", "index_group_no", "index_group_name", "section_no", "section_name", "garment_group_no", "garment_group_name", "detail_desc"],
+          "rule_type": "null_profile",
+          "severity": "info",
+          "expected": "nullable; report counts without repair",
+          "rationale": "分类和描述字段允许缺失，但应保留原始语义并量化。"
+        }
+      ]
+    },
+    "customers": {
+      "file": "data/raw/customers.parquet",
+      "required_fields": {
+        "customer_id": "string",
+        "FN": "double",
+        "Active": "double",
+        "club_member_status": "string",
+        "fashion_news_frequency": "string",
+        "age": "double",
+        "postal_code": "string"
+      },
+      "primary_key_candidate": ["customer_id"],
+      "nullable_fields": ["FN", "Active", "club_member_status", "fashion_news_frequency", "age", "postal_code"],
+      "rules": [
+        {
+          "check_id": "customers.schema.required_fields",
+          "table": "customers",
+          "fields": ["customer_id", "FN", "Active", "club_member_status", "fashion_news_frequency", "age", "postal_code"],
+          "rule_type": "required_fields",
+          "severity": "error",
+          "expected": "all fields exist with the declared Arrow types",
+          "rationale": "客户主表字段是后续数据契约和审计的输入边界。"
+        },
+        {
+          "check_id": "customers.customer_id.not_null",
+          "table": "customers",
+          "field": "customer_id",
+          "rule_type": "not_null",
+          "severity": "error",
+          "expected": "null_count = 0",
+          "rationale": "客户标识是主键与交易外键候选。"
+        },
+        {
+          "check_id": "customers.customer_id.format",
+          "table": "customers",
+          "field": "customer_id",
+          "rule_type": "regex",
+          "severity": "error",
+          "expected": "exactly 64 lowercase hexadecimal characters",
+          "rationale": "发现损坏或非预期客户标识，且不输出原值。"
+        },
+        {
+          "check_id": "customers.customer_id.candidate_key",
+          "table": "customers",
+          "fields": ["customer_id"],
+          "rule_type": "candidate_key",
+          "severity": "error",
+          "expected": "duplicate_key_count = 0 within scan scope",
+          "rationale": "验证客户标识作为候选主键的逻辑。"
+        },
+        {
+          "check_id": "customers.flags.nullability",
+          "table": "customers",
+          "fields": ["FN", "Active", "age"],
+          "rule_type": "nullable",
+          "severity": "info",
+          "expected": "nullable; report null counts without repair",
+          "rationale": "这些字段在实际 Parquet schema 中可空且以 double 存储。"
+        },
+        {
+          "check_id": "customers.age.reasonable",
+          "table": "customers",
+          "field": "age",
+          "rule_type": "range_profile",
+          "severity": "warning",
+          "expected": "non-null values between 0 and 120; report null, under-18, 18-24, 25-64, 65-120 and out-of-range counts",
+          "rationale": "分层观察年龄合理性，不自动修复或删除。"
+        },
+        {
+          "check_id": "customers.postal_code.privacy",
+          "table": "customers",
+          "field": "postal_code",
+          "rule_type": "privacy_and_regex",
+          "severity": "error",
+          "expected": "non-null values are 64 lowercase hexadecimal characters; never emit raw values",
+          "rationale": "邮编字段是散列标识，所有报告必须只输出计数。"
+        }
+      ]
+    },
+    "transactions": {
+      "file": "data/raw/transactions_train.parquet",
+      "required_fields": {
+        "t_dat": "string",
+        "customer_id": "string",
+        "article_id": "string",
+        "price": "double",
+        "sales_channel_id": "int64"
+      },
+      "foreign_key_candidates": {
+        "customer_id": "customers.customer_id",
+        "article_id": "articles.article_id"
+      },
+      "rules": [
+        {
+          "check_id": "transactions.schema.required_fields",
+          "table": "transactions",
+          "fields": ["t_dat", "customer_id", "article_id", "price", "sales_channel_id"],
+          "rule_type": "required_fields",
+          "severity": "error",
+          "expected": "all fields exist with the declared Arrow types",
+          "rationale": "交易事件字段是受限 smoke SQL 的输入边界。"
+        },
+        {
+          "check_id": "transactions.t_dat.parseable",
+          "table": "transactions",
+          "field": "t_dat",
+          "rule_type": "date_parse",
+          "severity": "error",
+          "expected": "try_cast(t_dat as date) is not null for non-null input",
+          "rationale": "实际存储为 string，必须先验证能否安全解释为日期。"
+        },
+        {
+          "check_id": "transactions.customer_id.not_null",
+          "table": "transactions",
+          "field": "customer_id",
+          "rule_type": "not_null",
+          "severity": "error",
+          "expected": "null_count = 0",
+          "rationale": "客户标识是候选外键。"
+        },
+        {
+          "check_id": "transactions.article_id.not_null",
+          "table": "transactions",
+          "field": "article_id",
+          "rule_type": "not_null",
+          "severity": "error",
+          "expected": "null_count = 0",
+          "rationale": "商品标识是候选外键。"
+        },
+        {
+          "check_id": "transactions.price.not_null",
+          "table": "transactions",
+          "field": "price",
+          "rule_type": "not_null",
+          "severity": "error",
+          "expected": "null_count = 0",
+          "rationale": "价格是关键交易数值。"
+        },
+        {
+          "check_id": "transactions.price.non_negative",
+          "table": "transactions",
+          "field": "price",
+          "rule_type": "range",
+          "severity": "error",
+          "expected": "price >= 0",
+          "rationale": "负价格需要在正式审计中单独解释。"
+        },
+        {
+          "check_id": "transactions.sales_channel_id.observed_domain",
+          "table": "transactions",
+          "field": "sales_channel_id",
+          "rule_type": "observed_domain",
+          "severity": "info",
+          "expected": "discover distinct non-null values from the declared smoke scope; no predefined legal set",
+          "rationale": "合法集合必须来自数据观察，不硬编码公开数据常识。"
+        },
+        {
+          "check_id": "transactions.full_row.duplicates",
+          "table": "transactions",
+          "fields": ["t_dat", "customer_id", "article_id", "price", "sales_channel_id"],
+          "rule_type": "duplicate_rows",
+          "severity": "warning",
+          "expected": "report duplicate excess rows within smoke scope",
+          "rationale": "验证完全重复检查 SQL，不把局部结果外推到全量。"
+        },
+        {
+          "check_id": "transactions.customer_id.foreign_key",
+          "table": "transactions",
+          "field": "customer_id",
+          "rule_type": "foreign_key_candidate",
+          "severity": "warning",
+          "expected": "all non-null smoke customer_id values match customers.customer_id",
+          "rationale": "只验证受限交易范围内的候选外键逻辑。"
+        },
+        {
+          "check_id": "transactions.article_id.foreign_key",
+          "table": "transactions",
+          "field": "article_id",
+          "rule_type": "foreign_key_candidate",
+          "severity": "warning",
+          "expected": "all non-null smoke article_id values match articles.article_id",
+          "rationale": "只验证受限交易范围内的候选外键逻辑。"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "group_name": "group_b_evaluable_users",
+  "status": "SUCCESS",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08",
+  "execution_seconds": 33.35721960000228,
+  "peak_rss_bytes": 678227968,
+  "temp_disk_peak_bytes": 0,
+  "memory_limit_mb": 865,
+  "threads": 1,
+  "output": "artifacts/stage_2b/groups/group_b_evaluable_users.json",
+  "error_message": ""
+}

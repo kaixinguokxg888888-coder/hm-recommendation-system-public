@@ -1,0 +1,16 @@
+﻿leakage_gate_id,status,evidence
+L1_OUTER_TRAIN_CONTAINMENT,PASS,2020-08-25 <= outer Train end 2020-08-25
+L2_FEATURE_BEFORE_LABEL,PASS,Every history_cutoff is strictly earlier than label_start.
+L3_TRAIN_VALIDATION_BOUNDARY,PASS,2020-08-25 < 2020-08-26
+L4_VALIDATION_TEST_BOUNDARY,PASS,2020-09-08 < 2020-09-09
+L5_TEST_LABEL_SELECTION_ISOLATION,PASS,Test is excluded from selection inputs.
+L6_FIRST7D_TEST_ISOLATION,PASS,Diagnostic is a Validation subset and ends before Test.
+L7_CANDIDATE_LABEL_SEPARATION,PASS,Future labels may annotate but never alter candidate membership.
+L8_HISTORICAL_FEATURE_CUTOFF,PASS,feature_timestamp <= corresponding snapshot as_of_date.
+L9_HISTORICAL_REPLAY,PASS,Historical sources must rebuild from the historical cutoff; no later snapshot backfill.
+L10_RETRIEVAL_SEMANTIC_FREEZE,PASS,Stage 3E retrieval semantics are immutable during historical replay.
+L11_RANKING_POPULATION_CONTRACT,PASS,Historical warm optimization population is frozen; query population semantics cannot alter candidate membership.
+L12_DETERMINISTIC_NEGATIVE_HASH,PASS,UTF-8 SHA-256 payload and digest/article tie-break are fully specified; built-in hash is forbidden.
+L13_FIRST7D_POST_SELECTION_ONLY,PASS,First7d runs once after locking the 14d winner and cannot select or retune.
+L14_HISTORICAL_FINGERPRINT_SEMANTICS,PASS,Protocol identity is cross-snapshot; semantic fingerprint equality applies only to formal/replay of the same historical snapshot.
+L15_STAGE4B_NOT_ENTERED_DURING_STAGE4A,PASS,FINAL ACCEPTED permits future Stage 4B protocol consumption under a separate Prompt; Stage 4B was not entered during Stage 4A.

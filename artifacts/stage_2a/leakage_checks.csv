@@ -1,0 +1,11 @@
+﻿dataset_fingerprint,split_version,feedback_version,check_id,check_name,status,severity,observed_value,expected_condition,as_of_date,notes
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-001,history严格早于label_start,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-002,validation labels不进入base_train,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-003,test labels不进入refit_history,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-004,validation与test标签不重叠,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-005,C cap按snapshot分别由history计算,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-006,内部编码不使用交易标签,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-007,内部编码不使用碰撞hash,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-008,内部映射一对一且覆盖维表,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-009,所有正式记录定义as_of_date,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识
+f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927,1.0.0,B-primary_C-log1p-p99-v1,LEAK-010,manifest来源与实际扫描上下文一致,PASS,error,true,true,2020-09-08,聚合验证；不输出任何实体标识

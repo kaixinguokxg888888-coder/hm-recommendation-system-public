@@ -1,0 +1,15 @@
+{
+  "candidate_semantics_changed": false,
+  "corrected_source_fingerprint": "a368a9ac8203ef6dcc45da51acc90dd0e0f32f38de91da3d1972c157fc8fe1ed",
+  "correction_reason": "P5AG18 must consume a completed structured engineering audit before the immutable Test pre-label lock is created",
+  "feature_semantics_changed": false,
+  "fingerprint_algorithm_changed": false,
+  "model_or_tie_break_changed": false,
+  "original_preregistered_source_fingerprint": "976357ff8b8fd142f8e8fcf4ed38d757604a2f57cbacfc3a464932d3efec141c",
+  "partition_membership_changed": false,
+  "prediction_recomputed": false,
+  "recorded_at": "2026-08-19T23:25:00+08:00",
+  "status": "PRE_LABEL_ENGINEERING_CORRECTION_RECORDED",
+  "test_label_read_count": 0,
+  "test_metric_read_count": 0
+}

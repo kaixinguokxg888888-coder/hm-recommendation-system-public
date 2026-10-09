@@ -1,0 +1,108 @@
+﻿artifact_role,column,dtype,nullable,contains_entity_value,semantic_note
+ranking_full_labeled,snapshot_id,string,True,False,frozen candidate column
+ranking_full_labeled,as_of_date,date32[day],True,False,frozen candidate column
+ranking_full_labeled,customer_key,int64,True,False,frozen candidate column
+ranking_full_labeled,article_key,int64,True,False,frozen candidate column
+ranking_full_labeled,candidate_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,candidate_contract_version,string,True,False,frozen candidate column
+ranking_full_labeled,candidate_protocol_version,string,True,False,frozen candidate column
+ranking_full_labeled,primary_source,string,True,False,frozen candidate column
+ranking_full_labeled,source_count,int32,True,False,frozen candidate column
+ranking_full_labeled,from_repurchase,bool,True,False,frozen candidate column
+ranking_full_labeled,from_itemcf,bool,True,False,frozen candidate column
+ranking_full_labeled,from_two_tower,bool,True,False,frozen candidate column
+ranking_full_labeled,from_trend,bool,True,False,frozen candidate column
+ranking_full_labeled,from_popularity,bool,True,False,frozen candidate column
+ranking_full_labeled,repurchase_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,repurchase_score,double,True,False,frozen candidate column
+ranking_full_labeled,itemcf_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,itemcf_score,double,True,False,frozen candidate column
+ranking_full_labeled,two_tower_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,two_tower_score,double,True,False,frozen candidate column
+ranking_full_labeled,trend_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,trend_score,double,True,False,frozen candidate column
+ranking_full_labeled,popularity_rank,int32,True,False,frozen candidate column
+ranking_full_labeled,popularity_score,double,True,False,frozen candidate column
+ranking_full_labeled,candidate_universe_version,string,True,False,frozen candidate column
+ranking_full_labeled,feedback_version,string,True,False,frozen candidate column
+ranking_full_labeled,population_version,string,True,False,frozen candidate column
+ranking_full_labeled,dataset_fingerprint,string,True,False,frozen candidate column
+ranking_full_labeled,stage_3d_config_fingerprint,string,True,False,frozen candidate column
+ranking_full_labeled,stage_3e_config_fingerprint,string,True,False,frozen candidate column
+ranking_full_labeled,upstream_ordering_kind,string,True,False,frozen candidate column
+ranking_full_labeled,label,uint8,True,False,Stage 4B-2 ranking contract column
+ranking_full_labeled,label_start,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_full_labeled,label_end,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_full_labeled,ranking_label_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_full_labeled,ranking_dataset_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,snapshot_id,string,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,customer_key,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,as_of_date,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_query_population,request_date,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_query_population,label_start,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_query_population,label_end,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_query_population,history_interaction_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,history_distinct_item_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,user_segment,string,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,future_positive_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,is_historical_evaluable_warm,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,is_cold_history_label_user,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,candidate_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,candidate_positive_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,candidate_zero_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,candidate_positive_coverage,double,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,has_candidate_positive,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,is_retrieval_miss,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,is_all_zero_relevance_group,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,full_main_evaluation_eligible,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,cold_evaluation_eligible,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,optimizer_eligible,bool,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,query_order,int64,True,False,Stage 4B-2 ranking contract column
+ranking_query_population,population_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,snapshot_id,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,as_of_date,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,customer_key,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,article_key,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,candidate_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,candidate_contract_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,candidate_protocol_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,primary_source,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,source_count,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,from_repurchase,bool,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,from_itemcf,bool,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,from_two_tower,bool,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,from_trend,bool,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,from_popularity,bool,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,repurchase_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,repurchase_score,double,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,itemcf_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,itemcf_score,double,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,two_tower_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,two_tower_score,double,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,trend_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,trend_score,double,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,popularity_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,popularity_score,double,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,candidate_universe_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,feedback_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,population_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,dataset_fingerprint,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,stage_3d_config_fingerprint,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,stage_3e_config_fingerprint,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,upstream_ordering_kind,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,label,uint8,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,label_start,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,label_end,date32[day],True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,ranking_label_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,ranking_dataset_version,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,query_order,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,sampling_digest,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_sampled,zero_sampling_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,snapshot_id,string,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,customer_key,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,query_order,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,group_size,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,positive_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,sampled_zero_count,int64,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,min_frozen_candidate_rank,int32,True,False,Stage 4B-2 ranking contract column
+ranking_optimizer_groups,max_frozen_candidate_rank,int32,True,False,Stage 4B-2 ranking contract column

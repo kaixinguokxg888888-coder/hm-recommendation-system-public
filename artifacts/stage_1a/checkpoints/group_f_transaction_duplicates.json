@@ -1,0 +1,62 @@
+{
+  "group_name": "group_f_transaction_duplicates",
+  "status": "SUCCESS",
+  "started_at": "2026-07-27T20:11:49+08:00",
+  "finished_at": "2026-07-27T20:13:30+08:00",
+  "execution_seconds": 100.11211,
+  "input_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+  "rows_scanned": 31788324,
+  "peak_rss_bytes": 710352896,
+  "temp_disk_peak_bytes": 2345404225,
+  "current_attempt_peak_rss_bytes": 710352896,
+  "current_attempt_temp_disk_peak_bytes": 2200829952,
+  "temp_disk_bytes_after": 2200829952,
+  "output_files": [
+    "artifacts/stage_1a/groups/group_f_transaction_duplicates.json",
+    "artifacts/stage_1a/transaction_duplicate_profiles.csv"
+  ],
+  "output_file_sizes": {
+    "artifacts/stage_1a/groups/group_f_transaction_duplicates.json": 4237,
+    "artifacts/stage_1a/transaction_duplicate_profiles.csv": 46404
+  },
+  "error_message": "",
+  "retried": true,
+  "attempts": 3,
+  "current_run_attempts": 1,
+  "spill_observed": true,
+  "oom_observed": true,
+  "duckdb_memory_limit_mb": 617,
+  "duckdb_threads": 1,
+  "temp_directory": "artifacts/stage_1a/tmp",
+  "max_temp_directory_size": "20GB",
+  "last_action": "EXECUTED",
+  "attempt_history": [
+    {
+      "status": "FAILED",
+      "started_at": "2026-07-27T19:57:41+08:00",
+      "finished_at": "2026-07-27T19:57:43+08:00",
+      "execution_seconds": 1.882161,
+      "config_fingerprint": "b1265f22f586c6388ab1b627a062787cab801ac07ea40db764fd266e95d0e698",
+      "peak_rss_bytes": 590172160,
+      "temp_disk_peak_bytes": 121733569,
+      "error_message": "OutOfMemoryException: Out of Memory Error: failed to allocate data of size 2.0 MiB (486.9 MiB/487.3 MiB used)\n\nPossible solutions:\n* Reducing the number of threads (SET threads=X)\n* Disabling insertion-order preservation (SET preserve_insertion_order=false)\n* Increasing the memory limit (SET memory_limit='...GB')\n\nSee also https://duckdb.org/docs/stable/guides/performance/how_to_tune_workloads",
+      "attempts": 1,
+      "spill_observed": true,
+      "oom_observed": true
+    },
+    {
+      "status": "FAILED",
+      "started_at": "2026-07-27T20:01:23+08:00",
+      "finished_at": "2026-07-27T20:01:34+08:00",
+      "execution_seconds": 11.236423,
+      "config_fingerprint": "c0c92e029e2119b4b70bad48b21ad0250a256ee0f2c2c2006476013477061a1d",
+      "peak_rss_bytes": 602611712,
+      "temp_disk_peak_bytes": 2345404225,
+      "error_message": "OutOfMemoryException: Out of Memory Error: could not allocate block of size 256.0 KiB (489.0 MiB/489.2 MiB used)\n\nPossible solutions:\n* Reducing the number of threads (SET threads=X)\n* Disabling insertion-order preservation (SET preserve_insertion_order=false)\n* Increasing the memory limit (SET memory_limit='...GB')\n\nSee also https://duckdb.org/docs/stable/guides/performance/how_to_tune_workloads",
+      "attempts": 2,
+      "spill_observed": true,
+      "oom_observed": true
+    }
+  ]
+}

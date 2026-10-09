@@ -1,0 +1,31 @@
+{
+  "group_name": "group_b_feedback_layer",
+  "payload": {
+    "private_feedback_path": "artifacts/stage_2a/private/feedback_daily.parquet",
+    "snapshots": {
+      "validation_14d": {
+        "history_rows_B": 27628749,
+        "label_rows_B": 498874,
+        "C_cap": 3,
+        "history_strength_raw": 30744934,
+        "capped_count_sum": 30554183,
+        "strength_sum": 29572952.09693464,
+        "C_cap_input_rows": 27628749
+      },
+      "test_14d": {
+        "history_rows_B": 28127623,
+        "label_rows_B": 447772,
+        "C_cap": 3,
+        "history_strength_raw": 31292772,
+        "capped_count_sum": 31099410,
+        "strength_sum": 30102690.322373606,
+        "C_cap_input_rows": 28127623
+      }
+    },
+    "private_feedback_fingerprint": "08743fdf85342b4eb26157d096b2bd53ec580d385b56214eb3ed4b723d033b71"
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "split_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-22"
+}

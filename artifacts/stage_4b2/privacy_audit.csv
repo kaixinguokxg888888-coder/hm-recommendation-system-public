@@ -1,0 +1,5 @@
+﻿check,status,detail
+raw_read_only,PASS,no raw write target
+private_git_ignored,PASS,private/tmp/checkpoints excluded
+public_entity_values,PASS,aggregate/schema/fingerprint/status only
+absolute_local_paths,PASS,repository-relative public lineage only

@@ -1,0 +1,171 @@
+{
+  "stage": "2B",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08",
+  "memory_limit_mb": 580,
+  "threads": 1,
+  "temp_directory": "artifacts/stage_2b/tmp",
+  "groups": [
+    {
+      "group_name": "group_a_ground_truth",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 0.1455757999792695,
+      "peak_rss_bytes": 49995776,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 907,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_a_ground_truth.json",
+      "error_message": ""
+    },
+    {
+      "group_name": "group_b_evaluable_users",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 33.35721960000228,
+      "peak_rss_bytes": 678227968,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 865,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_b_evaluable_users.json",
+      "error_message": ""
+    },
+    {
+      "group_name": "group_c_user_segments",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 0.3181071999715641,
+      "peak_rss_bytes": 68960256,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 866,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_c_user_segments.json",
+      "error_message": ""
+    },
+    {
+      "group_name": "group_d_item_state",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 18.109259799995925,
+      "peak_rss_bytes": 84307968,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 792,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_d_item_state.json",
+      "error_message": ""
+    },
+    {
+      "group_name": "group_e_evaluation_protocol",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 0.5927889000158757,
+      "peak_rss_bytes": 97566720,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 791,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_e_evaluation_protocol.json",
+      "error_message": ""
+    },
+    {
+      "group_name": "group_f_leakage_report",
+      "status": "SUCCESS",
+      "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+      "config_fingerprint": "6a07b67b87b3c13428ac972732e69136771fb58f5b200b6472f8816e9b0dac50",
+      "population_version": "1.0.0",
+      "feedback_version": "B-primary_C-log1p-p99-v1",
+      "as_of_date": "2020-09-08",
+      "execution_seconds": 0.00917249999474734,
+      "peak_rss_bytes": 37179392,
+      "temp_disk_peak_bytes": 0,
+      "memory_limit_mb": 580,
+      "threads": 1,
+      "output": "artifacts/stage_2b/groups/group_f_leakage_report.json",
+      "error_message": ""
+    }
+  ],
+  "totals": {
+    "execution_seconds": 52.53212379995966,
+    "peak_rss_bytes": 678227968,
+    "peak_temp_bytes": 0,
+    "spill_observed": false
+  },
+  "private_artifacts": {
+    "artifacts/stage_2b/private/evaluation_population_test_14d.parquet": {
+      "size_bytes": 867238,
+      "fingerprint": "1b191429aecdbcae215a9129579c46615e20763b8fe71b9d58b881541aaead2c",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/evaluation_population_validation_14d.parquet": {
+      "size_bytes": 941129,
+      "fingerprint": "8a41ede0b724c1f5990d16cf91702adb926cb2fe0edf20d6500c3c4c3709d728",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/ground_truth_test_14d.parquet": {
+      "size_bytes": 2369752,
+      "fingerprint": "755cdb8a263ac2ff7bcb8e21b7176c4459d846486733f06870513971497ea779",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/ground_truth_validation_14d.parquet": {
+      "size_bytes": 2632734,
+      "fingerprint": "c3aecba6c963b7907caea30ca7f5c91c53b0eff5c928392b2c7b6ac9115c1fe8",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/item_state_test_14d.parquet": {
+      "size_bytes": 491279,
+      "fingerprint": "6d53334a17f71c7be50f0c1bf749a281361f13f5f1748cf882b9ec691be56137",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/item_state_validation_14d.parquet": {
+      "size_bytes": 495103,
+      "fingerprint": "b2b683885d2fa8226c792a6781e39f03ff910246f3fcac46ae53d95a14e4c8f8",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/population_base_test_14d.parquet": {
+      "size_bytes": 979318,
+      "fingerprint": "8acda760ad67be714f53ef2b2461db5893285e2ca01f5d0a0433e2bff2a51d7b",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/population_base_validation_14d.parquet": {
+      "size_bytes": 1077324,
+      "fingerprint": "2d19e7c95e07d7bd36e3d8a6063e53d0744cd7c4e820b7b71d7c08163c8711e2",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/user_segments_test_14d.parquet": {
+      "size_bytes": 998911,
+      "fingerprint": "8c96597c75133f88b914af9b37f9b5db75ba01e290e402baa971ffac744e2479",
+      "git_policy": "IGNORED_PRIVATE"
+    },
+    "artifacts/stage_2b/private/user_segments_validation_14d.parquet": {
+      "size_bytes": 1094686,
+      "fingerprint": "3966f59fd05cec8e403780476ceea43023b40e48654bf7db1eaaad1eb3b01b2c",
+      "git_policy": "IGNORED_PRIVATE"
+    }
+  },
+  "temp_directory_final_bytes": 0,
+  "versions": {
+    "python": "3.10.11",
+    "duckdb": "1.5.5"
+  }
+}

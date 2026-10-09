@@ -1,0 +1,96 @@
+{
+  "access_contract": {
+    "first7d_label_read_count": 0,
+    "first7d_supervision_used": false,
+    "phase2_validation_14d_label_read_authorized": true,
+    "test_authorized": false,
+    "test_candidate_read_count": 0,
+    "test_feature_read_count": 0,
+    "test_label_read_count": 0,
+    "test_metric_read_count": 0,
+    "test_prediction_frozen": false,
+    "test_prediction_write_count": 0,
+    "validation_metric_recalculation": false
+  },
+  "config_canonical_fingerprint": "4d0b82c03d8280a5ffde25c73463116af1e5c0c5de6a792cfc492cee0c6dcb64",
+  "evaluator_contract_fingerprint": "87220eac7cb163b8f4ec36dc3913671abf54ab515ace6c58649af99defa91ac7",
+  "lightgbm_params_fingerprint": "e04109a59ac649ccc6b9f8d15cfaff0825b3dda59894d7d85660cf8d93b611b2",
+  "lightgbm_weights_fingerprint": "b0093c114c8cc5f0876cec0eb9c40af91f59006a06929b1bd5bd928d0d59bd3e",
+  "materialization_started": false,
+  "model_adapter_fingerprint": "aed9098285baf2d4480f51b71073b7a53073d31f0ea3a87f8ad870b7297236ed",
+  "model_contract": {
+    "continued_training_from_L1_600": false,
+    "early_stopping": false,
+    "feature_count": 52,
+    "feature_set": "F1",
+    "feature_version": "core_plus_affinity_v1",
+    "initialization": "fresh",
+    "internal_validation": false,
+    "model_id": "L1_FINAL_REFIT_600",
+    "num_boost_round": 600,
+    "objective": "lambdarank",
+    "query_weight": 1.0,
+    "sample_weight": 1.0,
+    "selected_model_id": "L1_600",
+    "warm_start": false
+  },
+  "ordering_contract_fingerprint": "773ee8368958b33ad365e2a0ce12702a3dd86ddc1e94e98c609a1a3ee06ba355",
+  "phase": "phase4_locked_final_refit_v1",
+  "phase_lock_binding": {
+    "phase1": {
+      "physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+      "semantic_fingerprint": ""
+    },
+    "phase2": {
+      "physical_fingerprint": "2880fb7a4cf864b56ac595e8f6ce8498d938e2ecf20579f1358eff19d03a86cc",
+      "semantic_fingerprint": "83a4bfd2dfc76084126eccb2291b2da91d6214756159b0f07f159b8cce001780"
+    },
+    "phase3_recovered": {
+      "physical_fingerprint": "76dc0eea99b9ec3f68c3f33fc9081d76bf3b55da90d491699719f90c9477742a",
+      "semantic_fingerprint": "f3af337e862b27d36e9a29968c7071482411329c1de8dc9918c80b3398c5bcb7"
+    }
+  },
+  "preregistration_fingerprint": "9fb7e10ec734ea48c0f38129f3397a9aa79df8ad8702a98fa2ff57646a1d37d8",
+  "resource_policy": {
+    "external_process_tree_monitor": true,
+    "materialization_memory_limit_mb": 1024,
+    "max_temp_directory_size": "40GB",
+    "rss_hard_fraction_of_available": 0.7,
+    "worker_consumes_frozen_absolute_cap_only": true,
+    "worker_forbidden_imports": [
+      "duckdb",
+      "pyarrow",
+      "ranking_features"
+    ]
+  },
+  "sampling_contract_fingerprint": "2c3dc207bdf805d7a9db895289c2f8860454d75414e343bdb19b47ba53baaaa0",
+  "snapshot_contract": [
+    {
+      "as_of_date": "2020-08-11",
+      "label_end": "2020-08-25",
+      "label_start": "2020-08-12",
+      "snapshot_id": "ranking_train_14d_v1",
+      "snapshot_order": 0
+    },
+    {
+      "as_of_date": "2020-08-25",
+      "label_end": "2020-09-08",
+      "label_start": "2020-08-26",
+      "snapshot_id": "validation_14d",
+      "snapshot_order": 1
+    }
+  ],
+  "snapshot_feature_policy": {
+    "ranking_train_14d_v1": "features_as_of_2020-08-11",
+    "recompute_old_snapshot_features": false,
+    "validation_14d": "features_as_of_2020-08-25"
+  },
+  "source_fingerprint": "0ea5aef6bc838cce2e925a3501190b64b77a5821fe74d6bb0951515ddc6cb72f",
+  "status": "FINAL_REFIT_PREREGISTERED_BEFORE_MATERIALIZATION",
+  "training_started": false,
+  "winner": {
+    "feature_set": "F1",
+    "model_id": "L1_600",
+    "rounds": 600
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "attempt": 1,
+  "config_fingerprint": "7636082b84edb63a22f6012e663947aaf4cb12db568c112f3f70e67e20710a0d",
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "error_message": "",
+  "execution_seconds": 397.64342089998536,
+  "generated_at": "2026-07-28T16:49:35+08:00",
+  "group_name": "validation_evaluation",
+  "memory_limit_mb": 948,
+  "output_files": [
+    "artifacts/stage_3a/private/user_metrics_validation_14d_popularity_global.parquet",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_7d.parquet",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_14d.parquet",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_28d.parquet",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_repurchase_pure.parquet",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_repurchase_popularity_fallback.parquet",
+    "artifacts/stage_3a/validation_metrics_overall.csv",
+    "artifacts/stage_3a/validation_metrics_by_segment.csv",
+    "artifacts/stage_3a/validation_candidate_coverage.csv"
+  ],
+  "output_fingerprints": {
+    "artifacts/stage_3a/private/user_metrics_validation_14d_popularity_global.parquet": "a522279fb100862f6545a94ebaadfde93e7628f8d1519fa7654c197ee92cba00",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_repurchase_popularity_fallback.parquet": "7685bf920816f93708732f601b309fec6d17d01ecb8c0194e9f8bbbfdf43401f",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_repurchase_pure.parquet": "e0659eadadbcb837b94d8c3eedc6752dfe678711806b482f4597da4cba62e65e",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_14d.parquet": "870fd982ef02db578199c2b9e761c7c5ae8e67aab5d2c86854c7e520e3a61ba1",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_28d.parquet": "6e3c1556ffc8a125d1e988f41340bbabf94105897a313125c66a9d3cdb971291",
+    "artifacts/stage_3a/private/user_metrics_validation_14d_trend_window_7d.parquet": "dc1adf60852b9ea1b7fd8fec6cdfc9e4f6ab44f601adeaf1ab2f7498290d2c14",
+    "artifacts/stage_3a/validation_candidate_coverage.csv": "289e05c0cec087c9fe02b6b55e99c3fcdd88c93bf8180d2173c22646feb5775b",
+    "artifacts/stage_3a/validation_metrics_by_segment.csv": "9d3d87841fd99793615b68bbc0d588b0552990997c00430a462957c6f15ad570",
+    "artifacts/stage_3a/validation_metrics_overall.csv": "d9f75c68a671381e8fd9196c779f5405bae467288036b52a583b825ac107b6ad"
+  },
+  "output_size_bytes": 3970167,
+  "peak_rss_bytes": 1143840768,
+  "run_fingerprint": "54dd4c3302fa16d943d0d9799e4c651bf721fd3947ee1895932a2dae981ab052",
+  "source_fingerprint": "86646f16fb94701b20fde34430f6d837a83d65b95de1688e7e4791f0bde3bcf8",
+  "spill_observed": true,
+  "status": "SUCCESS",
+  "temp_disk_peak_bytes": 2011628404,
+  "threads": 1
+}

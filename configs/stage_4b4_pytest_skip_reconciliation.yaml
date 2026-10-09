@@ -1,0 +1,97 @@
+{
+  "stage": "4B-4",
+  "phase": "phase4_post_training_pytest_skip_audit_reconciliation_v1",
+  "authorization": "chatgpt_phase4_pytest_skip_audit_reconciliation_2026-08-19",
+  "root_cause": "AUDIT_PARSER_ERROR",
+  "historical_reported_counts": {
+    "targeted_skipped": 1,
+    "full_skipped": 2,
+    "source": "prior_narrative_post_lock_rerun_summary"
+  },
+  "historical_formal_audit_displayed_progress_markers": {
+    "targeted_s_markers": 6,
+    "full_last_line_s_markers": 1,
+    "counts_are_formal_statistics": false
+  },
+  "commands": {
+    "targeted_pytest_args": [
+      "tests/test_stage_4b4_phase4.py",
+      "tests/test_stage_4b4_phase4_resource_recovery.py",
+      "tests/test_stage_4b4_phase4_post_training_recovery.py",
+      "-ra",
+      "-q"
+    ],
+    "reconciliation_pytest_args": [
+      "tests/test_stage_4b4_phase4_pytest_reconciliation.py",
+      "-ra",
+      "-q"
+    ],
+    "full_pytest_args": ["-ra", "-q"]
+  },
+  "expected": {
+    "failed_attempt1_source_fingerprint": "894f7f948dbdf6fd5bde339ad6167a96a4b54b4156164fbe5762d4a120705179",
+    "failed_attempt1_preregistration_fingerprint": "c3b5184986d51504179745a2a085f1675d57f5b30a3e7888ac7c257259f726e3",
+    "failed_attempt2_source_fingerprint": "94dbfdb5ea18b785dbeea1e954c7777b5927316a6d0e6802017199b0ea3937d8",
+    "failed_attempt2_preregistration_fingerprint": "6698781e6aa1402086bfdea383ab13626c403f064cdde1831ea71569bb7e300c",
+    "failed_attempt2_test_audit_physical_fingerprint": "90c685c10281df5f1e448874583d1444286ef5d255dc3b28d603940ada662dc5",
+    "failed_attempt2_lock_physical_fingerprint": "801cf97b4f9ee84cb69f1a2a05e2f0775ac96aa8b37f7e93d7abf4e35e8f0026",
+    "failed_attempt2_lock_semantic_fingerprint": "b828e264a591842281f3758a13055365244dc74abd8e3afa2c418dd8d08f9dde",
+    "failed_attempt2_gate_physical_fingerprint": "df4bab1e19e3395ed6772af8a5a1c01e568c17b719c9e309cbaa32ef08c5b222",
+    "failed_attempt2_report_physical_fingerprint": "486d00ce86e007be5b50b57b17a5b50cf6bed1b0c901f331d70395ab6e9e6988",
+    "failed_attempt2_manifest_physical_fingerprint": "a3bc19193c4f393475c9341eff3bbd63c15b8561d36d57c4845ceb01d1cebff2",
+    "failed_attempt2_reconciliation_physical_fingerprint": "49377aad6277972d1e9d94c7e404c7d90de97193c4e164ee4d57ff807b72ccc5",
+    "failed_attempt2_supersession_physical_fingerprint": "2656e9988784f8569bbf7539f884d4804daa9846a7b8b13fecb619fe38e87131",
+    "attempt3_preparation_source_fingerprint": "58c3b5786760ccc3c8cc3a9d9b8479996f6e9ec8ce58383476ff51c8591fd16b",
+    "attempt3_preparation_preregistration_fingerprint": "e3621199c73a127871bf241cd518dc6f6eb7d2818f176430ffa3a70ef42d639e",
+    "model_physical_fingerprint": "1f2af19a79ed8d085d68d20fe9437f4eca7da3534a3852eb823f483c6bf96922",
+    "model_semantic_fingerprint": "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+    "binary_physical_fingerprint": "df18e505648ad70924d9d59b2a5a888600f893427b1d6c543688666366c3e9d1",
+    "binary_semantic_fingerprint": "8fe8fe6ed1c1cc3e7cd82f2f5845c15955a0f1f45b2c7a9f29f31a41dcf52af9",
+    "replay_audit_physical_fingerprint": "7e52482d421bc2bca85c7bce2209e74aa6993d10ddfa71defbc6fd57a775e347",
+    "raw_score_fingerprint": "bb7eb22b48d1f88670dba8e0defad408aab118d3f0ea8c24769f6aa960aa2715",
+    "tie_break_fingerprint": "0567b99499a83d66864589fab34f75cde8622868b703c4b00904a07e5f9e4dec",
+    "original_test_audit_physical_fingerprint": "f0ca5a19af80da95f6bd8a6054c8d9d54e21c2184baa03c9a0d7f7e7d975f97f",
+    "original_test_audit_semantic_fingerprint": "c5ca86a327a10969d6a38cfdd731a87e52528f93a1d4a90f64a58f1009af4442",
+    "original_lock_physical_fingerprint": "1fa37804666881a1d67b0960bdb0a0ec61468789b743b6b93fcf7d709e7ab778",
+    "original_lock_semantic_fingerprint": "de1072d41e921c8cfe39275486a7a7f201dc9ffa26196b9b6fec8a6a6a52a3d6",
+    "original_gate_physical_fingerprint": "9e04a6acc9e5e4d7b7a4bb92e072fea1066f90081d108a354f401c0282170015",
+    "original_report_physical_fingerprint": "fa41b9957ae33678a3c5b161ae2597bf75945d7557eb376159deec016b11f83d",
+    "original_manifest_physical_fingerprint": "a8b95032b92dab92cedc1da04ef3e7278c457a3647c9e9c7b955651834333c7f",
+    "r1_to_r14_gate_evidence": [
+      "ef6a6fa9ab75ca578040cabf978f749e2bbfdf5966ac9d102f95992f478086d6",
+      "d2b0e6cbefc1e9555de08af499f73d1339f978a7a8ed034434d5b094b55092ec",
+      "6217903bdf6419fe8b2823dddcc996a01523bcafd33adaa1f683988aba1e3db8",
+      "257323b9bf830b7ec6bce333ed3b81ee11043f9ecb3c6346aefb6d5c3c8ac797",
+      "8fe8fe6ed1c1cc3e7cd82f2f5845c15955a0f1f45b2c7a9f29f31a41dcf52af9",
+      "6b9b7955896e614768273b8d2517d71c2e13f8db8c3159601fe5749ce7fc64da",
+      "6d4913f75072495e475c5fa2e4887bd098f60e81b7d0ccd5f4f7ea944262930f",
+      "0d6d94dda7ae94af9088520a07419cfed05edd1df7da31073b23ff5446eca546",
+      "0adc28c0497db8e300fe7c4ec487b0b34fd115b8a9cc5e978763d4a8ef2c675e",
+      "8e79067006100b0372f85cba15d0c825863c656334ee1cd00e40882fc5d4721d",
+      "bb7eb22b48d1f88670dba8e0defad408aab118d3f0ea8c24769f6aa960aa2715",
+      "f6917e2973bf8256e14f9d072474b3cd0488d04f8ac40bf8d9539e0385b23c7f",
+      "560cf503c7658f0ead0223748a8e384e42a3a71f033adfbcec79f8fc4386d4d4",
+      "4e4109b361ce10d38d0e293bbcf2b1abd5e27085b3785b51ed02947d14084b29"
+    ]
+  },
+  "paths": {
+    "model_manifest": "artifacts/stage_4b4/final_refit_model_fingerprint_manifest.json",
+    "model_artifact": "artifacts/stage_4b4/private/final_refit/resource_recovery/models/L1_FINAL_REFIT_600.txt",
+    "binary_manifest": "artifacts/stage_4b4/final_refit_binary_dataset_manifest.json",
+    "binary_artifact": "artifacts/stage_4b4/private/final_refit/resource_recovery/lightgbm_binary/final_refit_train.bin",
+    "replay_audit": "artifacts/stage_4b4/final_refit_prediction_replay_audit.json",
+    "test_audit": "artifacts/stage_4b4/final_refit_resource_recovery_test_and_security_audit.json",
+    "lock": "artifacts/stage_4b4/stage_4b4_final_refit_lock.json",
+    "gate": "artifacts/stage_4b4/final_refit_resource_recovery_gate.csv",
+    "manifest": "artifacts/stage_4b4/final_refit_resource_recovery_manifest.csv",
+    "report": "docs/stages/stage_4b4_locked_final_refit.md",
+    "reconciliation": "artifacts/stage_4b4/final_refit_pytest_skip_reconciliation.json",
+    "supersession": "artifacts/stage_4b4/final_refit_test_audit_supersession.json",
+    "preregistration": "artifacts/stage_4b4/final_refit_pytest_skip_reconciliation_preregistration.json",
+    "failed_attempt1": "artifacts/stage_4b4/final_refit_pytest_skip_reconciliation_attempt1_failure.json",
+    "failed_attempt2": "artifacts/stage_4b4/final_refit_pytest_skip_reconciliation_attempt2_failure.json",
+    "checkpoint_directory": "artifacts/stage_4b4/checkpoints/final_refit/pytest_skip_reconciliation",
+    "private_evidence_directory": "artifacts/stage_4b4/private/final_refit/pytest_skip_reconciliation/evidence",
+    "private_test_results_directory": "artifacts/stage_4b4/private/final_refit/pytest_skip_reconciliation/results"
+  }
+}

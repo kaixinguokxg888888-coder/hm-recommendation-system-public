@@ -1,0 +1,145 @@
+{
+  "stage": "4B-4",
+  "phase": "phase3_first7d_locked_winner_diagnostic_v1",
+  "diagnostic": {
+    "diagnostic_id": "ranking_validation_first7d_diagnostic",
+    "snapshot_id": "validation_14d",
+    "as_of_date": "2020-08-25",
+    "request_date": "2020-08-26",
+    "label_start": "2020-08-26",
+    "label_end": "2020-09-01",
+    "feedback_semantics": "B_user_item_day_binary_v1",
+    "selection_use": false,
+    "execution_limit": "one_locked_post_selection_diagnostic"
+  },
+  "versions": ["B0", "L1_600"],
+  "locked_winner": {
+    "model_id": "L1_600",
+    "feature_set": "F1",
+    "iteration": 600,
+    "winner_changed": false
+  },
+  "evaluation": {
+    "cutoff": 12,
+    "metrics": ["MAP@12", "NDCG@12", "Recall@12", "HitRate@12"],
+    "map_denominator": "min(all_first7d_positive_count,12)",
+    "recall_denominator": "all_first7d_positive_count",
+    "ndcg_gain": "binary",
+    "ndcg_discount": "1/log2(rank+1)",
+    "all_zero_relevance_queries": "retained_as_zero",
+    "missed_future_positives": "retained_in_denominators",
+    "candidate_universe": "frozen_validation_full500",
+    "negative_sampling": "not_used"
+  },
+  "slices": {
+    "user": [
+      "evaluable_warm_users", "short_history", "warm", "active",
+      "positive_count_eq_1", "positive_count_gt_1", "candidate_positive_zero",
+      "candidate_positive_nonzero", "has_cold_positive", "no_cold_positive",
+      "cold_history_label_users"
+    ],
+    "target": ["seen_item", "cold_item", "head", "mid", "tail", "zero_history"],
+    "critical_user": [
+      "short_history", "warm", "active", "positive_count_eq_1",
+      "positive_count_gt_1", "candidate_positive_zero", "candidate_positive_nonzero",
+      "has_cold_positive", "cold_history_label_users"
+    ],
+    "critical_target": ["seen_item", "cold_item", "head", "mid", "tail", "zero_history"]
+  },
+  "bootstrap": {
+    "method": "paired_user_block_percentile_v1",
+    "iterations": 1000,
+    "seed": 20260826,
+    "confidence_level": 0.95,
+    "comparison": "L1_600_minus_B0",
+    "selection_use": false
+  },
+  "decision_rules": {
+    "direction": {
+      "delta_lt_0": "VALIDATION_ROBUSTNESS_NOT_MET",
+      "delta_gte_0": "ROBUSTNESS_DIRECTION_PASS"
+    },
+    "confidence": {
+      "ci_lower_gt_0": "POSITIVE_AND_SIGNIFICANT",
+      "delta_gte_0_and_ci_touches_0": "NONNEGATIVE_BUT_INCONCLUSIVE",
+      "ci_upper_lt_0": "SIGNIFICANT_NEGATIVE"
+    },
+    "critical_slice": {
+      "ci_upper_lt_0": "FIRST7D_SEGMENT_REGRESSION_REVIEW_REQUIRED"
+    },
+    "winner_change_allowed": false,
+    "test_authorization_allowed": false
+  },
+  "replay": {
+    "partition": 0,
+    "versions": ["B0", "L1_600"],
+    "required_identity": "exact_row_identity"
+  },
+  "expected": {
+    "phase1_config_fingerprint": "3f7879e7c333d38ea5240a987afa09835bea9c8ed6353161c4e773524a5a58c0",
+    "phase1_lock_physical_fingerprint": "86e4bb6cfaa756db2b0c1bda7f10d5b2c4af1c45605a8c15d9bb928e68cc3eb7",
+    "phase2_config_fingerprint": "20052abb13b511ef50dd9b67e1110e89c2bc3e2ffdfe335fcbe36978e939391b",
+    "phase2_preregistration_fingerprint": "1b248fbc3fd407a605bb0d4e81fc35686b25fb26838a921d8974402aaddf8935",
+    "phase2_selection_lock_semantic_fingerprint": "83a4bfd2dfc76084126eccb2291b2da91d6214756159b0f07f159b8cce001780",
+    "phase2_selection_lock_physical_fingerprint": "2880fb7a4cf864b56ac595e8f6ce8498d938e2ecf20579f1358eff19d03a86cc",
+    "phase2_metrics_physical_fingerprint": "b928ad7f96304239afef9775a4104528cbaf843ef6be97960847200f8e9e30ef",
+    "phase2_bootstrap_physical_fingerprint": "6ca638a02da42892604c4d2ed6067a72768ed297ce201cc07a04b92a75b286f4",
+    "phase2_gate_physical_fingerprint": "3eeabcad0e322efd6d233bdd99b2fcdd502055d0d2f96e8bfcc38c47ecb01cba",
+    "phase2_recovery_physical_fingerprint": "fe19d796667451036ded493039b9f15b5a7fb94c326f1ac1dc4d15bb8a03ab80",
+    "phase2_final_audit_physical_fingerprint": "4aa865c33ecbbd81501ea62eb55a987ad9325ae11577ac4f21b8cb4756dd862b",
+    "validation_ground_truth_physical_fingerprint": "c3aecba6c963b7907caea30ca7f5c91c53b0eff5c928392b2c7b6ac9115c1fe8",
+    "validation_population_physical_fingerprint": "8a41ede0b724c1f5990d16cf91702adb926cb2fe0edf20d6500c3c4c3709d728",
+    "validation_item_state_physical_fingerprint": "b2b683885d2fa8226c792a6781e39f03ff910246f3fcac46ae53d95a14e4c8f8",
+    "prediction_global_merkle_fingerprints": {
+      "B0": "ba1511b2c1abe10a7e9993df5ccffc51d188fe67514372f32ee6f9f2b8429ace",
+      "L1_600": "aa4ff05d4115e138eb0f38d02e00c3e2195a3d0789bc6471ced989f0f3e7c108"
+    }
+  },
+  "execution": {
+    "partitions": 32,
+    "threads": 1,
+    "duckdb_memory_max_mb": 1024,
+    "memory_fraction_of_available": 0.30,
+    "rss_hard_fraction_of_available_at_preregistration": 0.65,
+    "max_temp_directory_size": "20GB",
+    "parquet_compression": "zstd",
+    "query_partition_expression": "customer_key % 32",
+    "simultaneous_prediction_versions": 1
+  },
+  "paths": {
+    "phase1_config": "configs/stage_4b4_lambdarank.yaml",
+    "phase1_lock": "artifacts/stage_4b4/stage_4b4_pre_label_lock.json",
+    "phase1_gate": "artifacts/stage_4b4/contract_gate.csv",
+    "prediction_manifest": "artifacts/stage_4b4/prediction_fingerprint_manifest.csv",
+    "phase2_config": "configs/stage_4b4_validation_selection.yaml",
+    "phase2_preregistration": "artifacts/stage_4b4/validation_selection_preregistration.json",
+    "phase2_metrics": "artifacts/stage_4b4/validation_selection_metrics.csv",
+    "phase2_bootstrap": "artifacts/stage_4b4/validation_selection_bootstrap.csv",
+    "phase2_gate": "artifacts/stage_4b4/validation_selection_contract_gate.csv",
+    "phase2_recovery": "artifacts/stage_4b4/validation_selection_recovery_correction.json",
+    "phase2_final_audit": "artifacts/stage_4b4/validation_selection_final_audit.csv",
+    "phase2_selection_lock": "artifacts/stage_4b4/stage_4b4_validation_selection_lock.json",
+    "predictions": "artifacts/stage_4b4/private/predictions/formal",
+    "validation_ground_truth": "artifacts/stage_2b/private/ground_truth_validation_14d.parquet",
+    "validation_population": "artifacts/stage_2b/private/evaluation_population_validation_14d.parquet",
+    "validation_item_state": "artifacts/stage_2b/private/item_state_validation_14d.parquet",
+    "public_directory": "artifacts/stage_4b4",
+    "private_directory": "artifacts/stage_4b4/private/phase3_first7d_diagnostic",
+    "checkpoint_directory": "artifacts/stage_4b4/checkpoints/phase3_first7d_diagnostic",
+    "temp_directory": "artifacts/stage_4b4/tmp/phase3_first7d_diagnostic",
+    "report": "docs/stages/stage_4b4_first7d_diagnostic.md",
+    "first7d_lock": "artifacts/stage_4b4/stage_4b4_first7d_lock.json"
+  },
+  "forbidden": {
+    "final_refit_executed": false,
+    "test_authorized": false,
+    "test_candidate_read_count": 0,
+    "test_feature_read_count": 0,
+    "test_label_read_count": 0,
+    "test_metric_read_count": 0,
+    "reranking_executed": false,
+    "retrieval_retuned": false,
+    "additional_challenger_evaluated": false,
+    "winner_changed": false
+  }
+}

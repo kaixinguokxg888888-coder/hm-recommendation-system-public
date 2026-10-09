@@ -1,0 +1,8 @@
+object,content_read_count,authorized,reopened,status
+raw_test_label_source,1,True,False,PASS
+canonical_test_ground_truth_build,1,True,False,PASS
+prediction_label_join,1,True,False,PASS
+formal_test_evaluation,1,True,False,PASS
+test_metric_materialization,1,True,False,PASS
+validation_labels,0,False,False,PASS
+first7d_labels,0,False,False,PASS

@@ -1,0 +1,7 @@
+﻿task_family,checkpoint_count,success_count,failed_count,retry_count,checkpoint_reuse_count,partial_artifact_count,recovery_status
+validation_feature_pipeline,134,134,0,7,134,0,REUSED_IDENTITY_MATCHED
+training_query_order_v2,1,1,1,1,1,0,ACCEPTED_V2_REUSED
+lightgbm_training,2,2,2,2,2,0,ISOLATED_MODELS_ACCEPTED_AND_REUSED
+prediction_freeze,32,32,0,1,4,7,INTERRUPTION_RECOVERED_4_REUSED_28_RECOMPUTED
+prediction_replay,1,1,0,0,0,0,FORMAL_REPLAY_IDENTITY_PASS
+test_and_compile,3,3,0,0,0,0,TARGETED_19_FULL_353_COMPILE_PASS

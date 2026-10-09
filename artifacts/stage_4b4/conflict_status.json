@@ -1,0 +1,22 @@
+{
+  "affected_tasks": [
+    "train_L0",
+    "train_L1",
+    "all_pre_label_predictions",
+    "prediction_fingerprint_freeze",
+    "pre_label_lock"
+  ],
+  "conflict": "The existing Train memmap is partition-major while the frozen group array is global-query_order-major.",
+  "formal_models_written": 2,
+  "formal_predictions_written": 7,
+  "parameter_or_data_semantics_changed": false,
+  "pre_label_lock_created": true,
+  "ready_for_validation_label_join": true,
+  "resolution": "authorized_global_query_order_v2_rebuild_and_exact_position_audit",
+  "resolution_status": "RESOLVED",
+  "stage": "4B-4",
+  "stage_status": "STAGE_4B4_PHASE1_PREDICTIONS_FROZEN",
+  "status_scope": "HISTORICAL_DISCOVERY_RESOLVED_BY_AUTHORIZED_RECOVERY",
+  "validation_labels_read": false,
+  "validation_metrics_computed": false
+}

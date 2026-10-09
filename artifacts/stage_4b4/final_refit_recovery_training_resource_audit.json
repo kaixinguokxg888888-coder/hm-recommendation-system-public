@@ -1,0 +1,19 @@
+{
+  "binary_dataset_size_bytes": 475205984,
+  "child_process_tree_peak_rss_bytes": 1164324864,
+  "frozen_absolute_training_cap_bytes": 4756091289,
+  "model_promoted": false,
+  "oom_observed": false,
+  "resource_audit_fingerprint": "0d6d94dda7ae94af9088520a07419cfed05edd1df7da31073b23ff5446eca546",
+  "resource_preregistration_fingerprint": "67dfdd6eb291e0aa6ab335a630c522bb4deaacd386451012c976accf66838b11",
+  "rss_fraction": 0.7,
+  "rss_gate_exceeded": false,
+  "runtime_available_memory_max_bytes_observation_only": 6795071488,
+  "runtime_available_memory_min_bytes_observation_only": 5722509312,
+  "runtime_cap_recomputed": false,
+  "status": "PASS",
+  "temporary_model_exists": true,
+  "temporary_model_size_bytes": 2541064,
+  "wall_time_seconds": 645.9465602999553,
+  "worker_exit_code": 0
+}

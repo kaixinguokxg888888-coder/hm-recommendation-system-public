@@ -1,0 +1,21 @@
+{
+  "group_name": "group_d_item_state",
+  "payload": {
+    "validation_14d": {
+      "private_path": "artifacts/stage_2b/private/item_state_validation_14d.parquet",
+      "fingerprint": "b2b683885d2fa8226c792a6781e39f03ff910246f3fcac46ae53d95a14e4c8f8",
+      "p50": 59,
+      "p90": 721
+    },
+    "test_14d": {
+      "private_path": "artifacts/stage_2b/private/item_state_test_14d.parquet",
+      "fingerprint": "6d53334a17f71c7be50f0c1bf749a281361f13f5f1748cf882b9ec691be56137",
+      "p50": 59,
+      "p90": 720
+    }
+  },
+  "dataset_fingerprint": "f3b4d8bfed7655be122a6b43abf3f11cd526367b89cafefe6daf0c3e8a057927",
+  "population_version": "1.0.0",
+  "feedback_version": "B-primary_C-log1p-p99-v1",
+  "as_of_date": "2020-09-08"
+}

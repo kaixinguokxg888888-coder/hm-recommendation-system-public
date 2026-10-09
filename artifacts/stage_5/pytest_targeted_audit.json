@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "passed": 43
+  },
+  "full_suite": false,
+  "result_physical_fingerprint": "46a331b94c633e8ee64adf017fca9dadd900d4668ebf0ab05e8f1a087d1de987",
+  "return_code": 0,
+  "status": "PASS",
+  "test_label_reads": 0
+}
